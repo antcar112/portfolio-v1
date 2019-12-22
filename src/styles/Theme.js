@@ -27,7 +27,7 @@ const darkTheme = {
 		textSecondary : '#cccccc',
 		bg            : '#111',
 		bgCard        : '#222222',
-		primary       : '#A62639',
+		primary       : '#0F97DB',
 	},
 };
 
