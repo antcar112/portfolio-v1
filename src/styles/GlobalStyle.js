@@ -54,7 +54,7 @@ export default createGlobalStyle`
     h3 {
         font-family: ${({ theme }) => theme.font.heading};
         font-weight: 400;
-        color: ${({ theme }) => theme.sharedColor.primary};
+        color:  ${({ theme }) => theme.color.primary};
         font-size: 2em;
 
     }

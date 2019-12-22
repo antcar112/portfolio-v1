@@ -3,8 +3,8 @@ import { Link } from 'gatsby';
 
 export const Btn = styled.button`
 	color: white;
-	background: ${({ theme }) => theme.sharedColor.primary};
-	border: 4px solid ${({ theme }) => theme.sharedColor.primary};
+	background: ${({ theme }) => theme.color.primary};
+	border: 4px solid ${({ theme }) => theme.color.primary};
 	width: 260px;
 	padding: 0.8em;
 	font-size: 1.2em;
@@ -15,15 +15,15 @@ export const Btn = styled.button`
 	&:hover,
 	&:active,
 	&:focus {
-		color: ${({ theme }) => theme.sharedColor.primary};
+		color: ${({ theme }) => theme.color.primary};
 		background: ${({ theme }) => theme.color.bg};
 	}
 `;
 
 export const BtnOutlineLink = styled(Link)`
     display: block;
-    color: ${({ theme }) => theme.sharedColor.primary};
-    border: 4px solid ${({ theme }) => theme.sharedColor.primary};
+    color:  ${({ theme }) => theme.color.primary};
+    border: 4px solid  ${({ theme }) => theme.color.primary};
     width: 200px;
     text-decoration: none;
     padding: 0.8em;
@@ -39,6 +39,6 @@ export const BtnOutlineLink = styled(Link)`
     &:active, 
     &:focus {
         color: white;
-        background: ${({ theme }) => theme.sharedColor.primary};
+        background:  ${({ theme }) => theme.color.primary};
     }
 `;

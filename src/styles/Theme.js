@@ -2,16 +2,13 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
 const theme = {
-	sharedColor     : {
-		primary : '#0F97DB',
-	},
 	font            : {
 		cursive : '"Covered By Your Grace", cursive;',
 		heading : '"Rubik", "Bitter", "serif"',
 		body    : '"Karla", "Helvetica", "sans-serif"',
 	},
 	hoverTransition :
-		'color 150ms ease-out, background 150ms ease-out, background-color 150ms ease-out',
+		'color 200ms ease-out, border 200ms ease-out, background 200ms ease-out, background-color 200ms ease-out',
 };
 
 const lightTheme = {
@@ -20,6 +17,7 @@ const lightTheme = {
 		textSecondary : '#777777',
 		bg            : '#ffffff',
 		bgCard        : '#ffffff',
+		primary       : '#0F97DB',
 	},
 };
 
@@ -29,6 +27,7 @@ const darkTheme = {
 		textSecondary : '#cccccc',
 		bg            : '#111',
 		bgCard        : '#222222',
+		primary       : '#A62639',
 	},
 };
 

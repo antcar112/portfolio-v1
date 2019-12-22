@@ -23,7 +23,7 @@ const Cursive = styled.h1`
 	transition: ${({ theme }) => theme.hoverTransition};
 
 	& span {
-		color: ${({ theme }) => theme.sharedColor.primary};
+		color: ${({ theme }) => theme.color.primary};
 		font-family: ${({ theme }) => theme.font.cursive};
 		transition: ${({ theme }) => theme.hoverTransition};
 	}

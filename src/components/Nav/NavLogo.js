@@ -16,7 +16,7 @@ const NavLogoContainer = styled(Link)`
 		height: 40px;
 		width: 40px;
 		margin-right: 20px;
-		border: 3px solid ${({ theme }) => theme.sharedColor.primary};
+		border: 3px solid  ${({ theme }) => theme.color.primary};
 		display: inline-block;
 	}
 

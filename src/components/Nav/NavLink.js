@@ -17,7 +17,7 @@ const StyledNavLink = styled(Link)`
 		&::before {
 			content: '';
 			height: 2px;
-			background: ${({ theme }) => theme.sharedColor.primary};
+			background: ${({ theme }) => theme.color.primary};
 			position: absolute;
 			bottom: 15px;
 			left: 10px;

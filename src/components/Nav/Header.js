@@ -6,6 +6,7 @@ const StyledHeader = styled.header`
 	height: 60px;
 	background-color: ${({ theme }) => theme.color.bg};
 	position: fixed;
+	z-index: 10;
 	overflow: hidden;
 	transition: ${({ theme }) => theme.hoverTransition};
 `;
