@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { BtnLink } from '../Button/Button';
+import { Btn } from '../Button/Button';
 
 const StyledHero = styled.div`
 	width: 100%;
@@ -42,9 +42,15 @@ const Hero = () => {
 					I’m a software developer and designer from Vancouver, BC
 				</HeroText>
 			</div>
-			<BtnLink to="#">See my work</BtnLink>
+			<Btn onClick={scrollDown}>See my work</Btn>
 		</StyledHero>
 	);
+};
+
+const scrollDown = () => {
+	document.getElementById('scroll-target').scrollIntoView({
+		behavior : 'smooth',
+	});
 };
 
 export default Hero;
