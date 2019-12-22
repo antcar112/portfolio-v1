@@ -3,6 +3,7 @@ import React from 'react';
 import Project from './Project';
 import timeego from '../../images/timeego.png';
 import cody from '../../images/cody-cameron.png';
+import pizza from '../../images/pizza.png';
 
 const projects = [
 	{
@@ -16,7 +17,7 @@ const projects = [
 	},
 	{
 		title       : 'Cody Cameron',
-		subtitle    : 'Artist Portfolio Site',
+		subtitle    : 'Artist Portfolio Website',
 		description :
 			'This is a portfolio website made for Cody Cameron, a graphic designer and artist based in Vancouver, BC.',
 		link        : '#',
@@ -24,13 +25,49 @@ const projects = [
 		background  : '#A3D9FF',
 	},
 	{
-		title       : 'Project 3',
-		subtitle    : 'Subtitle 3',
+		title       : "Big General's",
+		subtitle    : 'Pizza Restaurant Website',
 		description :
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel facilisis ipsum, non mollis dui. Cras vulputate volutpat tellus at tempor. Sed interdum magna eu luctus iaculis. Quisque in eleifend augue.',
 		link        : '#',
-		image       : timeego,
+		image       : pizza,
+		background  : '#F7E8A4 ',
+	},
+	{
+		title       : "Big General's",
+		subtitle    : 'Pizza Restaurant Website',
+		description :
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel facilisis ipsum, non mollis dui. Cras vulputate volutpat tellus at tempor. Sed interdum magna eu luctus iaculis. Quisque in eleifend augue.',
+		link        : '#',
+		image       : pizza,
 		background  : '#7E6B8F',
+	},
+	{
+		title       : "Big General's",
+		subtitle    : 'Pizza Restaurant Website',
+		description :
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel facilisis ipsum, non mollis dui. Cras vulputate volutpat tellus at tempor. Sed interdum magna eu luctus iaculis. Quisque in eleifend augue.',
+		link        : '#',
+		image       : pizza,
+		background  : '#EE4266',
+	},
+	{
+		title       : "Big General's",
+		subtitle    : 'Pizza Restaurant Website',
+		description :
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel facilisis ipsum, non mollis dui. Cras vulputate volutpat tellus at tempor. Sed interdum magna eu luctus iaculis. Quisque in eleifend augue.',
+		link        : '#',
+		image       : pizza,
+		background  : '#FFD23F',
+	},
+	{
+		title       : "Big General's",
+		subtitle    : 'Pizza Restaurant Website',
+		description :
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel facilisis ipsum, non mollis dui. Cras vulputate volutpat tellus at tempor. Sed interdum magna eu luctus iaculis. Quisque in eleifend augue.',
+		link        : '#',
+		image       : pizza,
+		background  : '#FC440F',
 	},
 ];
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import NavLink from './NavLink';
+import { NavLink, NavAnchor } from './NavLink';
 import DarkModeButton from './DarkModeButton';
 import SocialLinks from './SocialLinks';
 
@@ -20,7 +20,7 @@ const NavList = ({ colorTheme, toggleTheme }) => (
 	<StyledNavList>
 		<NavLink path="/" name="Work" />
 		<NavLink path="/about/" name="About" />
-		<NavLink path="/contact/" name="Contact" />
+		<NavAnchor path="mailto:antcar1992@gmail.com" name="Contact" />
 		<SocialLinks />
 		<DarkModeButton colorTheme={colorTheme} toggleTheme={toggleTheme} />
 	</StyledNavList>

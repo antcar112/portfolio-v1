@@ -66,7 +66,7 @@ const Project = ({ project, index }) => {
 	return (
 		<StyledProject background={project.background} index={index}>
 			<ImageContainer>
-				<img src={project.image} />
+				<img src={project.image} alt={project.title} />
 			</ImageContainer>
 			<WorkCard>
 				<CardTitle>{project.title}</CardTitle>

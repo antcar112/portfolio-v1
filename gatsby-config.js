@@ -4,9 +4,6 @@ module.exports = {
 		author      : `Anthony Caron`,
 		description : `A portfolio website for developer Anthony Caron.`,
 		siteUrl     : `https://gatsby-starter-blog-demo.netlify.com/`,
-		social      : {
-			// twitter : `kylemathews`,
-		},
 	},
 	plugins      : [
 		{
@@ -42,11 +39,11 @@ module.exports = {
 			// Adds a manifest file
 			resolve : `gatsby-plugin-manifest`,
 			options : {
-				name             : `Gatsby Starter Blog`,
-				short_name       : `GatsbyJS`,
+				name             : `Anthony Caron Portfolio`,
+				short_name       : `Anthony Caron`,
 				start_url        : `/`,
 				background_color : `#ffffff`,
-				theme_color      : `#663399`,
+				theme_color      : `#0F97DB`,
 				display          : `minimal-ui`,
 				icon             : `content/assets/gatsby-icon.png`,
 			},

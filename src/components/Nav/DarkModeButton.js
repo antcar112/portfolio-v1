@@ -25,6 +25,7 @@ const DarkModeBtn = styled.button`
 		position: absolute;
 		width: 130px;
 		top: 20px;
+		left: 25px;
 		pointer-events: none;
 		color: ${({ theme }) => theme.color.textSecondary};
 		transform: translateY(15px);

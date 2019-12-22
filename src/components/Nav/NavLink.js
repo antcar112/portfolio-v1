@@ -1,8 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 
-const StyledNavLink = styled(Link)`
+const styles = css`
 	text-decoration: none;
 	font-size: 1.1em;
 	display: block;
@@ -30,7 +30,11 @@ const StyledNavLink = styled(Link)`
 	}
 `;
 
-const NavLink = ({ path, name }) => {
+const StyledNavLink = styled(Link)`${styles};`;
+
+const StyledNavAnchor = styled.a`${styles};`;
+
+export const NavLink = ({ path, name }) => {
 	return (
 		<li>
 			<StyledNavLink to={path} activeClassName="nav_link--active">
@@ -40,4 +44,12 @@ const NavLink = ({ path, name }) => {
 	);
 };
 
-export default NavLink;
+export const NavAnchor = ({ path, name }) => {
+	return (
+		<li>
+			<StyledNavAnchor href={path} activeClassName="nav_link--active">
+				{name}
+			</StyledNavAnchor>
+		</li>
+	);
+};
