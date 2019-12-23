@@ -26,7 +26,11 @@ const NavList = styled.ul`
 	align-items: center;
 `;
 
-const DrawerList = ({ colorTheme, toggleTheme }) => {
+const DrawerList = ({ colorTheme, toggleTheme, setDrawerOpen }) => {
+	const handleDarkMode = () => {
+		toggleTheme();
+		setDrawerOpen();
+	};
 	return (
 		<NavList>
 			<DrawerNavLink>
@@ -63,7 +67,7 @@ const DrawerList = ({ colorTheme, toggleTheme }) => {
 				</a>
 			</DrawerNavLink>
 			<DrawerNavLink>
-				<button onClick={toggleTheme}>
+				<button onClick={handleDarkMode}>
 					{colorTheme === 'light' ? (
 						<DrawerLinkInfo name="Dark Mode" icon={<IoMdMoon />} />
 					) : (

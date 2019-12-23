@@ -16,19 +16,23 @@ const StyledNav = styled.nav`
 
 const Nav = ({ colorTheme, toggleTheme }) => {
 	const [
-		drawOpen,
-		setDrawOpen,
+		drawerOpen,
+		setDrawerOpen,
 	] = useState(false);
 	return (
 		<Header>
 			<StyledNav>
 				<NavLogo />
 				<NavList colorTheme={colorTheme} toggleTheme={toggleTheme} />
-				<Hamburger drawOpen={drawOpen} setDrawOpen={setDrawOpen} />
+				<Hamburger
+					drawerOpen={drawerOpen}
+					setDrawerOpen={setDrawerOpen}
+				/>
 				<NavDrawer
-					drawOpen={drawOpen}
+					drawerOpen={drawerOpen}
 					colorTheme={colorTheme}
 					toggleTheme={toggleTheme}
+					setDrawerOpen={setDrawerOpen}
 				/>
 			</StyledNav>
 		</Header>

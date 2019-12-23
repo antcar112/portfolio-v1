@@ -8,7 +8,7 @@ const StyledDrawer = styled.div`
 	position: fixed;
 	display: none;
 	background-color: ${({ theme }) => theme.color.bg};
-	border: ${({ theme }) => theme.color.primary} 10px solid;
+	border: ${({ theme }) => theme.color.primary} 8px solid;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -38,11 +38,15 @@ const StyledNav = styled.nav`
 	padding: 0;
 `;
 
-const NavDrawer = ({ drawOpen, colorTheme, toggleTheme }) => {
+const NavDrawer = ({ drawerOpen, colorTheme, toggleTheme, setDrawerOpen }) => {
 	return (
-		<StyledDrawer className={drawOpen ? 'drawer-open' : ''}>
+		<StyledDrawer className={drawerOpen ? 'drawer-open' : ''}>
 			<StyledNav>
-				<DrawerList colorTheme={colorTheme} toggleTheme={toggleTheme} />
+				<DrawerList
+					colorTheme={colorTheme}
+					toggleTheme={toggleTheme}
+					setDrawerOpen={setDrawerOpen}
+				/>
 			</StyledNav>
 		</StyledDrawer>
 	);

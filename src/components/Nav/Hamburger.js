@@ -74,11 +74,11 @@ const StyledHamburger = styled.button`
 	}
 `;
 
-const Hamburger = ({ drawOpen, setDrawOpen }) => {
+const Hamburger = ({ drawerOpen, setDrawerOpen }) => {
 	return (
 		<StyledHamburger
-			className={drawOpen ? 'hamburger-active' : ''}
-			onClick={() => setDrawOpen(!drawOpen)}
+			className={drawerOpen ? 'hamburger-active' : ''}
+			onClick={() => setDrawerOpen(!drawerOpen)}
 		>
 			<span className="top-bar" />
 			<span className="mid-bar" />
