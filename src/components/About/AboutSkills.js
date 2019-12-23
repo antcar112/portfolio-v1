@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { media } from '../../utils/media.js';
 import TechGrid from './TechGrid';
-import { H2 } from './text';
+import { H2 } from './Text.js';
 
 const StyledAboutSkills = styled.section``;
 

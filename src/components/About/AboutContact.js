@@ -4,7 +4,7 @@ import { IoMdMail } from 'react-icons/io';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 import { media } from '../../utils/media.js';
-import { H2, Paragraph } from './text';
+import { H2, Paragraph } from './Text.js';
 
 const StyledAboutContact = styled.section``;
 
