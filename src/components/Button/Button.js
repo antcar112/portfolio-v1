@@ -52,4 +52,9 @@ export const BtnOutlineLink = styled(Link)`
         color: white;
         background:  ${({ theme }) => theme.color.primary};
     }
+
+	${media.down.xs} {
+		font-size: 1em;
+		width: 100%;
+	}
 `;

@@ -6,12 +6,7 @@ import { media } from '../../utils/media.js';
 import Container from '../Container/Container';
 import ProjectList from './ProjectList';
 
-const Heading = styled.h1`
-	text-align: center;
-	${media.down.lg} {
-		margin-bottom: 50px;
-	}
-`;
+const Heading = styled.h1`${media.down.lg} {margin-bottom: 50px;}`;
 
 const StyledWork = styled.section`
 	width: 100%;

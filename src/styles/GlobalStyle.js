@@ -43,6 +43,7 @@ export default createGlobalStyle`
         color: ${({ theme }) => theme.color.text};
         color: ${({ theme }) => theme.color.text};
         font-size: 5em;
+        text-align: center;
 
         ${media.down.lg} {
             font-size: 4.5em;
@@ -109,7 +110,6 @@ export default createGlobalStyle`
         font-weight: 400;
         color: ${({ theme }) => theme.color.text};
         font-size: 1em;
-        line-height: 1.4em;
 
     }
 

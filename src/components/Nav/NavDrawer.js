@@ -14,11 +14,12 @@ const StyledDrawer = styled.div`
 	left: 0;
 	right: 0;
 	z-index: 3;
-	padding-top: 60px;
 	opacity: 0;
 	pointer-events: none;
 	transition: 300ms opacity ease-in-out,
 		${({ theme }) => theme.hoverTransition};
+	justify-content: center;
+	align-items: center;
 
 	&.drawer-open {
 		opacity: 1;
@@ -26,7 +27,7 @@ const StyledDrawer = styled.div`
 	}
 
 	${media.down.md} {
-		display: block;
+		display: flex;
 	}
 `;
 

@@ -25,8 +25,8 @@ const darkTheme = {
 	color : {
 		text          : '#ffffff',
 		textSecondary : '#cccccc',
-		bg            : '#111',
-		bgCard        : '#222222',
+		bg            : '#121212',
+		bgCard        : '#1F1F1F',
 		primary       : '#0F97DB',
 	},
 };

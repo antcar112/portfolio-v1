@@ -12,9 +12,9 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const StyledNavDrawer = styled.div`
 	width: 100%;
-	height: 60vh;
+	/* height: 60vh; */
 	max-width: 500px;
-	margin: 8vh auto;
+	margin: 0 auto;
 	padding: 0;
 `;
 
@@ -47,7 +47,7 @@ const NavListItem = styled.li`
 		display: flex;
 		justify-content: center;
 		width: 100%;
-		padding: 20px;
+		padding: 3vh;
 		cursor: pointer;
 
 		& div {
@@ -73,7 +73,7 @@ const NavListItem = styled.li`
 			color: ${({ theme }) => theme.color.textSecondary};
 		}
 
-		&.nav_link--active div {
+		&.nav_drawer_link--active div {
 			color: ${({ theme }) => theme.color.text};
 
 			&::before {
@@ -94,7 +94,7 @@ const DrawerList = ({ colorTheme, toggleTheme }) => {
 		<StyledNavDrawer>
 			<NavList>
 				<NavListItem>
-					<Link to="/" activeClassName="nav_link--active">
+					<Link to="/" activeClassName="nav_drawer_link--active">
 						<div>
 							<span>Work</span>
 							<IoMdFolder />
@@ -102,7 +102,10 @@ const DrawerList = ({ colorTheme, toggleTheme }) => {
 					</Link>
 				</NavListItem>
 				<NavListItem>
-					<Link to="/about/" activeClassName="nav_link--active">
+					<Link
+						to="/about/"
+						activeClassName="nav_drawer_link--active"
+					>
 						<div>
 							<span>About</span>
 							<IoMdPerson />
