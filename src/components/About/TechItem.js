@@ -10,16 +10,19 @@ const StyledTechItem = styled.div`
 
 	& img {
 		height: 45px;
-		filter: grayscale(100%);
+		filter: ${({ invert }) =>
+			invert ? 'grayscale(100%) invert(1)' : 'grayscale(100%)'};
 		transition: 150ms filter linear;
 
 		${media.down.md} {
-			filter: grayscale(0);
+			filter: ${({ invert }) =>
+				invert ? 'grayscale(0) invert(1)' : 'grayscale(0)'};
 		}
 		${media.down.xs} {
 			height: 35px;
 		}
 	}
+
 	& span {
 		transform: translateY(-10px);
 		opacity: 0;
@@ -52,7 +55,8 @@ const StyledTechItem = styled.div`
 	}
 	&:hover {
 		& img {
-			filter: grayscale(0);
+			filter: ${({ invert }) =>
+				invert ? 'grayscale(0) invert(1)' : 'grayscale(0)'};
 		}
 		& span {
 			transform: translateY(0px);
@@ -63,9 +67,11 @@ const StyledTechItem = styled.div`
 
 const TechItem = ({ tech }) => {
 	return (
-		<StyledTechItem>
-			<img src={tech.image} alt={tech.name} />
-			<span className="tech_name">{tech.name}</span>
+		<StyledTechItem invert={tech.invert}>
+			<img src={tech.image} alt={tech.name} invert={tech.invert} />
+			<span className="tech_name">
+				{tech.name} {tech.invert ? 'true' : 'false'}
+			</span>
 			{tech.inProgress && (
 				<span className="in_progress">(In Progress)</span>
 			)}
