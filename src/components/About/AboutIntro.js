@@ -20,10 +20,10 @@ const StyledAboutIntro = styled.section`
 	}
 
 	${media.down.md} {
-		margin: 30px auto 25px;
 		grid-template-columns: 1fr;
 		grid-template-rows: auto auto;
 		grid-template-areas: "image" "card";
+		grid-gap: 25px;
 	}
 `;
 
@@ -73,7 +73,6 @@ const AboutText = styled.div`
 	}
 
 	${media.down.md} {
-		top: -25px;
 		justify-self: center;
 	}
 

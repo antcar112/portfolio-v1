@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { media } from '../../utils/media.js';
-
 import Container from '../Container/Container';
 import ProjectList from './ProjectList';
 
-const Heading = styled.h1`${media.down.lg} {margin-bottom: 50px;}`;
+const Heading = styled.h1``;
 
 const StyledWork = styled.section`
 	width: 100%;
@@ -14,11 +12,20 @@ const StyledWork = styled.section`
 	transition: ${({ theme }) => theme.hoverTransition};
 `;
 
+const ScrollTarget = styled.div`
+	width: 1px;
+	height: 1px;
+	background: none;
+	position: relative;
+	top: -90px;
+`;
+
 const Work = () => {
 	return (
-		<StyledWork id="scroll-target">
+		<StyledWork>
+			<ScrollTarget id="scroll-target" />
+			<Heading>Projects</Heading>
 			<Container>
-				<Heading>My Work</Heading>
 				<ProjectList />
 			</Container>
 		</StyledWork>

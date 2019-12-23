@@ -85,11 +85,14 @@ export default createGlobalStyle`
         color:  ${({ theme }) => theme.color.primary};
         font-size: 2em;
 
-        ${media.down.lg} {
+        ${media.down.xl} {
             font-size: 1.8em;
         }
+        ${media.down.lg} {
+            font-size: 1.6em;
+        }
         ${media.down.md} {
-            font-size: 1.7em;
+            font-size: 1.6em;
         }
         ${media.down.sm} {
             font-size: 1.5em;

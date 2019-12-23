@@ -45,8 +45,8 @@ const oddStyles = css`
 	}
 `;
 
-export const StyledProject = styled.div`
-	margin-top: 90px;
+export const StyledProject = styled.article`
+	margin-bottom: 90px;
 	width: 100%;
 	display: grid;
 	${props => (props.index % 2 === 0 ? evenStyles : oddStyles)};

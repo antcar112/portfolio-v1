@@ -31,6 +31,5 @@ export const Paragraph = styled.p`
 	${media.down.sm} {
 		font-size: 1em;
 		line-height: 1.4em;
-		margin: 0 25px;
 	}
 `;

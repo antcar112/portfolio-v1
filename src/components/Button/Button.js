@@ -77,9 +77,6 @@ const SharedBtnStyles = css`
 	}
 
 	${media.down.md} {
-		width: 220px;
-		padding: 1.1em;
-
 		& span {
 			font-size: 1em;
 		}
@@ -133,6 +130,8 @@ const StyledBtn = styled.button`
 	padding: 1.25em;
 
 	${media.down.md} {
+		width: 220px;
+		padding: 1.1em;
 	}
 `;
 

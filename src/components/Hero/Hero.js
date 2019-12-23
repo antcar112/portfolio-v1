@@ -6,7 +6,7 @@ import { Btn } from '../Button/Button';
 
 const StyledHero = styled.div`
 	width: 100%;
-	height: 90vh;
+	height: calc(100vh - 60px);
 	padding: 0 50px;
 	background: ${({ theme }) => theme.color.bg};
 	text-align: center;
@@ -43,6 +43,8 @@ const Cursive = styled.h1`
 
 const HeroText = styled.span`
 	font-size: 1.8em;
+	display: block;
+	margin-bottom: 80px;
 
 	${media.down.md} {
 		font-size: 1.4em;
@@ -65,8 +67,8 @@ const Hero = () => {
 				<HeroText>
 					I’m a software developer and designer from Vancouver, BC
 				</HeroText>
+				<Btn text={'See my work'} handleClick={scrollDown} />
 			</div>
-			<Btn text={'See my work'} handleClick={scrollDown} />
 		</StyledHero>
 	);
 };
