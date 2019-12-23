@@ -40,7 +40,7 @@ const DrawerList = ({ colorTheme, toggleTheme }) => {
 				</Link>
 			</DrawerNavLink>
 			<DrawerNavLink>
-				<a href="mailto:antcar1992@gmail.com">
+				<a href="mailto:anthony.j.caron@gmail.com">
 					<DrawerLinkInfo name="Contact" icon={<IoMdMail />} />
 				</a>
 			</DrawerNavLink>

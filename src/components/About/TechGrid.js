@@ -10,11 +10,11 @@ const StyledTechGrid = styled.div`
 	display: grid;
 	grid-template-columns: repeat(8, 1fr);
 	grid-gap: 20px;
-	margin: 40px 25px 0;
+	margin: 40px auto 0;
 
 	${media.down.md} {
 		grid-template-columns: repeat(6, 1fr);
-		margin: 40px 25px 30px;
+		margin: 40px auto 30px;
 	}
 	${media.down.sm} {
 		grid-template-columns: repeat(5, 1fr);

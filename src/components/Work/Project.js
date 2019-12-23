@@ -14,7 +14,7 @@ const Project = ({ project, index }) => {
 				<CardTitle>{project.title}</CardTitle>
 				<CardSubtitle>{project.subtitle}</CardSubtitle>
 				<CardText>{project.description}</CardText>
-				<BtnOutlineLink to={project.link}>See More</BtnOutlineLink>
+				<BtnOutlineLink path={project.link} text={'See More'} />
 			</Card>
 		</StyledProject>
 	);

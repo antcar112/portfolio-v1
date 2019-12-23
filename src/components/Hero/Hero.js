@@ -66,15 +66,15 @@ const Hero = () => {
 					I’m a software developer and designer from Vancouver, BC
 				</HeroText>
 			</div>
-			<Btn onClick={scrollDown}>See my work</Btn>
+			<Btn text={'See my work'} handleClick={scrollDown} />
 		</StyledHero>
 	);
 };
+
+export default Hero;
 
 const scrollDown = () => {
 	document.getElementById('scroll-target').scrollIntoView({
 		behavior : 'smooth',
 	});
 };
-
-export default Hero;

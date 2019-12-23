@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import styled from 'styled-components';
 
 import { useDarkMode } from '../hooks/useDarkMode.js';
+import LoadingPage from './LoadingPage/LoadingPage';
 import Nav from './Nav/Nav.js';
 import Footer from './Footer/Footer.js';
 import GlobalStyle from '../styles/GlobalStyle';
@@ -14,19 +14,18 @@ const Layout = ({ children }) => {
 		componentMounted,
 	] = useDarkMode();
 
-	if (!componentMounted) {
-		return <div />;
-	}
-
 	return (
 		<Theme colorTheme={theme}>
-			<Fragment>
-				<GlobalStyle />
-				<Nav colorTheme={theme} toggleTheme={toggleTheme} />
-
-				<main>{children}</main>
-				<Footer />
-			</Fragment>
+			{!componentMounted ? (
+				<LoadingPage />
+			) : (
+				<Fragment>
+					<GlobalStyle />
+					<Nav colorTheme={theme} toggleTheme={toggleTheme} />
+					<main>{children}</main>
+					<Footer />
+				</Fragment>
+			)}
 		</Theme>
 	);
 };

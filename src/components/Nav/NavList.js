@@ -25,7 +25,7 @@ const NavList = ({ colorTheme, toggleTheme }) => (
 	<StyledNavList>
 		<NavLink path="/" name="Work" />
 		<NavLink path="/about/" name="About" />
-		<NavAnchor path="mailto:antcar1992@gmail.com" name="Contact" />
+		<NavAnchor path="mailto:anthony.j.caron@gmail.com" name="Contact" />
 		<SocialLinks />
 		<DarkModeButton colorTheme={colorTheme} toggleTheme={toggleTheme} />
 	</StyledNavList>
