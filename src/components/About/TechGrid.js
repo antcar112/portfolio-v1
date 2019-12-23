@@ -8,10 +8,13 @@ import techList from '../../content/tech.js';
 const StyledTechGrid = styled.div`
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(8, 1fr);
+	grid-template-columns: repeat(9, 1fr);
 	grid-gap: 20px;
 	margin: 40px auto 0;
 
+	${media.down.lg} {
+		grid-template-columns: repeat(8, 1fr);
+	}
 	${media.down.md} {
 		grid-template-columns: repeat(6, 1fr);
 		margin: 40px auto 30px;
