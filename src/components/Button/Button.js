@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
+import { media } from '../../utils/media.js';
+
 export const Btn = styled.button`
 	color: white;
 	background: ${({ theme }) => theme.color.primary};
@@ -17,6 +19,15 @@ export const Btn = styled.button`
 	&:focus {
 		color: ${({ theme }) => theme.color.primary};
 		background: ${({ theme }) => theme.color.bg};
+	}
+
+	${media.down.md} {
+		width: 220px;
+		font-size: 1em;
+	}
+
+	${media.down.xs} {
+		width: 90%;
 	}
 `;
 

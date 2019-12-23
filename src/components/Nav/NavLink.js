@@ -2,6 +2,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 
+import { media } from '../../utils/media.js';
+
 const styles = css`
 	text-decoration: none;
 	font-size: 1.1em;
@@ -10,6 +12,10 @@ const styles = css`
 	position: relative;
 	color: ${({ theme }) => theme.color.text};
 	transition: ${({ theme }) => theme.hoverTransition};
+
+	${media.down.lg} {
+		padding: 0 12px;
+	}
 
 	&.nav_link--active {
 		color: ${({ theme }) => theme.color.text};
@@ -47,9 +53,7 @@ export const NavLink = ({ path, name }) => {
 export const NavAnchor = ({ path, name }) => {
 	return (
 		<li>
-			<StyledNavAnchor href={path} activeClassName="nav_link--active">
-				{name}
-			</StyledNavAnchor>
+			<StyledNavAnchor href={path}>{name}</StyledNavAnchor>
 		</li>
 	);
 };

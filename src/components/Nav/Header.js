@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { media } from '../../utils/media.js';
+
 const StyledHeader = styled.header`
 	width: 100%;
 	height: 60px;
@@ -15,6 +17,13 @@ const HeaderContainer = styled.div`
 	width: 100%;
 	padding: 0 150px;
 	height: 100%;
+
+	${media.down.lg} {
+		padding: 0 90px 0 100px;
+	}
+	${media.down.md} {
+		padding: 0 10px 0 20px;
+	}
 `;
 
 const Header = ({ children }) => {

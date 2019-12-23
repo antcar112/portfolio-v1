@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { media } from '../../utils/media.js';
 import { NavLink, NavAnchor } from './NavLink';
 import DarkModeButton from './DarkModeButton';
 import SocialLinks from './SocialLinks';
@@ -10,6 +11,10 @@ const StyledNavList = styled.ul`
 	padding: 0;
 	list-style: none;
 	display: flex;
+
+	${media.down.md} {
+		display: none;
+	}
 
 	& li {
 		line-height: 60px;

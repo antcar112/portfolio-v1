@@ -75,7 +75,13 @@ const ProjectList = () => {
 	return (
 		<div>
 			{projects.map((project, index) => {
-				return <Project project={project} index={index} />;
+				return (
+					<Project
+						project={project}
+						index={index}
+						key={project.title}
+					/>
+				);
 			})}
 		</div>
 	);

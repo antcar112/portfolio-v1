@@ -41,7 +41,21 @@ export default createGlobalStyle`
         font-family: ${({ theme }) => theme.font.heading};
         font-weight: 700;
         color: ${({ theme }) => theme.color.text};
+        color: ${({ theme }) => theme.color.text};
         font-size: 5em;
+
+        ${media.down.lg} {
+            font-size: 4.5em;
+        }
+        ${media.down.md} {
+            font-size: 4em;
+        }
+        ${media.down.sm} {
+            font-size: 3em;
+        }
+        ${media.down.xs} {
+            font-size: 2.5em;
+        }
 
     }
     h2 {
@@ -50,12 +64,38 @@ export default createGlobalStyle`
         color: ${({ theme }) => theme.color.text};
         font-size: 3em;
 
+        ${media.down.lg} {
+            font-size: 3em;
+        }
+        ${media.down.md} {
+            font-size: 2.5em;
+        }
+        ${media.down.sm} {
+            font-size: 2.3em;
+        }
+        ${media.down.xs} {
+            font-size: 2em;
+        }
+
     }
     h3 {
         font-family: ${({ theme }) => theme.font.heading};
         font-weight: 400;
         color:  ${({ theme }) => theme.color.primary};
         font-size: 2em;
+
+        ${media.down.lg} {
+            font-size: 1.8em;
+        }
+        ${media.down.md} {
+            font-size: 1.7em;
+        }
+        ${media.down.sm} {
+            font-size: 1.5em;
+        }
+        ${media.down.xs} {
+            font-size: 1.4em;
+        }
 
     }
     p, 
@@ -69,6 +109,7 @@ export default createGlobalStyle`
         font-weight: 400;
         color: ${({ theme }) => theme.color.text};
         font-size: 1em;
+        line-height: 1.4em;
 
     }
 

@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { media } from '../../utils/media.js';
 import { Btn } from '../Button/Button';
 
 const StyledHero = styled.div`
 	width: 100%;
 	height: 90vh;
+	padding: 0 50px;
 	background: ${({ theme }) => theme.color.bg};
 	text-align: center;
 	display: flex;
@@ -27,9 +29,31 @@ const Cursive = styled.h1`
 		font-family: ${({ theme }) => theme.font.cursive};
 		transition: ${({ theme }) => theme.hoverTransition};
 	}
+
+	${media.down.md} {
+		font-size: 4.5em;
+	}
+	${media.down.sm} {
+		font-size: 4em;
+	}
+	${media.down.xs} {
+		font-size: 3em;
+	}
 `;
 
-const HeroText = styled.span`font-size: 1.8em;`;
+const HeroText = styled.span`
+	font-size: 1.8em;
+
+	${media.down.md} {
+		font-size: 1.4em;
+	}
+	${media.down.sm} {
+		font-size: 1.2em;
+	}
+	${media.down.xs} {
+		font-size: 1.1em;
+	}
+`;
 
 const Hero = () => {
 	return (

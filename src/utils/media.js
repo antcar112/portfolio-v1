@@ -3,7 +3,7 @@ const size = {
 	sm : '768px',
 	md : '992px',
 	lg : '1200px',
-	xl : '1450px'
+	xl : '1450px',
 };
 
 export const media = {
@@ -12,6 +12,6 @@ export const media = {
 		sm : `@media (max-width: ${size.sm})`,
 		md : `@media (max-width: ${size.md})`,
 		lg : `@media (max-width: ${size.lg})`,
-		xl : `@media (max-width: ${size.xl})`
-	}
+		xl : `@media (max-width: ${size.xl})`,
+	},
 };
