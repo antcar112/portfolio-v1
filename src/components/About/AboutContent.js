@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript } from 'react-icons/io';
-import { FaJava, FaBootstrap, FaNodeJs, FaReact } from 'react-icons/fa';
-import { DiMongodb } from 'react-icons/di';
+
 import html from '../../images/tech/html.svg';
 import css from '../../images/tech/css.svg';
 import javascript from '../../images/tech/javascript.svg';
@@ -85,6 +83,7 @@ const AboutContent = () => {
 					running and cooking.
 				</p>
 			</AboutText>
+
 			<Tech>
 				<h2>Tech I Know</h2>
 				<div className="tech-flex">

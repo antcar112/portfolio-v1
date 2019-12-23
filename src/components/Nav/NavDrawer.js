@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { media } from '../../utils/media.js';
@@ -31,13 +31,20 @@ const StyledDrawer = styled.div`
 	}
 `;
 
+const StyledNav = styled.nav`
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 0;
+`;
+
 const NavDrawer = ({ drawOpen, colorTheme, toggleTheme }) => {
 	return (
-		<Fragment>
-			<StyledDrawer className={drawOpen ? 'drawer-open' : ''}>
+		<StyledDrawer className={drawOpen ? 'drawer-open' : ''}>
+			<StyledNav>
 				<DrawerList colorTheme={colorTheme} toggleTheme={toggleTheme} />
-			</StyledDrawer>
-		</Fragment>
+			</StyledNav>
+		</StyledDrawer>
 	);
 };
 
