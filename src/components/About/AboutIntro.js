@@ -5,6 +5,8 @@ import { media } from '../../utils/media.js';
 import { CardStyles } from '../Card/Card';
 import anthony from '../../images/anthony.jpg';
 
+import { Paragraph } from './Text.js';
+
 const StyledAboutIntro = styled.section`
 	display: grid;
 	grid-template-columns: auto auto;
@@ -61,28 +63,12 @@ const AboutText = styled.div`
 		margin: 6px 0 20px;
 	}
 
-	& p {
-		font-size: 1.2em;
-		line-height: 1.5em;
-		margin-bottom: 1.4em;
-	}
-
-	& .bold {
-		font-weight: 700;
-		color: ${({ theme }) => theme.color.primary};
-	}
-
 	${media.down.lg} {
 		left: 0;
 		top: 0;
 
 		& h2 {
 			font-size: 2.8em;
-		}
-
-		& p {
-			font-size: 1.1em;
-			line-height: 1.4em;
 		}
 	}
 
@@ -95,11 +81,6 @@ const AboutText = styled.div`
 		& h2 {
 			font-size: 2.5em;
 		}
-
-		& p {
-			font-size: 1em;
-			line-height: 1.4em;
-		}
 	}
 `;
 
@@ -109,7 +90,7 @@ const AboutIntro = () => {
 			<AboutImage src={anthony} alt="Anthony" />
 			<AboutText className="about-text">
 				<h2 className="cursive">I'm Anthony,</h2>
-				<p>
+				<Paragraph>
 					a software developer and designer. I am currently earning a{' '}
 					<a
 						className="bold"
@@ -121,18 +102,18 @@ const AboutIntro = () => {
 					<a className="bold" href="https://www.bcit.ca/">
 						British Columbia Institute of Technology
 					</a>.
-				</p>{' '}
-				<p>
+				</Paragraph>{' '}
+				<Paragraph>
 					I love how developing software allows me to build something
 					new from scratch. I also enjoying the constant problem
 					solving and learning.
-				</p>
-				<p>
+				</Paragraph>
+				<Paragraph>
 					I currently live in the greater{' '}
 					<span className="bold">Vancouver</span> area. In my spare
 					time, I enjoy watching hockey, exploring new types of music,
 					running and cooking.
-				</p>
+				</Paragraph>
 			</AboutText>
 		</StyledAboutIntro>
 	);
