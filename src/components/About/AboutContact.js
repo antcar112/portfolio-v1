@@ -4,7 +4,7 @@ import { IoMdMail } from 'react-icons/io';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 import { media } from '../../utils/media.js';
-import { H2, Paragraph } from './Text.js';
+import { H2, Paragraph } from '../Text/Text.js';
 
 const StyledAboutContact = styled.section``;
 
@@ -61,19 +61,23 @@ const AboutContactList = styled.ul`
 			height: 2px;
 			background: ${({ theme }) => theme.color.primary};
 			position: absolute;
-			transform: scaleX(0);
+			transform: scaleX(0.4) translateY(5px);
+			opacity: 0;
 			transform-origin: 0;
-			transition: transform ease-in-out 150ms;
+			transition: transform ease-in-out 150ms, opacity ease-in-out 150ms;
 		}
 
-		&:hover {
+		&:hover,
+		&:active,
+		&:focus {
 			& span,
 			& svg {
 				color: ${({ theme }) => theme.color.primary};
 			}
 
 			&::before {
-				transform: scaleX(1);
+				transform: scaleX(1) translateY(0);
+				opacity: 1;
 			}
 		}
 	}

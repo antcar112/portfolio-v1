@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import { media } from '../../utils/media.js';
 
@@ -36,14 +37,19 @@ const styles = css`
 	}
 `;
 
-const StyledNavLink = styled(Link)`${styles};`;
+const StyledNavLink = styled(AniLink)`${styles};`;
 
 const StyledNavAnchor = styled.a`${styles};`;
 
 export const NavLink = ({ path, name }) => {
 	return (
 		<li>
-			<StyledNavLink to={path} activeClassName="nav_link--active">
+			<StyledNavLink
+				to={path}
+				swipe
+				direction="right"
+				activeClassName="nav_link--active"
+			>
 				{name}
 			</StyledNavLink>
 		</li>

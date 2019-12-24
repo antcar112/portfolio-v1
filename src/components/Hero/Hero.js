@@ -18,7 +18,7 @@ const StyledHero = styled.div`
 
 const Cursive = styled.h1`
 	font-family: ${({ theme }) => theme.font.cursive};
-	font-weight: 400;
+	font-weight: 700;
 	color: ${({ theme }) => theme.color.text};
 	font-size: 5.5em;
 	margin-bottom: 0px;
@@ -28,6 +28,7 @@ const Cursive = styled.h1`
 		color: ${({ theme }) => theme.color.primary};
 		font-family: ${({ theme }) => theme.font.cursive};
 		transition: ${({ theme }) => theme.hoverTransition};
+		font-weight: 700;
 	}
 
 	${media.down.md} {
@@ -62,7 +63,7 @@ const Hero = () => {
 		<StyledHero>
 			<div>
 				<Cursive>
-					Hello, I'm <span>Anthony</span>
+					Hi, I'm <span>Anthony</span>
 				</Cursive>
 				<HeroText>
 					I’m a software developer and designer from Vancouver, BC

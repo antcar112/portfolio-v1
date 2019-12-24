@@ -13,14 +13,15 @@ const NavLogoContainer = styled(Link)`
     transition: ${({ theme }) => theme.hoverTransition};
 
 	& span {
-		font-family: ${({ theme }) => theme.font.cursive};
-		font-size: 1.7em;
+		font-family: ${({ theme }) => theme.font.body};
+		font-size: 1.35em;
+		font-weight: 400;
 
 		${media.down.lg} {
-			font-size: 1.5em;
+			font-size: 1.2em;
 		}
 		${media.down.sm} {
-			font-size: 1.3em;
+			font-size: 1.1em;
 		}
 		@media only screen and (max-width: 380px) {
 			display: none;

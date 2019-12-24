@@ -6,7 +6,6 @@ module.exports = {
 		siteUrl     : `https://pensive-turing-510d5b.netlify.com/`,
 	},
 	plugins      : [
-		`gatsby-plugin-sharp`,
 		{
 			// Adds a manifest file
 			resolve : `gatsby-plugin-manifest`,
@@ -20,7 +19,10 @@ module.exports = {
 				icon             : `content/assets/gatsby-icon.png`,
 			},
 		},
+		`gatsby-plugin-sharp`,
+		'gatsby-transformer-sharp',
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-styled-components`,
+		`gatsby-plugin-transition-link`,
 	],
 };

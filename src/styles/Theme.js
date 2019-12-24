@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 const theme = {
 	font            : {
-		cursive : '"Covered By Your Grace", cursive;',
+		cursive : '"Rubik", cursive;',
 		heading : '"Rubik", "Bitter", "serif"',
 		body    : '"Karla", "Helvetica", "sans-serif"',
 	},

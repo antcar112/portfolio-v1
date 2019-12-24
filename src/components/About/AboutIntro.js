@@ -5,7 +5,7 @@ import { media } from '../../utils/media.js';
 import { CardStyles } from '../Card/Card';
 import anthony from '../../images/anthony.jpg';
 
-import { Paragraph } from './Text.js';
+import { Paragraph } from '../Text/Text.js';
 
 const StyledAboutIntro = styled.section`
 	display: grid;
@@ -58,9 +58,14 @@ const AboutText = styled.div`
 	& h2 {
 		font-family: ${({ theme }) => theme.font.cursive};
 		font-weight: 400;
-		color: ${({ theme }) => theme.color.primary};
+		color: ${({ theme }) => theme.color.text};
 		font-size: 3em;
 		margin: 6px 0 20px;
+
+		& span {
+			color: ${({ theme }) => theme.color.primary};
+			font-weight: 400;
+		}
 	}
 
 	${media.down.lg} {
@@ -88,7 +93,9 @@ const AboutIntro = () => {
 		<StyledAboutIntro>
 			<AboutImage src={anthony} alt="Anthony" />
 			<AboutText className="about-text">
-				<h2 className="cursive">I'm Anthony,</h2>
+				<h2 className="cursive">
+					I'm <span>Anthony</span>,
+				</h2>
 				<Paragraph>
 					a software developer and designer. I am currently earning a{' '}
 					<a

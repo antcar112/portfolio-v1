@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { media } from '../../utils/media.js';
 import TechGrid from './TechGrid';
-import { H2 } from './Text.js';
+import { H2 } from '../Text/Text.js';
 
 const StyledAboutSkills = styled.section``;
 

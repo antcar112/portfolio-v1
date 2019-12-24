@@ -5,7 +5,9 @@ import { media } from '../utils/media';
 export default createGlobalStyle`
     
     /* Font Imports */
-    @import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Karla|Rubik:400,700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Karla:400,700|Rubik:400,700,900&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Kalam&display=swap');
+
 
     /**** Resets ****/
     html {
