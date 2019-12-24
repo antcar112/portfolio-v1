@@ -2,7 +2,7 @@ import React from 'react';
 
 import { StyledProject, ImageContainer } from './ProjectStyles';
 import { Card, CardTitle, CardSubtitle, CardText } from '../Card/Card';
-import { BtnOutlineLink } from '../Button/Button';
+import { BtnOutlineAniLink } from '../Button/Button';
 
 const Project = ({ project, index }) => {
 	return (
@@ -14,7 +14,11 @@ const Project = ({ project, index }) => {
 				<CardTitle>{project.title}</CardTitle>
 				<CardSubtitle>{project.subtitle}</CardSubtitle>
 				<CardText>{project.description}</CardText>
-				<BtnOutlineLink path={project.link} text={'See More'} />
+				<BtnOutlineAniLink
+					path={project.link}
+					text="See More"
+					direction="up"
+				/>
 			</Card>
 		</StyledProject>
 	);

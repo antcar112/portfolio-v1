@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import { media } from '../../utils/media.js';
 import ButtonText from './ButtonText';
@@ -135,7 +135,7 @@ const StyledBtn = styled.button`
 	}
 `;
 
-const StyledBtnOutlineLink = styled(Link)`
+const StyledBtnOutlineAniLink = styled(AniLink)`
 	${BtnOutlineStyles};
 	width: 200px;
 	margin: 0 auto;
@@ -164,9 +164,15 @@ export const Btn = ({ text, handleClick }) => (
 	</StyledBtn>
 );
 
-export const BtnOutlineLink = ({ path, text }) => (
-	<StyledBtnOutlineLink to={path}>
+export const BtnOutlineAniLink = ({ path, text, direction }) => (
+	<StyledBtnOutlineAniLink
+		to={path}
+		cover
+		direction={direction}
+		bg="#0F97DB"
+		duration={0.8}
+	>
 		<ButtonText text={text} type={'text'} />
 		<ButtonText text={text} type={'hidden'} />
-	</StyledBtnOutlineLink>
+	</StyledBtnOutlineAniLink>
 );
