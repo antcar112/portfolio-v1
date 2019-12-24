@@ -1,4 +1,5 @@
-import timeego from '../images/timeego.png';
+import timeegoImg from '../images/timeego.png';
+import timeegoVideo from '../images/videos/timeego.webp';
 import cody from '../images/cody-cameron.png';
 import pizza from '../images/pizza.png';
 
@@ -9,8 +10,11 @@ const projects = [
 		description :
 			'Timeego is a web application designed to help students with track their time spent studying. It allows users to add courses, log their time studying, and view their total study time in each course.',
 		link        : '/timeego/',
-		image       : timeego,
+		image       : timeegoImg,
+		video       : timeegoVideo,
 		background  : '#10ffcb',
+		githubLink  : 'https://github.com/antcar112/timeego',
+		hostedLink  : 'https://timeego-d54c4.firebaseapp.com/',
 	},
 	{
 		title       : 'Cody Cameron',
@@ -20,6 +24,8 @@ const projects = [
 		link        : '/cody-cameron/',
 		image       : cody,
 		background  : '#A3D9FF',
+		githubLink  : 'https://github.com/antcar112/cody-cameron-portfolio',
+		hostedLink  : 'https://eloquent-wozniak-860d04.netlify.com/',
 	},
 	{
 		title       : "Big General's",
@@ -29,6 +35,8 @@ const projects = [
 		link        : '/big-generals/',
 		image       : pizza,
 		background  : '#F7E8A4 ',
+		githubLink  : 'https://github.com/antcar112/timeego',
+		hostedLink  : 'https://timeego-d54c4.firebaseapp.com/',
 	},
 	{
 		title       : 'Project 4',
@@ -36,27 +44,15 @@ const projects = [
 		description :
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel facilisis ipsum, non mollis dui. Cras vulputate volutpat tellus at tempor. Sed interdum magna eu luctus iaculis. Quisque in eleifend augue.',
 		link        : '/project-4/',
-		image       : timeego,
-		background  : '#7E6B8F',
-	},
-	{
-		title       : 'Project 5',
-		subtitle    : 'Pizza Restaurant Website',
-		description :
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel facilisis ipsum, non mollis dui. Cras vulputate volutpat tellus at tempor. Sed interdum magna eu luctus iaculis. Quisque in eleifend augue.',
-		link        : '/project-5/',
-		image       : cody,
-		background  : '#EE4266',
-	},
-	{
-		title       : 'Project 6',
-		subtitle    : 'Pizza Restaurant Website',
-		description :
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel facilisis ipsum, non mollis dui. Cras vulputate volutpat tellus at tempor. Sed interdum magna eu luctus iaculis. Quisque in eleifend augue.',
-		link        : '/project-6/',
 		image       : pizza,
-		background  : '#FFD23F',
+		background  : '#7E6B8F',
+		githubLink  : 'https://github.com/antcar112/timeego',
+		hostedLink  : 'https://timeego-d54c4.firebaseapp.com/',
 	},
 ];
+
+export const timeego = projects[0];
+export const codyCameron = projects[1];
+export const bigGenerals = projects[0];
 
 export default projects;

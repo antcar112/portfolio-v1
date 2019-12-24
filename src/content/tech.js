@@ -42,4 +42,26 @@ const tech = [
 	{ name: 'Figma', image: figma, inProgress: false },
 ];
 
+export const timeegoTech = [
+	{ name: 'HTML5', image: html, inProgress: false },
+	{ name: 'CSS3', image: css, inProgress: false },
+	{ name: 'Bootstrap', image: bootstrap, inProgress: false },
+	{ name: 'JavaScript', image: javascript, inProgress: false },
+	{ name: 'Firebase', image: firebase, inProgress: false },
+	{ name: 'Figma', image: figma, inProgress: false },
+];
+
+export const codyTech = [
+	{ name: 'JavaScript', image: javascript, inProgress: false },
+	{ name: 'React', image: react, inProgress: false },
+	{ name: 'GraphQL', image: graphql, inProgress: false },
+	{ name: 'Gatsby', image: gatsby, inProgress: false },
+	{
+		name       : 'Styled Components',
+		image      : styledComponents,
+		inProgress : false,
+	},
+	{ name: 'Abobe Photoshop', image: photoshop, inProgress: false },
+];
+
 export default tech;

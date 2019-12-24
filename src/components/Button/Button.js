@@ -134,6 +134,38 @@ const StyledBtn = styled.button`
 		padding: 1.1em;
 	}
 `;
+const StyledBtnAnchor = styled.a`
+	${BtnSolidStyles};
+	width: 240px;
+	height: 60px;
+	margin: 0;
+
+	& span {
+		font-size: 1.1em;
+	}
+
+	${media.down.md} {
+		width: 220px;
+		padding: 1.1em;
+	}
+`;
+
+const StyledBtnOutlineAnchor = styled.a`
+	${BtnOutlineStyles};
+	width: 240px;
+	height: 60px;
+	margin: 0;
+	background: ${({ theme }) => theme.color.bg};
+
+	& span {
+		font-size: 1.1em;
+	}
+
+	${media.down.md} {
+		width: 220px;
+		padding: 1.1em;
+	}
+`;
 
 const StyledBtnOutlineAniLink = styled(AniLink)`
 	${BtnOutlineStyles};
@@ -147,13 +179,43 @@ const StyledBtnOutlineAniLink = styled(AniLink)`
 	
 	${media.down.md} {
 		& span {
-		font-size: 1em;
-	}
+			font-size: 1em;
+		}
 	}
 
 	${media.down.xs} {
 		padding: 0.7em;
 		width: 100%;
+	}
+`;
+
+const StyledBackBtnOutline = styled(AniLink)`
+	${BtnOutlineStyles};
+	width: 70px;
+	height: 70px;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	background: ${({ theme }) => theme.color.bg};
+
+	& span {
+		font-size: 1em;
+	}
+	
+	${media.down.md} {
+		width: 60px;
+		height: 60px;
+		bottom: 20px;
+		right: 20px;
+
+		& span {
+			font-size: 0.9em;
+		}
+	}
+
+	${media.down.xs} {
+		width: 60px;
+		height: 60px;
 	}
 `;
 
@@ -164,6 +226,24 @@ export const Btn = ({ text, handleClick }) => (
 	</StyledBtn>
 );
 
+export const BtnAnchor = ({ text, link }) => (
+	<StyledBtnAnchor href={link} target="_blank" rel="noopener noreferrer">
+		<ButtonText text={text} type={'text'} />
+		<ButtonText text={text} type={'hidden'} />
+	</StyledBtnAnchor>
+);
+
+export const BtnOutlineAnchor = ({ text, link }) => (
+	<StyledBtnOutlineAnchor
+		href={link}
+		target="_blank"
+		rel="noopener noreferrer"
+	>
+		<ButtonText text={text} type={'text'} />
+		<ButtonText text={text} type={'hidden'} />
+	</StyledBtnOutlineAnchor>
+);
+
 export const BtnOutlineAniLink = ({ path, text, direction }) => (
 	<StyledBtnOutlineAniLink
 		to={path}
@@ -172,7 +252,21 @@ export const BtnOutlineAniLink = ({ path, text, direction }) => (
 		bg="#0F97DB"
 		duration={0.8}
 	>
+		<div />
 		<ButtonText text={text} type={'text'} />
 		<ButtonText text={text} type={'hidden'} />
 	</StyledBtnOutlineAniLink>
+);
+
+export const BackBtnOutline = ({ path, text, direction }) => (
+	<StyledBackBtnOutline
+		to={path}
+		cover
+		direction={direction}
+		bg="#0F97DB"
+		duration={0.8}
+	>
+		<ButtonText text={text} type={'text'} />
+		<ButtonText text={text} type={'hidden'} />
+	</StyledBackBtnOutline>
 );
