@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import {
 	IoMdFolder,
@@ -35,14 +36,28 @@ const DrawerList = ({ colorTheme, toggleTheme, setDrawerOpen }) => {
 	return (
 		<NavList>
 			<DrawerNavLink>
-				<Link to="/" activeClassName="nav_drawer_link--active">
+				<AniLink
+					to="/"
+					cover
+					direction="right"
+					bg="#0F97DB"
+					duration={0.8}
+					activeClassName="nav_drawer_link--active"
+				>
 					<DrawerLinkInfo name="Work" icon={<IoMdFolder />} />
-				</Link>
+				</AniLink>
 			</DrawerNavLink>
 			<DrawerNavLink>
-				<Link to="/about/" activeClassName="nav_drawer_link--active">
+				<AniLink
+					to="/about/"
+					cover
+					direction="left"
+					bg="#0F97DB"
+					duration={0.8}
+					activeClassName="nav_drawer_link--active"
+				>
 					<DrawerLinkInfo name="About" icon={<IoMdPerson />} />
-				</Link>
+				</AniLink>
 			</DrawerNavLink>
 			<DrawerNavLink>
 				<a href="mailto:anthony.j.caron@gmail.com">
