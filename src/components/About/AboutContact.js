@@ -4,7 +4,7 @@ import { IoMdMail } from 'react-icons/io';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 import { media } from '../../utils/media.js';
-import { H2, Paragraph } from '../Text/Text.js';
+import { SectionTitle, SectionParagraph } from '../Text/Text.js';
 
 const StyledAboutContact = styled.section``;
 
@@ -86,10 +86,10 @@ const AboutContactList = styled.ul`
 const AboutContact = () => {
 	return (
 		<StyledAboutContact>
-			<H2>Get In Touch</H2>
-			<Paragraph center>
+			<SectionTitle center>Get In Touch</SectionTitle>
+			<SectionParagraph center>
 				I'd love to answer any questions you may have.
-			</Paragraph>
+			</SectionParagraph>
 			<AboutContactList>
 				<li>
 					<a href="mailto:anthony.j.caron@gmail.com">

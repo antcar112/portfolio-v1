@@ -1,29 +1,42 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { media } from '../../utils/media.js';
 import TechItem from '../About/TechItem';
-import { CardTitle, CardText } from '../Card/Card';
+import { SectionSubtitle, SectionParagraph } from '../Text/Text.js';
 
-const StyledProjectTech = styled.section`
-	width: 100%;
-	max-width: 1100px;
-	margin: 50px auto;
-`;
+const StyledProjectTech = styled.div`margin: 50px auto 0;`;
 
 const TechGrid = styled.div`
 	display: grid;
-	grid-template-columns: repeat(9, 1fr);
-	margin: 50px auto;
+	grid-template-columns: repeat(8, 1fr);
+	grid-gap: 30px 20px;
+	margin: 50px auto 20px;
+
+	${media.down.lg} {
+		grid-template-columns: repeat(7, 1fr);
+	}
+	${media.down.md} {
+		grid-template-columns: repeat(6, 1fr);
+		grid-gap: 35px 20px;
+	}
+	${media.down.sm} {
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 35px 10px;
+	}
+	${media.down.xs} {
+		grid-template-columns: repeat(3, 1fr);
+	}
 `;
 
 const ProjectTech = ({ tech }) => {
 	return (
 		<StyledProjectTech>
-			<CardTitle>Tools Used</CardTitle>
-			<CardText>
-				Some of the key pieces of technology I used to create this
-				project.
-			</CardText>
+			<SectionSubtitle>Tools Used</SectionSubtitle>
+			<SectionParagraph>
+				Here are some of the key pieces of technology used in building
+				and designing this project.
+			</SectionParagraph>
 			<TechGrid>
 				{tech.map(t => <TechItem tech={t} key={t.name} />)}
 			</TechGrid>

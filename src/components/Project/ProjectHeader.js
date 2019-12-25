@@ -2,19 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 
+import { media } from '../../utils/media.js';
+import { PageTitle, PageSubtitle } from '../Text/Text';
+
 const StyledHeader = styled.section`
 	width: 100%;
-	padding-top: 2em;
-	& h2 {
-		color: ${({ theme }) => theme.color.primary};
-		font-weight: 400;
-		text-align: center;
-		margin-bottom: 1em;
-	}
+	padding-top: 1.5em;
 `;
 const ColorSection = styled.div`
+	margin-top: 10vh;
 	width: 100%;
-	height: 80vh;
+	height: 85vh;
 	background: ${({ background }) => background};
 	display: grid;
 	place-items: center center;
@@ -22,13 +20,27 @@ const ColorSection = styled.div`
 	& img {
 		height: 80%;
 	}
+
+	${media.down.md} {
+		height: 75vh;
+	}
+	${media.down.sm} {
+		height: 65vh;
+	}
+	${media.down.xs} {
+		height: 50vh;
+		& img {
+			height: auto;
+			width: 80%;
+		}
+	}
 `;
 
 const ProjectHeader = ({ background, title, subtitle, image }) => {
 	return (
 		<StyledHeader>
-			<h1>{title}</h1>
-			<h2>{subtitle}</h2>
+			<PageTitle>{title}</PageTitle>
+			<PageSubtitle>{subtitle}</PageSubtitle>
 			<ColorSection background={background}>
 				<Fade bottom>
 					<img src={image} alt={title} />

@@ -2,12 +2,21 @@ import styled from 'styled-components';
 
 import { media } from '../../utils/media.js';
 
-export const H2 = styled.h2`
+export const PageTitle = styled.h1`text-align: center;`;
+export const PageSubtitle = styled.h2`
+	color: ${({ theme }) => theme.color.primary};
+	font-weight: 400;
 	text-align: center;
-	margin-bottom: 0.5em;
 `;
 
-export const Paragraph = styled.p`
+export const SectionTitle = styled.h2`
+	text-align: ${({ center }) => (center ? 'center' : 'left')};
+	margin-bottom: 0.4em;
+`;
+
+export const SectionSubtitle = styled.h3`margin-bottom: 16px;`;
+
+export const SectionParagraph = styled.p`
 	text-align: ${props => (props.center ? 'center' : 'left')};
 	font-size: 1.2em;
 	line-height: 1.5em;
@@ -23,13 +32,25 @@ export const Paragraph = styled.p`
 		line-height: 1.4em;
 	}
 
-	${media.down.md} {
-		top: -25px;
-		justify-self: center;
+	${media.down.sm} {
+		font-size: 1em;
+	}
+`;
+
+export const SectionListItem = styled.li`
+	font-size: 1.2em;
+	margin-bottom: 0.7em;
+
+	& .bold {
+		font-weight: 700;
+		color: ${({ theme }) => theme.color.primary};
+	}
+
+	${media.down.lg} {
+		font-size: 1.1em;
 	}
 
 	${media.down.sm} {
 		font-size: 1em;
-		line-height: 1.4em;
 	}
 `;

@@ -63,5 +63,12 @@ export const codyTech = [
 	},
 	{ name: 'Abobe Photoshop', image: photoshop, inProgress: false },
 ];
+export const generalsTech = [
+	{ name: 'HTML5', image: html, inProgress: false },
+	{ name: 'CSS3', image: css, inProgress: false },
+	{ name: 'Sass', image: sass, inProgress: false },
+	{ name: 'JavaScript', image: javascript, inProgress: false },
+	{ name: 'Abobe Photoshop', image: photoshop, inProgress: false },
+];
 
 export default tech;

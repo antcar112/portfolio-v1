@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { PageTitle } from '../Text/Text';
 import Container from '../Container/Container';
 import ProjectList from './ProjectList';
-
-const Heading = styled.h1``;
 
 const StyledWork = styled.section`
 	width: 100%;
@@ -24,7 +23,7 @@ const Work = () => {
 	return (
 		<StyledWork>
 			<ScrollTarget id="scroll-target" />
-			<Heading>Projects</Heading>
+			<PageTitle>Projects</PageTitle>
 			<Container>
 				<ProjectList />
 			</Container>

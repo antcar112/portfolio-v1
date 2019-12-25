@@ -1,127 +1,10 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import { media } from '../../utils/media.js';
 import ButtonText from './ButtonText';
-
-const SharedBtnStyles = css`
-	cursor: pointer;
-	display: inline-block;
-	position: relative;
-	text-decoration: none;
-	transition: ${({ theme }) => theme.hoverTransition};
-	overflow: hidden;
-
-	&::after {
-		content: '';
-		position: absolute;
-		z-index: 1;
-		top: 0;
-		bottom: 0;
-		left: 110%;
-		width: 120%;
-
-		transition: all 375ms;
-	}
-
-	&:hover::after,
-	&:active::after,
-	&:focus::after {
-		left: -10%;
-	}
-
-	& div {
-		width: 100%;
-		height: 100%;
-		display: inline-block;
-		display: grid;
-		place-items: center center;
-		pointer-events: none;
-	}
-
-	& span {
-		display: inline-block;
-		font-size: 1.2em;
-		pointer-events: none;
-	}
-
-	& .btn_text--text {
-		transition: transform 500ms, opacity 250ms 120ms;
-		opacity: 1;
-	}
-
-	&:hover .btn_text--text,
-	&:active .btn_text--text,
-	&:focus .btn_text--text {
-		opacity: 0;
-		transform: translateX(-20%);
-		transition: transform 500ms, opacity 250ms;
-	}
-
-	& .btn_text--hidden {
-		position: absolute;
-		transition: right 500ms, opacity 250ms;
-		opacity: 0;
-		right: -20%;
-		top: 0;
-		z-index: 2;
-	}
-
-	&:hover .btn_text--hidden,
-	&:active .btn_text--hidden,
-	&:focus .btn_text--hidden {
-		right: 0;
-		opacity: 1;
-		transition: right 500ms, opacity 250ms 120ms;
-	}
-
-	${media.down.md} {
-		& span {
-			font-size: 1em;
-		}
-	}
-
-	${media.down.xs} {
-		width: 90%;
-	}
-`;
-
-const BtnSolidStyles = css`
-	${SharedBtnStyles};
-	border: none;
-	background: ${({ theme }) => theme.color.primary};
-
-	&::after {
-		background: ${({ theme }) => theme.color.primaryDarkened};
-	}
-
-	& span {
-		color: white;
-	}
-`;
-
-const BtnOutlineStyles = css`
-	${SharedBtnStyles};
-	border: 4px solid ${({ theme }) => theme.color.primary};
-	background: ${({ theme }) => theme.color.bgCard};
-
-	&::after {
-		background: ${({ theme }) => theme.color.primary};
-	}
-
-	& .btn_text--text {
-		& span {
-			color: ${({ theme }) => theme.color.primary};
-		}
-	}
-
-	& .btn_text--hidden {
-		& span {
-			color: white;
-		}
-	}
-`;
+import { BtnSolidStyles, BtnOutlineStyles } from './ButtonStyles';
 
 const StyledBtn = styled.button`
 	${BtnSolidStyles};
@@ -132,6 +15,14 @@ const StyledBtn = styled.button`
 	${media.down.md} {
 		width: 220px;
 		padding: 1.1em;
+
+		& span {
+			font-size: 1em;
+		}
+	}
+
+	${media.down.xs} {
+		width: 90%;
 	}
 `;
 const StyledBtnAnchor = styled.a`
@@ -146,7 +37,14 @@ const StyledBtnAnchor = styled.a`
 
 	${media.down.md} {
 		width: 220px;
-		padding: 1.1em;
+	}
+	${media.down.sm} {
+		height: 50px;
+		width: 100%;
+
+		& span {
+			font-size: 1em;
+		}
 	}
 `;
 
@@ -163,7 +61,15 @@ const StyledBtnOutlineAnchor = styled.a`
 
 	${media.down.md} {
 		width: 220px;
-		padding: 1.1em;
+	}
+
+	${media.down.sm} {
+		height: 50px;
+		width: 100%;
+
+		& span {
+			font-size: 1em;
+		}
 	}
 `;
 
@@ -191,33 +97,30 @@ const StyledBtnOutlineAniLink = styled(AniLink)`
 
 const StyledBackBtnOutline = styled(AniLink)`
 	${BtnOutlineStyles};
-	width: 70px;
-	height: 70px;
-	position: fixed;
-	bottom: 40px;
-	right: 40px;
+	width: 260px;
+	height: 55px;
 	background: ${({ theme }) => theme.color.bg};
+	margin-bottom: 30px;
 
 	& span {
-		font-size: 1em;
+		font-size: 1.2em;
 	}
 	
 	${media.down.md} {
-		width: 60px;
-		height: 60px;
-		bottom: 20px;
-		right: 20px;
+		margin-top: 30px;
+	}
+
+	${media.down.sm} {
+		height: 50px;
+		width: 100%;
 
 		& span {
-			font-size: 0.9em;
+			font-size: 1em;
 		}
 	}
-
-	${media.down.xs} {
-		width: 60px;
-		height: 60px;
-	}
 `;
+
+const BackBtnContainer = styled.div`${media.down.xs} {margin: 0 20px;}`;
 
 export const Btn = ({ text, handleClick }) => (
 	<StyledBtn onClick={handleClick}>
@@ -252,21 +155,22 @@ export const BtnOutlineAniLink = ({ path, text, direction }) => (
 		bg="#0F97DB"
 		duration={0.8}
 	>
-		<div />
 		<ButtonText text={text} type={'text'} />
 		<ButtonText text={text} type={'hidden'} />
 	</StyledBtnOutlineAniLink>
 );
 
 export const BackBtnOutline = ({ path, text, direction }) => (
-	<StyledBackBtnOutline
-		to={path}
-		cover
-		direction={direction}
-		bg="#0F97DB"
-		duration={0.8}
-	>
-		<ButtonText text={text} type={'text'} />
-		<ButtonText text={text} type={'hidden'} />
-	</StyledBackBtnOutline>
+	<BackBtnContainer>
+		<StyledBackBtnOutline
+			to={path}
+			cover
+			direction={direction}
+			bg="#0F97DB"
+			duration={0.8}
+		>
+			<ButtonText text={text} type={'text'} />
+			<ButtonText text={text} type={'hidden'} />
+		</StyledBackBtnOutline>
+	</BackBtnContainer>
 );

@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { codyCameron } from '../content/projects.js';
+import { codyCameron as project } from '../content/projects.js';
 import { codyTech as tech } from '../content/tech.js';
 import Layout from '../components/layout';
 import Container from '../components/Container/Container';
 import ProjectHeader from '../components/Project/ProjectHeader';
 import ProjectInfo from '../components/Project/ProjectInfo';
-import ProjectTech from '../components/Project/ProjectTech';
+import ProjectVideo from '../components/Project/ProjectVideo';
+import ProjectDev from '../components/Project/ProjectDev';
 import { BackBtnOutline } from '../components/Button/Button';
 
 const {
@@ -18,7 +19,10 @@ const {
 	image,
 	githubLink,
 	hostedLink,
-} = codyCameron;
+	video,
+	devDesc,
+	features,
+} = project;
 
 const ProjectContainer = styled.div`
 	background: ${({ theme }) => theme.color.bg};
@@ -42,15 +46,10 @@ const CodyCameron = () => (
 					githubLink={githubLink}
 					hostedLink={hostedLink}
 				/>
-				<img
-					src={image}
-					style={{ display: 'block', margin: '30px auto' }}
-				/>
-				<ProjectTech tech={tech} />
-				<p>Screenshot?</p>
-				<p>Motivation + Design Details?</p>
+				<ProjectVideo video={video} title={title} />
+				<ProjectDev devDesc={devDesc} features={features} tech={tech} />
+				<BackBtnOutline path="/" text="Go Back" direction="down" />
 			</Container>
-			<BackBtnOutline path="/" text="Back" direction="down" />
 		</ProjectContainer>
 	</Layout>
 );

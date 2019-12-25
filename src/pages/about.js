@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Layout from '../components/layout';
 import Container from '../components/Container/Container';
+import { PageTitle } from '../components/Text/Text';
 import AboutIntro from '../components/About/AboutIntro';
 import AboutSkills from '../components/About/AboutSkills';
 import AboutContact from '../components/About/AboutContact';
@@ -18,7 +19,7 @@ const About = () => {
 		<Layout>
 			<StyledAbout>
 				<Container>
-					<h1>About Me</h1>
+					<PageTitle>About Me</PageTitle>
 					<AboutIntro />
 					<AboutSkills />
 					<AboutContact />

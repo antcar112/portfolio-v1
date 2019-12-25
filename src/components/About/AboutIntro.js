@@ -5,7 +5,7 @@ import { media } from '../../utils/media.js';
 import { CardStyles } from '../Card/Card';
 import anthony from '../../images/anthony.jpg';
 
-import { Paragraph } from '../Text/Text.js';
+import { SectionParagraph } from '../Text/Text.js';
 
 const StyledAboutIntro = styled.section`
 	display: grid;
@@ -96,7 +96,7 @@ const AboutIntro = () => {
 				<h2 className="cursive">
 					I'm <span>Anthony</span>,
 				</h2>
-				<Paragraph>
+				<SectionParagraph>
 					a software developer and designer. I am currently earning a{' '}
 					<a
 						className="bold"
@@ -108,18 +108,18 @@ const AboutIntro = () => {
 					<a className="bold" href="https://www.bcit.ca/">
 						British Columbia Institute of Technology
 					</a>.
-				</Paragraph>{' '}
-				<Paragraph>
+				</SectionParagraph>{' '}
+				<SectionParagraph>
 					I love how developing software allows me to build something
 					new from scratch. I also enjoying the constant problem
 					solving and learning.
-				</Paragraph>
-				<Paragraph>
+				</SectionParagraph>
+				<SectionParagraph>
 					I currently live in the greater{' '}
 					<span className="bold">Vancouver</span> area. In my spare
 					time, I enjoy watching hockey, exploring new types of music,
 					running and cooking.
-				</Paragraph>
+				</SectionParagraph>
 			</AboutText>
 		</StyledAboutIntro>
 	);
