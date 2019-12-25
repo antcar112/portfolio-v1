@@ -23,7 +23,7 @@ const StyledFooter = styled.footer`
 const Footer = () => {
 	return (
 		<StyledFooter>
-			<span>© Anthony Caron {new Date().getFullYear()}.</span>
+			<span>© Anthony Caron {new Date().getFullYear()}</span>
 			<span>Website designed and developed by Anthony Caron.</span>
 		</StyledFooter>
 	);

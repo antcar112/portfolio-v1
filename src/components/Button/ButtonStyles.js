@@ -5,7 +5,8 @@ const SharedBtnStyles = css`
 	display: inline-block;
 	position: relative;
 	text-decoration: none;
-	transition: ${({ theme }) => theme.hoverTransition};
+	transition: ${({ theme }) => theme.hoverTransition},
+		border-color 300ms linear;
 	overflow: hidden;
 
 	&::after {
@@ -91,8 +92,12 @@ export const BtnOutlineStyles = css`
 	border: 4px solid ${({ theme }) => theme.color.primary};
 	background: none;
 
+	&:hover {
+		border-color: ${({ theme }) => theme.color.primaryDarkened};
+	}
+
 	&::after {
-		background: ${({ theme }) => theme.color.primary};
+		background: ${({ theme }) => theme.color.primaryDarkened};
 	}
 	& div {
 		width: 100%;
