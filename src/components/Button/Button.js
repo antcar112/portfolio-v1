@@ -97,7 +97,7 @@ const StyledBtnOutlineAniLink = styled(AniLink)`
 
 const StyledBackBtnOutline = styled(AniLink)`
 	${BtnOutlineStyles};
-	width: 260px;
+	width: 280px;
 	height: 55px;
 	background: ${({ theme }) => theme.color.bg};
 	margin-bottom: 30px;
@@ -120,7 +120,15 @@ const StyledBackBtnOutline = styled(AniLink)`
 	}
 `;
 
-const BackBtnContainer = styled.div`${media.down.xs} {margin: 0 20px;}`;
+const BackBtnContainer = styled.div`
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+
+	${media.down.xs} {
+		padding: 0 20px;
+	}
+`;
 
 export const Btn = ({ text, handleClick }) => (
 	<StyledBtn onClick={handleClick}>

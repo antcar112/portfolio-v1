@@ -29,8 +29,6 @@ const ProjectContainer = styled.div`
 	transition: ${({ theme }) => theme.hoverTransition};
 `;
 
-const BackBtnContainer = styled.div`width: 100%;`;
-
 const Timeego = () => (
 	<Layout>
 		<ProjectContainer>

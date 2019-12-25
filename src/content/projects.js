@@ -1,6 +1,7 @@
 import timeegoImg from '../images/timeego.png';
 import timeegoVideo from '../images/videos/timeego.webp';
 import cody from '../images/cody-cameron.png';
+import codyVideo from '../images/videos/codyVideo.webp';
 import pizza from '../images/pizza.png';
 
 const projects = [
@@ -31,7 +32,7 @@ const projects = [
 			'This is a portfolio website made for Cody Cameron, a graphic designer and artist based in Vancouver, BC.',
 		link        : '/cody-cameron/',
 		image       : cody,
-		video       : timeegoVideo,
+		video       : codyVideo,
 		background  : '#A3D9FF',
 		githubLink  : 'https://github.com/antcar112/cody-cameron-portfolio',
 		hostedLink  : 'https://eloquent-wozniak-860d04.netlify.com/',

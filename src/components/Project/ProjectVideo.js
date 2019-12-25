@@ -7,8 +7,10 @@ const VideoContainer = styled.section`
 	display: grid;
 	place-items: center center;
 	margin: 60px auto 0;
+	padding: 0 20px;
 
 	& img {
+		max-height: 82vh;
 	}
 `;
 
