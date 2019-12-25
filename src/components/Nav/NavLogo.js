@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'gatsby';
+import React, { useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import { media } from '../../utils/media.js';
 
-const NavLogoContainer = styled(Link)`
+const NavLogoContainer = styled(AniLink)`
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -53,8 +53,15 @@ const NavLogoContainer = styled(Link)`
 `;
 
 const NavLogo = () => {
+	const themeContext = useContext(ThemeContext);
 	return (
-		<NavLogoContainer to="/">
+		<NavLogoContainer
+			to="/"
+			cover
+			direction="right"
+			bg={themeContext.color.primary}
+			duration={0.8}
+		>
 			<div className="logo" />
 			<span>Anthony Caron</span>
 		</NavLogoContainer>

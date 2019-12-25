@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import {
@@ -32,6 +32,7 @@ const DrawerList = ({ colorTheme, toggleTheme, setDrawerOpen }) => {
 		toggleTheme();
 		setDrawerOpen();
 	};
+	const themeContext = useContext(ThemeContext);
 	return (
 		<NavList>
 			<DrawerNavLink>
@@ -39,7 +40,7 @@ const DrawerList = ({ colorTheme, toggleTheme, setDrawerOpen }) => {
 					to="/"
 					cover
 					direction="right"
-					bg="#0F97DB"
+					bg={themeContext.color.primary}
 					duration={0.8}
 					activeClassName="nav_drawer_link--active"
 				>
@@ -51,7 +52,7 @@ const DrawerList = ({ colorTheme, toggleTheme, setDrawerOpen }) => {
 					to="/about/"
 					cover
 					direction="left"
-					bg="#0F97DB"
+					bg={themeContext.color.primary}
 					duration={0.8}
 					activeClassName="nav_drawer_link--active"
 				>

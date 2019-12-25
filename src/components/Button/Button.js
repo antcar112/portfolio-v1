@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import { media } from '../../utils/media.js';
@@ -155,30 +155,36 @@ export const BtnOutlineAnchor = ({ text, link }) => (
 	</StyledBtnOutlineAnchor>
 );
 
-export const BtnOutlineAniLink = ({ path, text, direction }) => (
-	<StyledBtnOutlineAniLink
-		to={path}
-		cover
-		direction={direction}
-		bg="#0F97DB"
-		duration={0.8}
-	>
-		<ButtonText text={text} type={'text'} />
-		<ButtonText text={text} type={'hidden'} />
-	</StyledBtnOutlineAniLink>
-);
-
-export const BackBtnOutline = ({ path, text, direction }) => (
-	<BackBtnContainer>
-		<StyledBackBtnOutline
+export const BtnOutlineAniLink = ({ path, text, direction }) => {
+	const themeContext = useContext(ThemeContext);
+	return (
+		<StyledBtnOutlineAniLink
 			to={path}
 			cover
 			direction={direction}
-			bg="#0F97DB"
+			bg={themeContext.color.primary}
 			duration={0.8}
 		>
 			<ButtonText text={text} type={'text'} />
 			<ButtonText text={text} type={'hidden'} />
-		</StyledBackBtnOutline>
-	</BackBtnContainer>
-);
+		</StyledBtnOutlineAniLink>
+	);
+};
+
+export const BackBtnOutline = ({ path, text, direction }) => {
+	const themeContext = useContext(ThemeContext);
+	return (
+		<BackBtnContainer>
+			<StyledBackBtnOutline
+				to={path}
+				cover
+				direction={direction}
+				bg={themeContext.color.primary}
+				duration={0.8}
+			>
+				<ButtonText text={text} type={'text'} />
+				<ButtonText text={text} type={'hidden'} />
+			</StyledBackBtnOutline>
+		</BackBtnContainer>
+	);
+};

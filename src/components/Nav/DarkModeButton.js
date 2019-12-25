@@ -13,6 +13,8 @@ const DarkModeBtn = styled.button`
 	position: relative;
 
 	&:hover {
+		color: ${({ theme }) => theme.color.textSecondary};
+
 		& span {
 			transform: translateY(0);
 			opacity: 1;

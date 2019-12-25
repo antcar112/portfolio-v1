@@ -1,5 +1,5 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
+import React, { useContext } from 'react';
+import styled, { css, ThemeContext } from 'styled-components';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import { media } from '../../utils/media.js';
@@ -41,13 +41,15 @@ const StyledNavLink = styled(AniLink)`${styles};`;
 const StyledNavAnchor = styled.a`${styles};`;
 
 export const NavLink = ({ path, name, direction }) => {
+	const themeContext = useContext(ThemeContext);
+
 	return (
 		<li>
 			<StyledNavLink
 				to={path}
 				cover
 				direction={direction}
-				bg="#0F97DB"
+				bg={themeContext.color.primary}
 				duration={0.8}
 				activeClassName="nav_link--active"
 			>
