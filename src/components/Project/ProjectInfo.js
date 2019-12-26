@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { media } from '../../utils/media.js';
-import { BtnAnchor, BtnOutlineAnchor } from '../Button/Button';
+import Button from '../Button/Button';
 import {
 	SectionTitle,
 	SectionSubtitle,
@@ -11,12 +11,7 @@ import {
 
 const StyledProjectInfo = styled.section`
 	width: 100%;
-	max-width: 1100px;
 	margin: 10px auto 0;
-
-	${media.down.xs} {
-		padding: 0 20px;
-	}
 `;
 
 const Grid = styled.div`
@@ -66,8 +61,8 @@ const ProjectInfo = ({
 					<SectionParagraph>{description}</SectionParagraph>
 				</div>
 				<Buttons>
-					<BtnAnchor text="See Website" link={hostedLink} />
-					<BtnOutlineAnchor text="View on GitHub" link={githubLink} />
+					<Button text="See Website" href={hostedLink} />
+					<Button outline text="View on GitHub" href={githubLink} />
 				</Buttons>
 			</Grid>
 		</StyledProjectInfo>

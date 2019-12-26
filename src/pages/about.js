@@ -16,7 +16,7 @@ const StyledAbout = styled.section`
 
 const About = () => {
 	return (
-		<Layout>
+		<Layout pageTitle={'About'}>
 			<StyledAbout>
 				<Container>
 					<PageTitle>About Me</PageTitle>

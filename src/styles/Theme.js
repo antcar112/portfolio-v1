@@ -28,8 +28,10 @@ const darkTheme = {
 		textSecondary   : '#AAAAAA',
 		bg              : '#151515',
 		bgCard          : '#1D1D1D',
-		primary         : '#CD2A25',
-		primaryDarkened : '#C11E19',
+		primary         : '#0F97DB',
+		primaryDarkened : '#0d8bca',
+		// primary         : '#CD2A25',
+		// primaryDarkened : '#C11E19',
 	},
 };
 

@@ -5,7 +5,12 @@ import { media } from '../../utils/media.js';
 import TechItem from '../About/TechItem';
 import { SectionSubtitle, SectionParagraph } from '../Text/Text.js';
 
-const StyledProjectTech = styled.div`margin: 50px auto 0;`;
+const StyledProjectTech = styled.div`
+	margin: 50px auto 0;
+	${media.down.md} {
+		margin-bottom: 30px;
+	}
+`;
 
 const TechGrid = styled.div`
 	display: grid;

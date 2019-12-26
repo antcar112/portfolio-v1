@@ -5,7 +5,7 @@ import Hero from '../components/Hero/Hero';
 import Work from '../components/Work/Work';
 
 const Home = () => (
-	<Layout>
+	<Layout pageTitle={'Work'}>
 		<Hero />
 		<Work />
 	</Layout>

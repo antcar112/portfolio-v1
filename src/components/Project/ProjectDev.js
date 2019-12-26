@@ -1,20 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { media } from '../../utils/media.js';
 import ProjectFeatures from './ProjectFeatures';
 import ProjectTech from './ProjectTech';
 import { SectionTitle, SectionParagraph } from '../Text/Text.js';
 
-const StyledProjectDev = styled.section`
-	width: 100%;
-	max-width: 1100px;
-	margin: 60px auto 0;
-
-	${media.down.xs} {
-		padding: 0 20px;
-	}
-`;
+const StyledProjectDev = styled.section`margin: 60px auto 0;`;
 
 const ProjectDev = ({ devDesc, tech, features }) => {
 	return (

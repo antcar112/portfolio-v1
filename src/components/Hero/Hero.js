@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { media } from '../../utils/media.js';
-import { Btn } from '../Button/Button';
+import Button from '../Button/Button';
 
 const StyledHero = styled.div`
 	width: 100%;
@@ -68,7 +68,7 @@ const Hero = () => {
 				<HeroText>
 					I’m a software developer and designer from Vancouver, BC
 				</HeroText>
-				<Btn text={'See my work'} handleClick={scrollDown} />
+				<Button text={'See my work'} handleClick={scrollDown} />
 			</div>
 		</StyledHero>
 	);

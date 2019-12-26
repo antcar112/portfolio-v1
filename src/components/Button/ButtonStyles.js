@@ -1,5 +1,7 @@
 import { css } from 'styled-components';
 
+import { media } from '../../utils/media.js';
+
 const SharedBtnStyles = css`
 	cursor: pointer;
 	display: inline-block;
@@ -8,6 +10,8 @@ const SharedBtnStyles = css`
 	transition: ${({ theme }) => theme.hoverTransition},
 		border-color 300ms linear;
 	overflow: hidden;
+	width: 250px;
+	height: 60px;
 
 	&::after {
 		content: '';
@@ -38,7 +42,7 @@ const SharedBtnStyles = css`
 
 	& span {
 		display: inline-block;
-		font-size: 1.2em;
+		font-size: 1.1em;
 		pointer-events: none;
 	}
 
@@ -70,6 +74,15 @@ const SharedBtnStyles = css`
 		right: 0;
 		opacity: 1;
 		transition: right 500ms, opacity 250ms 120ms;
+	}
+
+	${media.down.sm} {
+		height: 50px;
+		width: 100%;
+
+		& span {
+			font-size: 1em;
+		}
 	}
 `;
 
