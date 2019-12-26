@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { PageTitle } from '../Text/Text';
 import Container from '../Container/Container';
-import ProjectList from './ProjectList';
+import WorkList from './WorkList';
 
 const StyledWork = styled.section`
 	width: 100%;
@@ -25,7 +25,7 @@ const Work = () => {
 			<ScrollTarget id="scroll-target" />
 			<PageTitle>Projects</PageTitle>
 			<Container>
-				<ProjectList />
+				<WorkList />
 			</Container>
 		</StyledWork>
 	);

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { media } from '../../utils/media.js';
-import { CardStyles } from '../Card/Card';
+import Card from '../Card/Card';
 import anthony from '../../images/anthony.jpg';
 
 import { SectionParagraph } from '../Text/Text.js';
@@ -45,12 +45,10 @@ const AboutImage = styled.img`
 	}
 `;
 
-const AboutText = styled.div`
-	${CardStyles};
+const AboutCard = styled(Card)`
 	width: 100%;
 	max-width: 550px;
 	justify-self: flex-start;
-	grid-area: card;
 	position: relative;
 	left: -25px;
 	top: 50px;
@@ -92,7 +90,7 @@ const AboutIntro = () => {
 	return (
 		<StyledAboutIntro>
 			<AboutImage src={anthony} alt="Anthony" />
-			<AboutText className="about-text">
+			<AboutCard className="about-text">
 				<h2 className="cursive">
 					I'm <span>Anthony</span>,
 				</h2>
@@ -120,7 +118,7 @@ const AboutIntro = () => {
 					time, I enjoy watching hockey, exploring new types of music,
 					running and cooking.
 				</SectionParagraph>
-			</AboutText>
+			</AboutCard>
 		</StyledAboutIntro>
 	);
 };
