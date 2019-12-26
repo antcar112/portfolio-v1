@@ -5,7 +5,7 @@ import Header from './Header';
 import NavLogo from './NavLogo';
 import NavList from './NavList';
 import Hamburger from './Hamburger';
-import NavDrawer from './NavDrawer';
+import Drawer from './Drawer';
 
 const StyledNav = styled.nav`
 	width: 100%;
@@ -28,7 +28,7 @@ const Nav = ({ colorTheme, toggleTheme }) => {
 					drawerOpen={drawerOpen}
 					setDrawerOpen={setDrawerOpen}
 				/>
-				<NavDrawer
+				<Drawer
 					drawerOpen={drawerOpen}
 					colorTheme={colorTheme}
 					toggleTheme={toggleTheme}

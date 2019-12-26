@@ -43,7 +43,6 @@ export default createGlobalStyle`
         font-family: ${({ theme }) => theme.font.heading};
         font-weight: 700;
         color: ${({ theme }) => theme.color.text};
-        color: ${({ theme }) => theme.color.text};
         font-size: 5em;
         text-align: center;
 

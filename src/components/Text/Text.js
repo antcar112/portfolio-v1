@@ -11,16 +11,18 @@ export const PageSubtitle = styled.h2`
 
 export const SectionTitle = styled.h2`
 	text-align: ${({ center }) => (center ? 'center' : 'left')};
-	margin-bottom: 0.4em;
+	margin-bottom: ${({ card }) => (card ? '10px' : '0.4em')};
 `;
 
-export const SectionSubtitle = styled.h3`margin-bottom: 16px;`;
+export const SectionSubtitle = styled.h3`
+	margin-bottom: ${({ card }) => (card ? '30px;' : '16px')};
+`;
 
 export const SectionParagraph = styled.p`
 	text-align: ${props => (props.center ? 'center' : 'left')};
 	font-size: 1.2em;
 	line-height: 1.5em;
-	margin-bottom: 1.4em;
+	margin-bottom: ${({ card }) => (card ? '30px' : '1.4em')};
 
 	& .bold {
 		font-weight: 700;
@@ -45,7 +47,6 @@ export const SectionListItem = styled.li`
 		font-weight: 700;
 		color: ${({ theme }) => theme.color.primary};
 	}
-
 	${media.down.lg} {
 		font-size: 1.1em;
 	}

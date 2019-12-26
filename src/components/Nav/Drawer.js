@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { media } from '../../utils/media.js';
 import DrawerList from './DrawerList';
 
-const StyledDrawer = styled.div`
+const StyledDrawer = styled.aside`
 	position: fixed;
 	display: none;
 	background-color: ${({ theme }) => theme.color.bg};
@@ -38,7 +38,7 @@ const StyledNav = styled.nav`
 	padding: 0;
 `;
 
-const NavDrawer = ({ drawerOpen, colorTheme, toggleTheme, setDrawerOpen }) => {
+const Drawer = ({ drawerOpen, colorTheme, toggleTheme, setDrawerOpen }) => {
 	return (
 		<StyledDrawer className={drawerOpen ? 'drawer-open' : ''}>
 			<StyledNav>
@@ -52,4 +52,4 @@ const NavDrawer = ({ drawerOpen, colorTheme, toggleTheme, setDrawerOpen }) => {
 	);
 };
 
-export default NavDrawer;
+export default Drawer;

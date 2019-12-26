@@ -2,7 +2,8 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 
 import { StyledProject, ImageContainer } from './ProjectStyles';
-import { Card, CardTitle, CardSubtitle, CardText } from '../Card/Card';
+import { Card } from '../Card/Card';
+import { SectionTitle, SectionSubtitle, SectionParagraph } from '../Text/Text';
 import Button from '../Button/Button';
 
 const Project = ({ project, index }) => {
@@ -14,9 +15,9 @@ const Project = ({ project, index }) => {
 				</ImageContainer>
 			</Fade>
 			<Card>
-				<CardTitle>{project.title}</CardTitle>
-				<CardSubtitle>{project.subtitle}</CardSubtitle>
-				<CardText>{project.description}</CardText>
+				<SectionTitle card>{project.title}</SectionTitle>
+				<SectionSubtitle card>{project.subtitle}</SectionSubtitle>
+				<SectionParagraph card>{project.description}</SectionParagraph>
 				<Button
 					outline
 					to={project.link}
