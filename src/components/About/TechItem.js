@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 
 import { media } from '../../utils/media.js';
+import { GlobalThemeContext } from '../../context/GlobalContextProvider';
 
 const StyledTechItem = styled.div`
 	display: flex;
@@ -10,11 +11,15 @@ const StyledTechItem = styled.div`
 
 	& img {
 		height: 45px;
-		filter: grayscale(100%);
+		filter: ${({ colorTheme, invert }) =>
+				colorTheme === 'dark' && invert ? 'invert(1)' : ''}
+			grayscale(100%);
 		transition: 150ms filter linear;
 
 		${media.down.md} {
-			filter: grayscale(0);
+			filter: ${({ colorTheme, invert }) =>
+					colorTheme === 'dark' && invert ? 'invert(1)' : ''}
+				grayscale(0);
 		}
 		${media.down.xs} {
 			height: 35px;
@@ -53,7 +58,9 @@ const StyledTechItem = styled.div`
 	}
 	&:hover {
 		& img {
-			filter: grayscale(0);
+			filter: ${({ colorTheme, invert }) =>
+					colorTheme === 'dark' && invert ? 'invert(1)' : ''}
+				grayscale(0);
 		}
 		& span {
 			transform: translateY(0px);
@@ -63,8 +70,9 @@ const StyledTechItem = styled.div`
 `;
 
 const TechItem = ({ tech }) => {
+	const theme = useContext(GlobalThemeContext);
 	return (
-		<StyledTechItem>
+		<StyledTechItem colorTheme={theme.theme} invert={tech.invert}>
 			<img src={tech.image} alt={tech.name} />
 			<span className="tech_name">{tech.name}</span>
 			{tech.inProgress && (

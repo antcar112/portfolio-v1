@@ -21,13 +21,13 @@ const StyledNavList = styled.ul`
 	}
 `;
 
-const NavList = ({ colorTheme, toggleTheme }) => (
+const NavList = () => (
 	<StyledNavList>
 		<NavLink path="/" name="Work" direction="right" />
 		<NavLink path="/about/" name="About" direction="left" />
 		<NavAnchor path="mailto:anthony.j.caron@gmail.com" name="Contact" />
 		<SocialLinks />
-		<DarkModeButton colorTheme={colorTheme} toggleTheme={toggleTheme} />
+		<DarkModeButton />
 	</StyledNavList>
 );
 

@@ -14,18 +14,9 @@ const StyledAnchor = styled.a`
 
 const StyledAniLink = styled(AniLink)`
 	${({ outline }) => (outline ? BtnOutlineStyles : BtnSolidStyles)};
-	${({ back }) => back && 'margin-bottom: 30px;'};
 `;
 
-export const Button = ({
-	outline,
-	to,
-	href,
-	back,
-	text,
-	direction,
-	handleClick,
-}) => {
+export const Button = ({ outline, to, href, text, direction, handleClick }) => {
 	const themeContext = useContext(ThemeContext);
 	if (to) {
 		return (
@@ -36,7 +27,6 @@ export const Button = ({
 				direction={direction}
 				bg={themeContext.color.primary}
 				duration={0.8}
-				back={back}
 			>
 				<ButtonText text={text} type={'text'} />
 				<ButtonText text={text} type={'hidden'} />

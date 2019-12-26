@@ -14,26 +14,22 @@ const StyledNav = styled.nav`
 	justify-content: space-between;
 `;
 
-const Nav = ({ colorTheme, toggleTheme }) => {
+const Nav = () => {
 	const [
 		drawerOpen,
 		setDrawerOpen,
 	] = useState(false);
+
 	return (
 		<Header>
 			<StyledNav>
 				<NavLogo />
-				<NavList colorTheme={colorTheme} toggleTheme={toggleTheme} />
+				<NavList />
 				<Hamburger
 					drawerOpen={drawerOpen}
 					setDrawerOpen={setDrawerOpen}
 				/>
-				<Drawer
-					drawerOpen={drawerOpen}
-					colorTheme={colorTheme}
-					toggleTheme={toggleTheme}
-					setDrawerOpen={setDrawerOpen}
-				/>
+				<Drawer drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />
 			</StyledNav>
 		</Header>
 	);

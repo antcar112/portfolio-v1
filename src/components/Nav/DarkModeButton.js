@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { IoMdSunny, IoMdMoon } from 'react-icons/io';
+
+import { GlobalThemeContext } from '../../context/GlobalContextProvider';
 
 const DarkModeBtn = styled.button`
 	border: none;
@@ -46,10 +48,11 @@ const DarkModeBtn = styled.button`
 `;
 
 const DarkModeButton = ({ colorTheme, toggleTheme }) => {
+	const theme = useContext(GlobalThemeContext);
 	return (
-		<DarkModeBtn onClick={toggleTheme} colorTheme={colorTheme}>
+		<DarkModeBtn onClick={theme.toggle} colorTheme={theme.theme}>
 			<IoMdSunny className="sun" /> <IoMdMoon className="moon" />
-			<span>{colorTheme === 'light' ? 'Dark ' : 'Light '}Mode</span>
+			<span>{theme.theme === 'light' ? 'Dark ' : 'Light '}Mode</span>
 		</DarkModeBtn>
 	);
 };

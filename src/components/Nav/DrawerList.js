@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
+import { GlobalThemeContext } from '../../context/GlobalContextProvider';
 import {
 	IoMdFolder,
 	IoMdMail,
@@ -27,12 +28,14 @@ const NavList = styled.ul`
 	align-items: center;
 `;
 
-const DrawerList = ({ colorTheme, toggleTheme, setDrawerOpen }) => {
+const DrawerList = ({ setDrawerOpen }) => {
+	const themeContext = useContext(ThemeContext);
+	const theme = useContext(GlobalThemeContext);
+
 	const handleDarkMode = () => {
-		toggleTheme();
+		theme.toggle();
 		setDrawerOpen();
 	};
-	const themeContext = useContext(ThemeContext);
 	return (
 		<NavList>
 			<DrawerNavLink>
@@ -84,7 +87,7 @@ const DrawerList = ({ colorTheme, toggleTheme, setDrawerOpen }) => {
 			</DrawerNavLink>
 			<DrawerNavLink>
 				<button onClick={handleDarkMode}>
-					{colorTheme === 'light' ? (
+					{theme.theme === 'light' ? (
 						<DrawerLinkInfo name="Dark Mode" icon={<IoMdMoon />} />
 					) : (
 						<DrawerLinkInfo

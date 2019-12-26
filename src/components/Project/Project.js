@@ -12,6 +12,7 @@ import Button from '../Button/Button';
 const ProjectContainer = styled.div`
 	background: ${({ theme }) => theme.color.bg};
 	transition: ${({ theme }) => theme.hoverTransition};
+	margin-bottom: 30px;
 `;
 
 const InnerContainer = styled.div`
@@ -60,13 +61,7 @@ const Project = ({ project, tech }) => {
 						features={features}
 						tech={tech}
 					/>
-					<Button
-						outline
-						to="/"
-						text="Go Back"
-						direction="down"
-						back
-					/>
+					<Button outline to="/" text="Go Back" direction="down" />
 				</InnerContainer>
 			</Container>
 		</ProjectContainer>

@@ -38,15 +38,11 @@ const StyledNav = styled.nav`
 	padding: 0;
 `;
 
-const Drawer = ({ drawerOpen, colorTheme, toggleTheme, setDrawerOpen }) => {
+const Drawer = ({ drawerOpen, setDrawerOpen }) => {
 	return (
 		<StyledDrawer className={drawerOpen ? 'drawer-open' : ''}>
 			<StyledNav>
-				<DrawerList
-					colorTheme={colorTheme}
-					toggleTheme={toggleTheme}
-					setDrawerOpen={setDrawerOpen}
-				/>
+				<DrawerList setDrawerOpen={setDrawerOpen} />
 			</StyledNav>
 		</StyledDrawer>
 	);
