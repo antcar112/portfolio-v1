@@ -5,15 +5,18 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { BtnSolidStyles, BtnOutlineStyles } from './ButtonStyles';
 
 const StyledButton = styled.button`
-	${({ outline }) => (outline ? BtnOutlineStyles : BtnSolidStyles)};
+	${({ outline }) =>
+		outline === 'outline' ? BtnOutlineStyles : BtnSolidStyles};
 `;
 
 const StyledAnchor = styled.a`
-	${({ outline }) => (outline ? BtnOutlineStyles : BtnSolidStyles)};
+	${({ outline }) =>
+		outline === 'outline' ? BtnOutlineStyles : BtnSolidStyles};
 `;
 
 const StyledAniLink = styled(AniLink)`
-	${({ outline }) => (outline ? BtnOutlineStyles : BtnSolidStyles)};
+	${({ outline }) =>
+		outline === 'outline' ? BtnOutlineStyles : BtnSolidStyles};
 `;
 
 export const Button = ({ outline, to, href, text, direction, handleClick }) => {
@@ -21,8 +24,8 @@ export const Button = ({ outline, to, href, text, direction, handleClick }) => {
 	if (to) {
 		return (
 			<StyledAniLink
-				outline={outline}
 				to={to}
+				outline={outline ? 'outline' : 'solid'}
 				cover
 				direction={direction}
 				bg={themeContext.color.primary}
@@ -38,9 +41,9 @@ export const Button = ({ outline, to, href, text, direction, handleClick }) => {
 		return (
 			<StyledAnchor
 				href={href}
+				outline={outline ? 'outline' : 'solid'}
 				target="_blank"
 				rel="noopener noreferrer"
-				outline={outline}
 			>
 				<ButtonText text={text} type={'text'} />
 				<ButtonText text={text} type={'hidden'} />
@@ -49,7 +52,10 @@ export const Button = ({ outline, to, href, text, direction, handleClick }) => {
 	}
 
 	return (
-		<StyledButton onClick={handleClick} outline={outline}>
+		<StyledButton
+			onClick={handleClick}
+			outline={outline ? 'outline' : 'solid'}
+		>
 			<ButtonText text={text} type={'text'} />
 			<ButtonText text={text} type={'hidden'} />
 		</StyledButton>
