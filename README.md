@@ -16,11 +16,15 @@ You can then clone this repo, and use Gatsby to run this site locally (found at 
 
 ```shell
 # clone this repo
+
 git clone https://github.com/antcar112/anthony-caron-portfolio.git
+
 # navigate into this repo
 cd ./anthony-caron-portfolio
+
 # install dependencies
 npm i
+
 # run this site locally
 gatsby develop
 ```
