@@ -55,8 +55,8 @@ const projects = [
 		image       : pizza,
 		video       : timeegoVideo,
 		background  : '#F7E8A4 ',
-		githubLink  : 'https://github.com/antcar112/timeego',
-		hostedLink  : 'https://timeego-d54c4.firebaseapp.com/',
+		githubLink  : 'https://github.com/antcar112/big-generals-pizza',
+		hostedLink  : 'https://happy-jepsen-721e54.netlify.com/index.html',
 		devDesc     : [
 			`The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.`,
 			`The placeholder text, beginning with the line “Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin.`,
