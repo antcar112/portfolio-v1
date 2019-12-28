@@ -18,6 +18,7 @@ const ProjectContainer = styled.div`
 const InnerContainer = styled.div`
 	width: 100%;
 	max-width: 1100px;
+	margin: 0 auto;
 
 	${media.down.xs} {
 		padding: 0 20px;
@@ -61,7 +62,12 @@ const Project = ({ project, tech }) => {
 						features={features}
 						tech={tech}
 					/>
-					<Button outline to="/" text="Go Back" direction="down" />
+					<Button
+						outline
+						to="/"
+						text="Go Back"
+						direction="down"
+					/>
 				</InnerContainer>
 			</Container>
 		</ProjectContainer>

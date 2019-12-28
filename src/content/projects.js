@@ -1,8 +1,9 @@
 import timeegoImg from '../images/timeego.png';
-import timeegoVideo from '../images/videos/timeego.webp';
+import timeegoVideo from '../images/videos/timeegoVideo.webp';
 import cody from '../images/cody-cameron.png';
 import codyVideo from '../images/videos/codyVideo.webp';
 import pizza from '../images/pizza.png';
+import pizzaVideo from '../images/videos/bigGeneralsVideo.webp';
 
 const projects = [
 	{
@@ -34,8 +35,10 @@ const projects = [
 		image       : cody,
 		video       : codyVideo,
 		background  : '#A3D9FF',
-		githubLink  : 'https://github.com/antcar112/cody-cameron-portfolio',
-		hostedLink  : 'https://eloquent-wozniak-860d04.netlify.com/',
+		githubLink  :
+			'https://github.com/antcar112/cody-cameron-portfolio',
+		hostedLink  :
+			'https://eloquent-wozniak-860d04.netlify.com/',
 		devDesc     : [
 			`The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.`,
 			`The placeholder text, beginning with the line “Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin.`,
@@ -53,10 +56,12 @@ const projects = [
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel facilisis ipsum, non mollis dui. Cras vulputate volutpat tellus at tempor. Sed interdum magna eu luctus iaculis. Quisque in eleifend augue.',
 		link        : '/big-generals/',
 		image       : pizza,
-		video       : timeegoVideo,
+		video       : pizzaVideo,
 		background  : '#F7E8A4 ',
-		githubLink  : 'https://github.com/antcar112/big-generals-pizza',
-		hostedLink  : 'https://happy-jepsen-721e54.netlify.com/index.html',
+		githubLink  :
+			'https://github.com/antcar112/big-generals-pizza',
+		hostedLink  :
+			'https://happy-jepsen-721e54.netlify.com/index.html',
 		devDesc     : [
 			`The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.`,
 			`The placeholder text, beginning with the line “Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin.`,
