@@ -9,7 +9,7 @@ const projects = [
 	{
 		title       : 'Timeego',
 		subtitle    : 'Studying Web App',
-		description : `Timeego is a web application designed to help students with track their time spent studying. It allows users to add courses, log their time studying, and view their total study time in each course.`,
+		description : `Timeego is a web app designed to help students track their time spent studying. It allows users to add courses, log their time studying, and view their total study time in each course.`,
 		link        : '/timeego/',
 		image       : timeegoImg,
 		video       : timeegoVideo,
@@ -30,7 +30,7 @@ const projects = [
 		title       : 'Cody Cameron',
 		subtitle    : 'Artist Portfolio Website',
 		description :
-			'This is a portfolio website made for Cody Cameron, a graphic designer and artist based in Vancouver, BC.',
+			'A portfolio website made for Cody Cameron, a graphic designer and artist based in Vancouver, BC.',
 		link        : '/cody-cameron/',
 		image       : cody,
 		video       : codyVideo,
@@ -44,7 +44,7 @@ const projects = [
 			`The placeholder text, beginning with the line “Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin.`,
 		],
 		features    : [
-			`Just some place holder info`,
+			`Uses the Contentful headless CMS to allow Cody to manage his own content.`,
 			`I'll come back and write these later`,
 			`This is the last one for now, but there should be 3 to 5 per project`,
 		],
@@ -53,7 +53,7 @@ const projects = [
 		title       : "Big General's",
 		subtitle    : 'Pizza Restaurant Website',
 		description :
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel facilisis ipsum, non mollis dui. Cras vulputate volutpat tellus at tempor. Sed interdum magna eu luctus iaculis. Quisque in eleifend augue.',
+			"A website for Big General's, a fictional pizza restaurant.",
 		link        : '/big-generals/',
 		image       : pizza,
 		video       : pizzaVideo,
@@ -67,7 +67,7 @@ const projects = [
 			`The placeholder text, beginning with the line “Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin.`,
 		],
 		features    : [
-			`Just some place holder info`,
+			`Placeholder`,
 			`I'll come back and write these later`,
 			`This is the last one for now, but there should be 3 to 5 per project`,
 		],
