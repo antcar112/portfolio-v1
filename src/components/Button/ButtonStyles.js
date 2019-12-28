@@ -92,7 +92,8 @@ export const BtnSolidStyles = css`
 	background: ${({ theme }) => theme.color.primary};
 
 	&::after {
-		background: ${({ theme }) => theme.color.primaryDarkened};
+		background: ${({ theme }) =>
+			theme.color.primaryDarkened};
 	}
 
 	& span {
@@ -106,11 +107,13 @@ export const BtnOutlineStyles = css`
 	background: none;
 
 	&:hover {
-		border-color: ${({ theme }) => theme.color.primaryDarkened};
+		border-color: ${({ theme }) =>
+			theme.color.primaryDarkened};
 	}
 
 	&::after {
-		background: ${({ theme }) => theme.color.primaryDarkened};
+		background: ${({ theme }) =>
+			theme.color.primaryDarkened};
 	}
 	& div {
 		width: 100%;

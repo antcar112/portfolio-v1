@@ -18,9 +18,8 @@ This site is built with GatsbyJS, so you'll need to have the [Gatsby CLI](https:
     npm install
     ```
 
-3. Start the development server (found at http://localhost:8000/ by default).
+3. Start the development server (found at http://localhost:8000/).
     ```sh
-    # run this site locally
     gatsby develop
     ```
 
