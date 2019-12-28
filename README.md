@@ -1,35 +1,30 @@
 # Anthony Caron - Portfolio Website
-This is a portfolio website developed for myself. It was developed using [React](https://reactjs.org/) and [GatsbyJS](https://www.gatsbyjs.org/).
+This is a portfolio website developed for myself. It was developed using [GatsbyJS](https://www.gatsbyjs.org/) and is hosted by [Netlify](https://www.netlify.com/).
 
-## Hosting
+## :cloud: Hosting
 The site is hosted publicly at https://www.anthonycaron.com/.
 
-## Local Installation
-This site is build with GatsbyJS, so you'll need to have the [Gatsby CLI](https://www.gatsbyjs.org/docs/gatsby-cli/) installed on your machine. You can install the Gatsby CLI with:
+## :open_file_folder: Local Installation
+This site is built with GatsbyJS, so you'll need to have the [Gatsby CLI](https://www.gatsbyjs.org/docs/gatsby-cli/) installed on your machine to run it locally. 
 
-```shell
-# install the Gatsby CLI globally
-npm install -g gatsby-cli
-```
+1. Install the Gatsby CLI
 
-You can then clone this repo, and use Gatsby to run this site locally (found at http://localhost:8000/ by default).
+    ```sh
+    npm install -g gatsby-cli
+    ```
 
-```shell
-# clone this repo
+2. Install dependencies
+    ```sh
+    npm install
+    ```
 
-git clone https://github.com/antcar112/anthony-caron-portfolio.git
+3. Start the development server (found at http://localhost:8000/ by default).
+    ```sh
+    # run this site locally
+    gatsby develop
+    ```
 
-# navigate into this repo
-cd ./anthony-caron-portfolio
-
-# install dependencies
-npm i
-
-# run this site locally
-gatsby develop
-```
-
-## Technologies Used
+## :hammer_and_wrench: Technologies Used
 The following tools were used to develop this project:
 * [React](https://reactjs.org/)
 * [GatsbyJS](https://www.gatsbyjs.org/)
@@ -37,5 +32,5 @@ The following tools were used to develop this project:
 * [React Icons](https://react-icons.netlify.com/#/)
 * [Netlify](https://www.netlify.com/)
 
-## Contact
+## :wave: Contact
 Built by [Anthony Caron](https://github.com/antcar112) - Feel free to reach out and contact me if you have any questions. 
