@@ -20,13 +20,13 @@ const StyledFooter = styled.footer`
 	}
 `;
 
-const Footer = () => {
-	return (
-		<StyledFooter>
-			<span>© Anthony Caron {new Date().getFullYear()}</span>
-			<span>Website designed and developed by Anthony Caron.</span>
-		</StyledFooter>
-	);
-};
+const Footer = () => (
+	<StyledFooter>
+		<span>© Anthony Caron {new Date().getFullYear()}</span>
+		<span>
+			Website designed and developed by Anthony Caron.
+		</span>
+	</StyledFooter>
+);
 
 export default Footer;

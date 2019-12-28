@@ -6,13 +6,11 @@ import { SectionTitle } from '../Text/Text.js';
 
 const StyledAboutSkills = styled.section``;
 
-const AboutSkills = () => {
-	return (
-		<StyledAboutSkills>
-			<SectionTitle center>My Skills</SectionTitle>
-			<TechGrid />
-		</StyledAboutSkills>
-	);
-};
+const AboutSkills = () => (
+	<StyledAboutSkills>
+		<SectionTitle center>My Skills</SectionTitle>
+		<TechGrid />
+	</StyledAboutSkills>
+);
 
 export default AboutSkills;

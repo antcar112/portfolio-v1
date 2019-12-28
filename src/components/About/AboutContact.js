@@ -64,7 +64,8 @@ const AboutContactList = styled.ul`
 			transform: scaleX(0.4) translateY(5px);
 			opacity: 0;
 			transform-origin: 0;
-			transition: transform ease-in-out 150ms, opacity ease-in-out 150ms;
+			transition: transform ease-in-out 150ms,
+				opacity ease-in-out 150ms;
 		}
 
 		&:hover,
@@ -83,43 +84,41 @@ const AboutContactList = styled.ul`
 	}
 `;
 
-const AboutContact = () => {
-	return (
-		<StyledAboutContact>
-			<SectionTitle center>Get In Touch</SectionTitle>
-			<SectionParagraph center>
-				I'd love to answer any questions you may have.
-			</SectionParagraph>
-			<AboutContactList>
-				<li>
-					<a href="mailto:anthony.j.caron@gmail.com">
-						<IoMdMail />
-						<span> Email</span>
-					</a>
-				</li>
-				<li>
-					<a
-						href="https://github.com/antcar112"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<FaGithub />
-						<span> GitHub</span>
-					</a>
-				</li>
-				<li>
-					<a
-						href="https://www.linkedin.com/in/anthony-caron-249442194/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<FaLinkedin />
-						<span> LinkedIn</span>
-					</a>
-				</li>
-			</AboutContactList>
-		</StyledAboutContact>
-	);
-};
+const AboutContact = () => (
+	<StyledAboutContact>
+		<SectionTitle center>Get In Touch</SectionTitle>
+		<SectionParagraph center>
+			I'd love to answer any questions you may have.
+		</SectionParagraph>
+		<AboutContactList>
+			<li>
+				<a href="mailto:anthony.j.caron@gmail.com">
+					<IoMdMail />
+					<span> Email</span>
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://github.com/antcar112"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<FaGithub />
+					<span> GitHub</span>
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://www.linkedin.com/in/anthony-caron/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<FaLinkedin />
+					<span> LinkedIn</span>
+				</a>
+			</li>
+		</AboutContactList>
+	</StyledAboutContact>
+);
 
 export default AboutContact;

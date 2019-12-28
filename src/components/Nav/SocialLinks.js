@@ -17,25 +17,23 @@ const SocialLink = styled.a`
 	}
 `;
 
-const SocialLinks = () => {
-	return (
-		<Fragment>
-			<SocialLink
-				href="https://github.com/antcar112"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<FaGithub />
-			</SocialLink>
-			<SocialLink
-				href="https://www.linkedin.com/in/anthony-caron-249442194/"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<FaLinkedin />
-			</SocialLink>
-		</Fragment>
-	);
-};
+const SocialLinks = () => (
+	<Fragment>
+		<SocialLink
+			href="https://github.com/antcar112"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<FaGithub />
+		</SocialLink>
+		<SocialLink
+			href="https://www.linkedin.com/in/anthony-caron/"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<FaLinkedin />
+		</SocialLink>
+	</Fragment>
+);
 
 export default SocialLinks;

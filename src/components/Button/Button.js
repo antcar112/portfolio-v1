@@ -2,24 +2,40 @@ import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
-import { BtnSolidStyles, BtnOutlineStyles } from './ButtonStyles';
+import {
+	BtnSolidStyles,
+	BtnOutlineStyles,
+} from './ButtonStyles';
 
 const StyledButton = styled.button`
 	${({ outline }) =>
-		outline === 'outline' ? BtnOutlineStyles : BtnSolidStyles};
+		outline === 'outline'
+			? BtnOutlineStyles
+			: BtnSolidStyles};
 `;
 
 const StyledAnchor = styled.a`
 	${({ outline }) =>
-		outline === 'outline' ? BtnOutlineStyles : BtnSolidStyles};
+		outline === 'outline'
+			? BtnOutlineStyles
+			: BtnSolidStyles};
 `;
 
 const StyledAniLink = styled(AniLink)`
 	${({ outline }) =>
-		outline === 'outline' ? BtnOutlineStyles : BtnSolidStyles};
+		outline === 'outline'
+			? BtnOutlineStyles
+			: BtnSolidStyles};
 `;
 
-export const Button = ({ outline, to, href, text, direction, handleClick }) => {
+export const Button = ({
+	outline,
+	to,
+	href,
+	text,
+	direction,
+	handleClick,
+}) => {
 	const themeContext = useContext(ThemeContext);
 	if (to) {
 		return (
@@ -64,10 +80,8 @@ export const Button = ({ outline, to, href, text, direction, handleClick }) => {
 
 export default Button;
 
-const ButtonText = ({ text, type }) => {
-	return (
-		<div className={`btn_text--${type}`}>
-			<span>{text}</span>
-		</div>
-	);
-};
+const ButtonText = ({ text, type }) => (
+	<div className={`btn_text--${type}`}>
+		<span>{text}</span>
+	</div>
+);

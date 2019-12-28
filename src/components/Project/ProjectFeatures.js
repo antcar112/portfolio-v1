@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { SectionSubtitle, SectionListItem } from '../Text/Text.js';
+import {
+	SectionSubtitle,
+	SectionListItem,
+} from '../Text/Text.js';
 
 const StyledProjectFeatures = styled.div`margin: 50px auto;`;
 
@@ -10,19 +13,17 @@ const FeatureList = styled.ul`
 	margin-top: 1.5em;
 `;
 
-const ProjectFeatures = ({ features }) => {
-	return (
-		<StyledProjectFeatures>
-			<SectionSubtitle>Key Features</SectionSubtitle>
-			<FeatureList>
-				{features.map((feature, i) => (
-					<SectionListItem key={`feat-${i}`}>
-						{feature}
-					</SectionListItem>
-				))}
-			</FeatureList>
-		</StyledProjectFeatures>
-	);
-};
+const ProjectFeatures = ({ features }) => (
+	<StyledProjectFeatures>
+		<SectionSubtitle>Key Features</SectionSubtitle>
+		<FeatureList>
+			{features.map((feature, i) => (
+				<SectionListItem key={`feat-${i}`}>
+					{feature}
+				</SectionListItem>
+			))}
+		</FeatureList>
+	</StyledProjectFeatures>
+);
 
 export default ProjectFeatures;

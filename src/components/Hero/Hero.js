@@ -58,21 +58,23 @@ const HeroText = styled.span`
 	}
 `;
 
-const Hero = () => {
-	return (
-		<StyledHero>
-			<div>
-				<Cursive>
-					Hi, I'm <span>Anthony</span>
-				</Cursive>
-				<HeroText>
-					I’m a software developer and designer from Vancouver, BC
-				</HeroText>
-				<Button text={'See my work'} handleClick={scrollDown} />
-			</div>
-		</StyledHero>
-	);
-};
+const Hero = () => (
+	<StyledHero>
+		<div>
+			<Cursive>
+				Hi, I'm <span>Anthony</span>
+			</Cursive>
+			<HeroText>
+				I’m a software developer and designer from
+				Vancouver, BC
+			</HeroText>
+			<Button
+				text={'See my work'}
+				handleClick={scrollDown}
+			/>
+		</div>
+	</StyledHero>
+);
 
 export default Hero;
 

@@ -26,12 +26,10 @@ const HeaderContainer = styled.div`
 	}
 `;
 
-const Header = ({ children }) => {
-	return (
-		<StyledHeader>
-			<HeaderContainer>{children}</HeaderContainer>
-		</StyledHeader>
-	);
-};
+const Header = ({ children }) => (
+	<StyledHeader>
+		<HeaderContainer>{children}</HeaderContainer>
+	</StyledHeader>
+);
 
 export default Header;

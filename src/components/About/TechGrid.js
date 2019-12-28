@@ -30,12 +30,10 @@ const StyledTechGrid = styled.div`
 	}
 `;
 
-const TechGrid = () => {
-	return (
-		<StyledTechGrid>
-			{techList.map(t => <TechItem tech={t} key={t.name} />)}
-		</StyledTechGrid>
-	);
-};
+const TechGrid = () => (
+	<StyledTechGrid>
+		{techList.map(t => <TechItem tech={t} key={t.name} />)}
+	</StyledTechGrid>
+);
 
 export default TechGrid;

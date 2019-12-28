@@ -17,28 +17,30 @@ const Spinner = styled.div`
 
 	@keyframes rotate-object {
 		0% {
-			transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-			-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-		}
-		50% {
-			transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-			-webkit-transform: perspective(120px) rotateX(-180.1deg)
+			transform: perspective(120px) rotateX(0deg)
+				rotateY(0deg);
+			-webkit-transform: perspective(120px) rotateX(0deg)
 				rotateY(0deg);
 		}
+		50% {
+			transform: perspective(120px) rotateX(-180.1deg)
+				rotateY(0deg);
+			-webkit-transform: perspective(120px)
+				rotateX(-180.1deg) rotateY(0deg);
+		}
 		100% {
-			transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-			-webkit-transform: perspective(120px) rotateX(-180deg)
+			transform: perspective(120px) rotateX(-180deg)
 				rotateY(-179.9deg);
+			-webkit-transform: perspective(120px)
+				rotateX(-180deg) rotateY(-179.9deg);
 		}
 	}
 `;
 
-const LoadingPage = () => {
-	return (
-		<Page>
-			<Spinner />
-		</Page>
-	);
-};
+const LoadingPage = () => (
+	<Page>
+		<Spinner />
+	</Page>
+);
 
 export default LoadingPage;

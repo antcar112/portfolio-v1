@@ -51,22 +51,26 @@ const ProjectInfo = ({
 	description,
 	githubLink,
 	hostedLink,
-}) => {
-	return (
-		<StyledProjectInfo>
-			<SectionTitle>{title}</SectionTitle>
-			<Grid>
-				<div>
-					<SectionSubtitle>{subtitle}</SectionSubtitle>
-					<SectionParagraph>{description}</SectionParagraph>
-				</div>
-				<Buttons>
-					<Button text="See Website" href={hostedLink} />
-					<Button outline text="View on GitHub" href={githubLink} />
-				</Buttons>
-			</Grid>
-		</StyledProjectInfo>
-	);
-};
+}) => (
+	<StyledProjectInfo>
+		<SectionTitle>{title}</SectionTitle>
+		<Grid>
+			<div>
+				<SectionSubtitle>{subtitle}</SectionSubtitle>
+				<SectionParagraph>
+					{description}
+				</SectionParagraph>
+			</div>
+			<Buttons>
+				<Button text="See Website" href={hostedLink} />
+				<Button
+					outline
+					text="View on GitHub"
+					href={githubLink}
+				/>
+			</Buttons>
+		</Grid>
+	</StyledProjectInfo>
+);
 
 export default ProjectInfo;

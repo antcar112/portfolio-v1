@@ -32,7 +32,8 @@ const DarkModeBtn = styled.button`
 		color: ${({ theme }) => theme.color.textSecondary};
 		transform: translateY(15px);
 		opacity: 0;
-		transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+		transition: transform 200ms ease-in-out,
+			opacity 200ms ease-in-out;
 	}
 
 	& .sun {
@@ -47,12 +48,22 @@ const DarkModeBtn = styled.button`
 	}
 `;
 
-const DarkModeButton = ({ colorTheme, toggleTheme }) => {
+const DarkModeButton = () => {
 	const theme = useContext(GlobalThemeContext);
 	return (
-		<DarkModeBtn onClick={theme.toggle} colorTheme={theme.theme}>
-			<IoMdSunny className="sun" /> <IoMdMoon className="moon" />
-			<span>{theme.theme === 'light' ? 'Dark ' : 'Light '}Mode</span>
+		<DarkModeBtn
+			onClick={theme.toggle}
+			colorTheme={theme.theme}
+		>
+			<IoMdSunny className="sun" />{' '}
+			<IoMdMoon className="moon" />
+			<span>
+				{theme.theme === 'light' ? (
+					'Dark '
+				) : (
+					'Light '
+				)}Mode
+			</span>
 		</DarkModeBtn>
 	);
 };

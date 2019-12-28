@@ -3,7 +3,10 @@ import styled from 'styled-components';
 
 import { media } from '../../utils/media.js';
 import TechItem from '../About/TechItem';
-import { SectionSubtitle, SectionParagraph } from '../Text/Text.js';
+import {
+	SectionSubtitle,
+	SectionParagraph,
+} from '../Text/Text.js';
 
 const StyledProjectTech = styled.div`
 	margin: 50px auto 0;
@@ -34,19 +37,17 @@ const TechGrid = styled.div`
 	}
 `;
 
-const ProjectTech = ({ tech }) => {
-	return (
-		<StyledProjectTech>
-			<SectionSubtitle>Tools Used</SectionSubtitle>
-			<SectionParagraph>
-				Here are some of the key pieces of technology used in building
-				and designing this project.
-			</SectionParagraph>
-			<TechGrid>
-				{tech.map(t => <TechItem tech={t} key={t.name} />)}
-			</TechGrid>
-		</StyledProjectTech>
-	);
-};
+const ProjectTech = ({ tech }) => (
+	<StyledProjectTech>
+		<SectionSubtitle>Tools Used</SectionSubtitle>
+		<SectionParagraph>
+			Here are some of the key pieces of technology used in
+			building and designing this project.
+		</SectionParagraph>
+		<TechGrid>
+			{tech.map(t => <TechItem tech={t} key={t.name} />)}
+		</TechGrid>
+	</StyledProjectTech>
+);
 
 export default ProjectTech;

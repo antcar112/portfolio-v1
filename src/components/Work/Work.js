@@ -19,16 +19,14 @@ const ScrollTarget = styled.div`
 	top: -90px;
 `;
 
-const Work = () => {
-	return (
-		<StyledWork>
-			<ScrollTarget id="scroll-target" />
-			<PageTitle>Projects</PageTitle>
-			<Container>
-				<WorkList />
-			</Container>
-		</StyledWork>
-	);
-};
+const Work = () => (
+	<StyledWork>
+		<ScrollTarget id="scroll-target" />
+		<PageTitle>Projects</PageTitle>
+		<Container>
+			<WorkList />
+		</Container>
+	</StyledWork>
+);
 
 export default Work;

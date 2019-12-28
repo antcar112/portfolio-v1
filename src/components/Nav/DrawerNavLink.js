@@ -1,5 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const NavListItem = styled.li`
 	display: block;
@@ -62,8 +63,70 @@ const NavListItem = styled.li`
 	}
 `;
 
-const DrawerNavLink = ({ children }) => {
-	return <NavListItem>{children}</NavListItem>;
+const DrawerNavLink = ({
+	to,
+	href,
+	direction,
+	name,
+	icon,
+	email,
+	onClick,
+}) => {
+	const themeContext = useContext(ThemeContext);
+
+	if (to) {
+		return (
+			<NavListItem>
+				<AniLink
+					to={to}
+					cover
+					direction={direction}
+					bg={themeContext.color.primary}
+					duration={0.8}
+					activeClassName="nav_drawer_link--active"
+				>
+					<DrawLinkContent name={name} icon={icon} />
+				</AniLink>
+			</NavListItem>
+		);
+	}
+	if (href && !email) {
+		return (
+			<NavListItem>
+				<a
+					href={href}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<DrawLinkContent name={name} icon={icon} />
+				</a>
+			</NavListItem>
+		);
+	}
+	if (href && email) {
+		return (
+			<NavListItem>
+				<a href={href}>
+					<DrawLinkContent name={name} icon={icon} />
+				</a>
+			</NavListItem>
+		);
+	}
+
+	return (
+		<NavListItem>
+			<button onClick={onClick}>
+				<DrawLinkContent name={name} icon={icon} />
+			</button>
+		</NavListItem>
+	);
 };
+
+const DrawLinkContent = ({ name, icon }) => (
+	<div>
+		<span>{name}</span>
+		{icon}
+	</div>
+);
 
 export default DrawerNavLink;

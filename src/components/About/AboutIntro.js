@@ -86,41 +86,40 @@ const AboutCard = styled(Card)`
 	}
 `;
 
-const AboutIntro = () => {
-	return (
-		<StyledAboutIntro>
-			<AboutImage src={anthony} alt="Anthony" />
-			<AboutCard className="about-text">
-				<h2 className="cursive">
-					I'm <span>Anthony</span>,
-				</h2>
-				<SectionParagraph>
-					a software developer and designer. I am currently earning a{' '}
-					<a
-						className="bold"
-						href="https://www.bcit.ca/study/programs/5500dipma"
-					>
-						Computer Systems Technology
-					</a>{' '}
-					diploma at the{' '}
-					<a className="bold" href="https://www.bcit.ca/">
-						British Columbia Institute of Technology
-					</a>.
-				</SectionParagraph>{' '}
-				<SectionParagraph>
-					I love how developing software allows me to build something
-					new from scratch. I also enjoying the constant problem
-					solving and learning.
-				</SectionParagraph>
-				<SectionParagraph>
-					I currently live in the greater{' '}
-					<span className="bold">Vancouver</span> area. In my spare
-					time, I enjoy watching hockey, exploring new types of music,
-					running and cooking.
-				</SectionParagraph>
-			</AboutCard>
-		</StyledAboutIntro>
-	);
-};
+const AboutIntro = () => (
+	<StyledAboutIntro>
+		<AboutImage src={anthony} alt="Anthony" />
+		<AboutCard className="about-text">
+			<h2 className="cursive">
+				I'm <span>Anthony</span>,
+			</h2>
+			<SectionParagraph>
+				a software developer and designer. I am currently
+				earning a{' '}
+				<a
+					className="bold"
+					href="https://www.bcit.ca/study/programs/5500dipma"
+				>
+					Computer Systems Technology
+				</a>{' '}
+				diploma at the{' '}
+				<a className="bold" href="https://www.bcit.ca/">
+					British Columbia Institute of Technology
+				</a>.
+			</SectionParagraph>{' '}
+			<SectionParagraph>
+				I love how developing software allows me to build
+				something new from scratch. I also enjoying the
+				constant problem solving and learning.
+			</SectionParagraph>
+			<SectionParagraph>
+				I currently live in the greater{' '}
+				<span className="bold">Vancouver</span> area. In
+				my spare time, I enjoy watching hockey, exploring
+				new types of music, running and cooking.
+			</SectionParagraph>
+		</AboutCard>
+	</StyledAboutIntro>
+);
 
 export default AboutIntro;

@@ -12,12 +12,10 @@ const VideoContainer = styled.section`
 	}
 `;
 
-const ProjectVideo = ({ video, title }) => {
-	return (
-		<VideoContainer>
-			<img src={video} alt={title} />
-		</VideoContainer>
-	);
-};
+const ProjectVideo = ({ video, title }) => (
+	<VideoContainer>
+		<img src={video} alt={title} />
+	</VideoContainer>
+);
 
 export default ProjectVideo;

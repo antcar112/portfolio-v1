@@ -21,7 +21,6 @@ const SharedBtnStyles = css`
 		bottom: 0;
 		left: 110%;
 		width: 120%;
-
 		transition: all 375ms;
 	}
 

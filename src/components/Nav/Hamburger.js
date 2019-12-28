@@ -56,35 +56,37 @@ const StyledHamburger = styled.button`
 		}
 
 		& .bot-bar {
-			transform: translateY(-6px) rotate(-45deg) scaleX(0.9);
+			transform: translateY(-6px) rotate(-45deg)
+				scaleX(0.9);
 		}
 
 		&:hover {
 			& span {
-				background: ${({ theme }) => theme.color.primary};
+				background: ${({ theme }) =>
+					theme.color.primary};
 			}
 			& .top-bar {
-				transform: translateY(6px) rotate(45deg) scale(1.05);
+				transform: translateY(6px) rotate(45deg)
+					scale(1.05);
 			}
 
 			& .bot-bar {
-				transform: translateY(-6px) rotate(-45deg) scale(1.05);
+				transform: translateY(-6px) rotate(-45deg)
+					scale(1.05);
 			}
 		}
 	}
 `;
 
-const Hamburger = ({ drawerOpen, setDrawerOpen }) => {
-	return (
-		<StyledHamburger
-			className={drawerOpen ? 'hamburger-active' : ''}
-			onClick={() => setDrawerOpen(!drawerOpen)}
-		>
-			<span className="top-bar" />
-			<span className="mid-bar" />
-			<span className="bot-bar" />
-		</StyledHamburger>
-	);
-};
+const Hamburger = ({ drawerOpen, setDrawerOpen }) => (
+	<StyledHamburger
+		className={drawerOpen ? 'hamburger-active' : ''}
+		onClick={() => setDrawerOpen(!drawerOpen)}
+	>
+		<span className="top-bar" />
+		<span className="mid-bar" />
+		<span className="bot-bar" />
+	</StyledHamburger>
+);
 
 export default Hamburger;

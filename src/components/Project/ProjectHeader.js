@@ -36,18 +36,21 @@ const ColorSection = styled.div`
 	}
 `;
 
-const ProjectHeader = ({ background, title, subtitle, image }) => {
-	return (
-		<StyledHeader>
-			<PageTitle>{title}</PageTitle>
-			<PageSubtitle>{subtitle}</PageSubtitle>
-			<ColorSection background={background}>
-				<Fade bottom>
-					<img src={image} alt={title} />
-				</Fade>
-			</ColorSection>
-		</StyledHeader>
-	);
-};
+const ProjectHeader = ({
+	background,
+	title,
+	subtitle,
+	image,
+}) => (
+	<StyledHeader>
+		<PageTitle>{title}</PageTitle>
+		<PageSubtitle>{subtitle}</PageSubtitle>
+		<ColorSection background={background}>
+			<Fade bottom>
+				<img src={image} alt={title} />
+			</Fade>
+		</ColorSection>
+	</StyledHeader>
+);
 
 export default ProjectHeader;
