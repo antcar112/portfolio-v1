@@ -63,7 +63,7 @@ const NavLogo = () => {
 			duration={0.8}
 		>
 			<div className="logo" />
-			<span>Anthony Caron</span>
+			{/* <span>Anthony Caron</span> */}
 		</NavLogoContainer>
 	);
 };

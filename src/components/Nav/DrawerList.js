@@ -47,7 +47,10 @@ const DrawerList = ({ setDrawerOpen }) => {
 					duration={0.8}
 					activeClassName="nav_drawer_link--active"
 				>
-					<DrawerLinkInfo name="Work" icon={<IoMdFolder />} />
+					<DrawerLinkInfo
+						name="Work"
+						icon={<IoMdFolder />}
+					/>
 				</AniLink>
 			</DrawerNavLink>
 			<DrawerNavLink>
@@ -59,12 +62,18 @@ const DrawerList = ({ setDrawerOpen }) => {
 					duration={0.8}
 					activeClassName="nav_drawer_link--active"
 				>
-					<DrawerLinkInfo name="About" icon={<IoMdPerson />} />
+					<DrawerLinkInfo
+						name="About"
+						icon={<IoMdPerson />}
+					/>
 				</AniLink>
 			</DrawerNavLink>
 			<DrawerNavLink>
 				<a href="mailto:anthony.j.caron@gmail.com">
-					<DrawerLinkInfo name="Contact" icon={<IoMdMail />} />
+					<DrawerLinkInfo
+						name="Contact"
+						icon={<IoMdMail />}
+					/>
 				</a>
 			</DrawerNavLink>
 			<DrawerNavLink>
@@ -73,7 +82,10 @@ const DrawerList = ({ setDrawerOpen }) => {
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<DrawerLinkInfo name="GitHub" icon={<FaGithub />} />
+					<DrawerLinkInfo
+						name="GitHub"
+						icon={<FaGithub />}
+					/>
 				</a>
 			</DrawerNavLink>
 			<DrawerNavLink>
@@ -82,13 +94,19 @@ const DrawerList = ({ setDrawerOpen }) => {
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<DrawerLinkInfo name="LinkedIn" icon={<FaLinkedin />} />
+					<DrawerLinkInfo
+						name="LinkedIn"
+						icon={<FaLinkedin />}
+					/>
 				</a>
 			</DrawerNavLink>
 			<DrawerNavLink>
 				<button onClick={handleDarkMode}>
 					{theme.theme === 'light' ? (
-						<DrawerLinkInfo name="Dark Mode" icon={<IoMdMoon />} />
+						<DrawerLinkInfo
+							name="Dark Mode"
+							icon={<IoMdMoon />}
+						/>
 					) : (
 						<DrawerLinkInfo
 							name="Light Mode"

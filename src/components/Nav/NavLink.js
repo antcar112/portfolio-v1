@@ -40,13 +40,22 @@ const StyledNavLink = styled(AniLink)`${styles};`;
 
 const StyledNavAnchor = styled.a`${styles};`;
 
-export const NavLink = ({ path, name, direction }) => {
+const NavLink = ({ to, href, name, direction }) => {
 	const themeContext = useContext(ThemeContext);
 
+	if (href) {
+		return (
+			<li>
+				<StyledNavAnchor href={href}>
+					{name}
+				</StyledNavAnchor>
+			</li>
+		);
+	}
 	return (
 		<li>
 			<StyledNavLink
-				to={path}
+				to={to}
 				cover
 				direction={direction}
 				bg={themeContext.color.primary}
@@ -59,10 +68,4 @@ export const NavLink = ({ path, name, direction }) => {
 	);
 };
 
-export const NavAnchor = ({ path, name }) => {
-	return (
-		<li>
-			<StyledNavAnchor href={path}>{name}</StyledNavAnchor>
-		</li>
-	);
-};
+export default NavLink;

@@ -29,11 +29,13 @@ const NavListItem = styled.li`
 			max-width: 160px;
 
 			& span {
-				transition: ${({ theme }) => theme.hoverTransition};
+				transition: ${({ theme }) =>
+					theme.hoverTransition};
 			}
 
 			& svg {
-				transition: ${({ theme }) => theme.hoverTransition};
+				transition: ${({ theme }) =>
+					theme.hoverTransition};
 				font-size: 1.5em;
 			}
 		}
@@ -49,7 +51,8 @@ const NavListItem = styled.li`
 			&::before {
 				content: '';
 				height: 3px;
-				background: ${({ theme }) => theme.color.primary};
+				background: ${({ theme }) =>
+					theme.color.primary};
 				position: absolute;
 				bottom: -7px;
 				left: -12px;
