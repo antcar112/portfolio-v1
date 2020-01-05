@@ -115,8 +115,9 @@ const AboutIntro = () => (
 			<SectionParagraph>
 				I currently live in the greater{' '}
 				<span className="bold">Vancouver</span> area. In
-				my spare time, I enjoy watching hockey, exploring
-				new types of music, running and cooking.
+				my spare time, I enjoy playing guitar and drums,
+				watching hockey, exploring new types of music,
+				running and cooking.
 			</SectionParagraph>
 		</AboutCard>
 	</StyledAboutIntro>

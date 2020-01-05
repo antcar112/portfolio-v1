@@ -17,13 +17,17 @@ const projects = [
 		githubLink  : 'https://github.com/antcar112/timeego',
 		hostedLink  : 'https://timeego-d54c4.firebaseapp.com/',
 		devDesc     : [
-			`The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.`,
-			`The placeholder text, beginning with the line “Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin.`,
+			`Timeego was the result of a four-month project class, in which our team of three conceived, designed and developed a web application. We used an Agile design methodology to build this app. The final project was judged on good UX/UI, complete documentation, and overall functionality.`,
+			`The original pitch for this app was to build something that would allow students to log their time studying, and view their total study time in each course. This would help students track, manage and ultimately improve their study habits. I'm proud to say the finished product lives up to this original idea.`,
+			`The feature I'm most proud of in this app is the working stopwatch that can be used to track study times. It was built using object-oriented programming, and uses local storage to save it's state. This allows the time to persist across different page loads without the need for a true backend.`,
+			`When we started coding, we quickly realized we would have a lot of different JavaScript files. To improve our organization, implemented a Model-View-Controller design pattern. This ultimately made the finished product much easier to navigate.`,
 		],
 		features    : [
-			`Just some place holder info`,
-			`I'll come back and write these later`,
-			`This is the last one for now, but there should be 3 to 5 per project`,
+			`A working stopwatch that is able to track times across different page loads.`,
+			`Allows users to add, edit and delete courses.`,
+			`Developed using the Agile design methodology.`,
+			`Code organized using the MVC design pattern.`,
+			`Uses Google Firebase for a database and for authorization.`,
 		],
 	},
 	{
@@ -64,11 +68,11 @@ const projects = [
 		hostedLink  :
 			'https://happy-jepsen-721e54.netlify.com/index.html',
 		devDesc     : [
-			`This site was my final project for the first web development course I took. The goal was to design a simple website for a small business of our choice using HTML, CSS and some very basic JavaScript.`,
-			`There was a very large focus on making the site well designed and easy to navigate. Because of this, I decided to use a colorful design to catch the users eye. I also took this project as an opportunity to use Sass for the first time, which really the speed that I could write my CSS.`,
+			`This site was a project for the first web development course I took. The goal of the project was to design a static website for a small business of our choice using HTML, CSS and some very basic JavaScript.`,
+			`There was a very emphasis on making the site well designed and easy to navigate. Because of this, I decided to use a colorful design to catch the users eye. I also took this project as an opportunity to use Sass for the first time. Doing this really increased the speed that I could write my CSS.`,
 		],
 		features    : [
-			`Simple, static website focused on design and ease of use.`,
+			`A static HTML website focused on a clean design and ease of use.`,
 			`Uses Sass to speed up process of writing CSS.`,
 		],
 	},
