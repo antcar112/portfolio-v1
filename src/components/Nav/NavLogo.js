@@ -12,28 +12,18 @@ const NavLogoContainer = styled(AniLink)`
 	line-height: 60px;
     transition: ${({ theme }) => theme.hoverTransition};
 
-	& span {
-		font-family: ${({ theme }) => theme.font.body};
-		font-size: 1.35em;
-		font-weight: 400;
 
-		${media.down.lg} {
-			font-size: 1.2em;
-		}
-		${media.down.sm} {
-			font-size: 1.1em;
-		}
-		@media only screen and (max-width: 380px) {
-			display: none;
-		}
-	}
 	
 	& .logo {
 		height: 40px;
 		width: 40px;
 		margin-right: 20px;
 		border: 3px solid  ${({ theme }) => theme.color.primary};
-		display: inline-block;
+		background: ${({ theme }) => theme.color.primary};
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
 
 		${media.down.lg} {
 			height: 35px;
@@ -44,6 +34,21 @@ const NavLogoContainer = styled(AniLink)`
 			height: 30px;
 			width: 30px;
 			margin-right: 10px;
+		}
+	}
+
+	& span {
+		font-family: ${({ theme }) => theme.font.body};
+		color: ${({ theme }) => theme.color.bg};
+		font-size: 26px;
+		display: block;
+		font-weight: 700;
+
+		${media.down.lg} {
+			font-size: 21px;
+		}
+		${media.down.sm} {
+			font-size: 18px;
 		}
 	}
 
@@ -62,8 +67,9 @@ const NavLogo = () => {
 			bg={themeContext.color.primary}
 			duration={0.8}
 		>
-			<div className="logo" />
-			{/* <span>Anthony Caron</span> */}
+			<div className="logo">
+				<span>AC</span>
+			</div>
 		</NavLogoContainer>
 	);
 };

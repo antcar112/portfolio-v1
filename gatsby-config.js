@@ -16,7 +16,7 @@ module.exports = {
 				background_color : `#ffffff`,
 				theme_color      : `#0F97DB`,
 				display          : `minimal-ui`,
-				icon             : `content/assets/gatsby-icon.png`,
+				icon             : `content/assets/ac-icon.jpg`,
 			},
 		},
 		`gatsby-plugin-sharp`,
