@@ -70,7 +70,7 @@ const projects = [
 			`Volt's purpose is to display complex mining data in a simple, graphical form. This allows company executives to easily spot trends affecting the overall productivity of the company.`,
 			`The mining data was provided by the hackathon organizers in the form of JSON. We parsed, organized and analysed this data using the Python library Pandas.`,
 			`The web application is built using the MERN stack. React is used to build the front end and Node and Express are used on the backend. The parsed mining data is stored in a MongoDB database.`,
-			`My personal role in this project was building the MERN portion of the app the layout as well as designing the layout.`
+			`My personal role in this project was building the MERN portion of the app as well as designing the layout.`
 		],
 		features    : [
 			`Uses the MERN stack to build a fast, responsive full stack web application.`,

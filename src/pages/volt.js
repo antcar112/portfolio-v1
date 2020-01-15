@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 import Project from '../components/Project/Project';
 
 const Volt = () => (
-	<Layout pageTitle={'VOLT'}>
+	<Layout pageTitle={'Volt'}>
 		<Project project={project} tech={tech} />
 	</Layout>
 );
