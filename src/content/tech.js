@@ -23,106 +23,106 @@ const tech = [
 		name       : 'HTML5',
 		image      : html,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'CSS3',
 		image      : css,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Sass',
 		image      : sass,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Bootstrap',
 		image      : bootstrap,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'JavaScript',
 		image      : javascript,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'NodeJS',
 		image      : node,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Express',
 		image      : express,
 		inProgress : false,
-		invert     : true,
+		invert     : true
 	},
 	{
 		name       : 'React',
 		image      : react,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'GraphQL',
 		image      : graphql,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Gatsby',
 		image      : gatsby,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Styled Components',
 		image      : styledComponents,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Firebase',
 		image      : firebase,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Java',
 		image      : java,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{ name: 'C', image: c, inProgress: true, invert: false },
 	{
 		name       : 'Oracle Database',
 		image      : oracle,
 		inProgress : true,
-		invert     : false,
+		invert     : false
 	},
 	// { name: 'MySQL', image: mysql, inProgress: true, invert: false },
 	{
 		name       : 'MongoDB',
 		image      : mongodb,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Abobe Photoshop',
 		image      : photoshop,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Figma',
 		image      : figma,
 		inProgress : false,
-		invert     : false,
-	},
+		invert     : false
+	}
 ];
 
 export const timeegoTech = [
@@ -130,38 +130,38 @@ export const timeegoTech = [
 		name       : 'HTML5',
 		image      : html,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'CSS3',
 		image      : css,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Bootstrap',
 		image      : bootstrap,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'JavaScript',
 		image      : javascript,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Firebase',
 		image      : firebase,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Figma',
 		image      : figma,
 		inProgress : false,
-		invert     : false,
-	},
+		invert     : false
+	}
 ];
 
 export const codyTech = [
@@ -169,70 +169,121 @@ export const codyTech = [
 		name       : 'JavaScript',
 		image      : javascript,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'React',
 		image      : react,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'GraphQL',
 		image      : graphql,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Gatsby',
 		image      : gatsby,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Styled Components',
 		image      : styledComponents,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Abobe Photoshop',
 		image      : photoshop,
 		inProgress : false,
-		invert     : false,
+		invert     : false
+	}
+];
+
+export const voltTech = [
+	{
+		name       : 'JavaScript',
+		image      : javascript,
+		inProgress : false,
+		invert     : false
 	},
+	{
+		name       : 'React',
+		image      : react,
+		inProgress : false,
+		invert     : false
+	},
+	{
+		name       : 'NodeJS',
+		image      : node,
+		inProgress : false,
+		invert     : false
+	},
+	{
+		name       : 'Express',
+		image      : express,
+		inProgress : false,
+		invert     : true
+	},
+	{
+		name       : 'MongoDB',
+		image      : mongodb,
+		inProgress : false,
+		invert     : false
+	},
+	{
+		name       : 'Styled Components',
+		image      : styledComponents,
+		inProgress : false,
+		invert     : false
+	},
+	{
+		name       : 'Bootstrap',
+		image      : bootstrap,
+		inProgress : false,
+		invert     : false
+	},
+	{
+		name       : 'Figma',
+		image      : figma,
+		inProgress : false,
+		invert     : false
+	}
 ];
 export const generalsTech = [
 	{
 		name       : 'HTML5',
 		image      : html,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'CSS3',
 		image      : css,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Sass',
 		image      : sass,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'JavaScript',
 		image      : javascript,
 		inProgress : false,
-		invert     : false,
+		invert     : false
 	},
 	{
 		name       : 'Abobe Photoshop',
 		image      : photoshop,
 		inProgress : false,
-		invert     : false,
-	},
+		invert     : false
+	}
 ];
 
 export default tech;
