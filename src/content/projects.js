@@ -2,6 +2,7 @@ import timeegoImg from '../images/timeego.png';
 import timeegoVideo from '../images/videos/timeegoVideo.webp';
 import cody from '../images/cody-cameron.png';
 import codyVideo from '../images/videos/codyVideo.webp';
+import voltVideo from '../images/videos/voltVideo.webp';
 import pizza from '../images/pizza.png';
 import pizzaVideo from '../images/videos/bigGeneralsVideo.webp';
 
@@ -60,7 +61,7 @@ const projects = [
 			'A web application designed display complex mining data in a simple, graphical form. This project was made for the QDS20 Hackathon hosted at BCIT.',
 		link        : '/volt/',
 		image       : cody,
-		video       : codyVideo,
+		video       : voltVideo,
 		background  : '#7E6B8F',
 		githubLink  : 'https://github.com/antcar112/qds-20-hackathon',
 		hostedLink  : 'https://hardcore-dubinsky-9bf55c.netlify.com/',
