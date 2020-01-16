@@ -1,11 +1,11 @@
-import timeegoImg from '../images/timeego.png';
-import timeegoVideo from '../images/videos/timeegoVideo.webp';
-import cody from '../images/cody-cameron.png';
-import codyVideo from '../images/videos/codyVideo.webp';
-import voltImage from '../images/volt.png';
-import voltVideo from '../images/videos/voltVideo.webp';
-import pizza from '../images/pizza.png';
-import pizzaVideo from '../images/videos/bigGeneralsVideo.webp';
+import timeegoImg from '../images/projects/timeego.png';
+import timeegoVideo from '../images/projects/timeegoVideo.webp';
+import codyImg from '../images/projects/cody-cameron.png';
+import codyVideo from '../images/projects/codyVideo.webp';
+import voltImage from '../images/projects/volt.png';
+import voltVideo from '../images/projects/voltVideo.webp';
+import pizzaImg from '../images/projects/pizza.png';
+import pizzaVideo from '../images/projects/bigGeneralsVideo.webp';
 
 const projects = [
 	{
@@ -39,7 +39,7 @@ const projects = [
 		description :
 			'A portfolio website made for Cody Cameron, a graphic designer and artist based in Vancouver, BC.',
 		link        : '/cody-cameron/',
-		image       : cody,
+		image       : codyImg,
 		video       : codyVideo,
 		background  : '#A3D9FF',
 		githubLink  :
@@ -89,7 +89,7 @@ const projects = [
 		description :
 			"A static website built for Big General's, a fictional pizza restaurant.",
 		link        : '/big-generals/',
-		image       : pizza,
+		image       : pizzaImg,
 		video       : pizzaVideo,
 		background  : '#F7E8A4 ',
 		githubLink  :
