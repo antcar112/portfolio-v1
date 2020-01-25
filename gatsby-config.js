@@ -3,7 +3,7 @@ module.exports = {
 		title       : `Anthony Caron Portfolio`,
 		author      : `Anthony Caron`,
 		description : `A portfolio website for developer Anthony Caron.`,
-		siteUrl     : `https://pensive-turing-510d5b.netlify.com/`,
+		siteUrl     : `https://pensive-turing-510d5b.netlify.com/`
 	},
 	plugins      : [
 		{
@@ -16,13 +16,13 @@ module.exports = {
 				background_color : `#ffffff`,
 				theme_color      : `#0F97DB`,
 				display          : `minimal-ui`,
-				icon             : `content/assets/ac-icon.jpg`,
-			},
+				icon             : `content/assets/logo.png`
+			}
 		},
 		`gatsby-plugin-sharp`,
 		'gatsby-transformer-sharp',
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-styled-components`,
-		`gatsby-plugin-transition-link`,
-	],
+		`gatsby-plugin-transition-link`
+	]
 };

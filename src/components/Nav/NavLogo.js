@@ -3,6 +3,7 @@ import styled, { ThemeContext } from 'styled-components';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import { media } from '../../utils/media.js';
+import logo from '../../images/logo.png';
 
 const NavLogoContainer = styled(AniLink)`
 	height: 100%;
@@ -16,10 +17,7 @@ const NavLogoContainer = styled(AniLink)`
 	
 	& .logo {
 		height: 40px;
-		width: 40px;
 		margin-right: 20px;
-		border: 3px solid  ${({ theme }) => theme.color.primary};
-		background: ${({ theme }) => theme.color.primary};
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -27,12 +25,10 @@ const NavLogoContainer = styled(AniLink)`
 
 		${media.down.lg} {
 			height: 35px;
-			width: 35px;
 		}
 
 		${media.down.sm} {
 			height: 30px;
-			width: 30px;
 			margin-right: 10px;
 		}
 	}
@@ -67,9 +63,7 @@ const NavLogo = () => {
 			bg={themeContext.color.primary}
 			duration={0.8}
 		>
-			<div className="logo">
-				<span>AC</span>
-			</div>
+			<img className="logo" src={logo} />
 		</NavLogoContainer>
 	);
 };
