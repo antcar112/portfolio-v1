@@ -1,71 +1,62 @@
-import React, { useContext } from 'react';
-import styled, { ThemeContext } from 'styled-components';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import React, { useContext } from 'react'
+import styled, { ThemeContext } from 'styled-components'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
-import { media } from '../../utils/media.js';
-import logo from '../../images/logo.png';
+import logo from 'src/images/logo.png'
+import { media } from 'src/utils/media.js'
 
 const NavLogoContainer = styled(AniLink)`
-	height: 100%;
-	display: flex;
-	align-items: center;
-	text-decoration: none;
-	line-height: 60px;
-    transition: ${({ theme }) => theme.hoverTransition};
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  line-height: 60px;
+  transition: ${({ theme }) => theme.hoverTransition};
 
+  & .logo {
+    height: 40px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-	
-	& .logo {
-		height: 40px;
-		margin-right: 20px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		
+    ${media.down.lg} {
+      height: 35px;
+    }
 
-		${media.down.lg} {
-			height: 35px;
-		}
+    ${media.down.sm} {
+      height: 30px;
+      margin-right: 10px;
+    }
+  }
 
-		${media.down.sm} {
-			height: 30px;
-			margin-right: 10px;
-		}
-	}
+  & span {
+    font-family: ${({ theme }) => theme.font.body};
+    color: ${({ theme }) => theme.color.bg};
+    font-size: 26px;
+    display: block;
+    font-weight: 700;
 
-	& span {
-		font-family: ${({ theme }) => theme.font.body};
-		color: ${({ theme }) => theme.color.bg};
-		font-size: 26px;
-		display: block;
-		font-weight: 700;
+    ${media.down.lg} {
+      font-size: 21px;
+    }
+    ${media.down.sm} {
+      font-size: 18px;
+    }
+  }
 
-		${media.down.lg} {
-			font-size: 21px;
-		}
-		${media.down.sm} {
-			font-size: 18px;
-		}
-	}
-
-    &:hover {
-		color: ${({ theme }) => theme.color.textSecondary};
-	}
-`;
+  &:hover {
+    color: ${({ theme }) => theme.color.textSecondary};
+  }
+`
 
 const NavLogo = () => {
-	const themeContext = useContext(ThemeContext);
-	return (
-		<NavLogoContainer
-			to="/"
-			cover
-			direction="right"
-			bg={themeContext.color.primary}
-			duration={0.8}
-		>
-			<img className="logo" src={logo} />
-		</NavLogoContainer>
-	);
-};
+  const themeContext = useContext(ThemeContext)
+  return (
+    <NavLogoContainer to='/' cover direction='right' bg={themeContext.color.primary} duration={0.8}>
+      <img className='logo' src={logo} alt='Anthony Caron - Developer' />
+    </NavLogoContainer>
+  )
+}
 
-export default NavLogo;
+export default NavLogo

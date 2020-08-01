@@ -20,7 +20,9 @@
 		"react-reveal": "^1.2.2",
 		"styled-components": "^4.4.1"
 	},
-	"devDependencies": {},
+	"devDependencies": {
+		"gatsby-plugin-root-import": "^2.0.5"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/antcar112/anthony-caron-portfolio"

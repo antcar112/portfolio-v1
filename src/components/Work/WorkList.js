@@ -1,18 +1,14 @@
-import React from 'react';
+import React from 'react'
 
-import WorkItem from './WorkItem';
-import projects from '../../content/projects.js';
+import WorkItem from 'src/components/Work/WorkItem'
+import projects from 'src/content/projects.js'
 
 const WorkList = () => (
-	<div>
-		{projects.map((project, index) => (
-			<WorkItem
-				project={project}
-				index={index}
-				key={project.title}
-			/>
-		))}
-	</div>
-);
+  <div>
+    {projects.map((project, index) => (
+      <WorkItem project={project} index={index} key={project.title} />
+    ))}
+  </div>
+)
 
-export default WorkList;
+export default WorkList
