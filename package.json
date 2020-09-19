@@ -18,7 +18,9 @@
 		"react-helmet": "^5.2.1",
 		"react-icons": "^3.8.0",
 		"react-reveal": "^1.2.2",
-		"styled-components": "^4.4.1"
+		"styled-components": "^4.4.1",
+		"typeface-karla": "0.0.72",
+		"typeface-rubik": "0.0.72"
 	},
 	"devDependencies": {
 		"gatsby-plugin-root-import": "^2.0.5"

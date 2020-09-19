@@ -1,13 +1,12 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
-import { media } from '../utils/media';
+import { media } from '../utils/media'
 
 export default createGlobalStyle`
     
     /* Font Imports */
-    @import url('https://fonts.googleapis.com/css?family=Karla:400,700|Rubik:400,700,900&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Kalam&display=swap');
-
+    /* @import url('https://fonts.googleapis.com/css?family=Karla:400,700|Rubik:400,700,900&display=swap'); */
+    /* Now importing via typeface library in gatsby-browser */
 
     /**** Resets ****/
     html {
@@ -21,7 +20,6 @@ export default createGlobalStyle`
     }
 
     /*** Global ****/
-
     img {
         max-width: 100%;
         height: auto;
@@ -126,4 +124,4 @@ export default createGlobalStyle`
     }
 
 
-`;
+`

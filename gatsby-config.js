@@ -3,7 +3,7 @@ module.exports = {
     title: `Anthony Caron Portfolio`,
     author: `Anthony Caron`,
     description: `A portfolio website for developer Anthony Caron.`,
-    siteUrl: `https://pensive-turing-510d5b.netlify.com/`
+    siteUrl: `https://www.anthonycaron.com/`
   },
   plugins: [
     {
