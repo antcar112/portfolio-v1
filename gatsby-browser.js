@@ -1,5 +1,5 @@
 import React from 'react'
-import GlobalContextProvider from './src/context/GlobalContextProvider'
+import GlobalContextProvider from 'src/context/GlobalContextProvider'
 import 'typeface-karla'
 import 'typeface-rubik'
 

@@ -1,11 +1,17 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
 
+const fonts = {
+  cursive: ['Rubik', 'Helvetica', 'serif'],
+  heading: ['Rubik', 'Helvetica', 'serif'],
+  body: ['Karla', 'Helvetica', 'sans-serif'],
+}
+
 const theme = {
   font: {
-    cursive: '"Rubik", cursive;',
-    heading: '"Rubik", "Bitter", "serif"',
-    body: '"Karla", "Helvetica", "sans-serif"',
+    cursive: fonts.cursive.join(', '),
+    heading: fonts.heading.join(', '),
+    body: fonts.body.join(', '),
   },
   hoverTransition:
     'color 200ms ease-out, border 200ms ease-out, background 200ms ease-out, background-color 200ms ease-out',
@@ -30,8 +36,6 @@ const darkTheme = {
     bgCard: '#1D1D1D',
     primary: '#0F97DB',
     primaryDarkened: '#0d8bca',
-    // primary         : '#CD2A25',
-    // primaryDarkened : '#C11E19',
   },
 }
 

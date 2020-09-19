@@ -1,14 +1,12 @@
-import React from 'react';
-
-import { timeego as project } from '../content/projects.js';
-import { timeegoTech as tech } from '../content/tech.js';
-import Layout from '../components/layout';
-import Project from '../components/Project/Project';
+import { timeego, timeegoTech } from '@src/content'
+import { Project } from '@src/modules/project'
+import { Layout } from '@src/ui/layout'
+import React from 'react'
 
 const Timeego = () => (
-	<Layout pageTitle={'Timeego'}>
-		<Project project={project} tech={tech} />
-	</Layout>
-);
+  <Layout pageTitle='Timeego'>
+    <Project project={timeego} tech={timeegoTech} />
+  </Layout>
+)
 
-export default Timeego;
+export default Timeego

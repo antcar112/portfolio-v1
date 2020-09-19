@@ -1,14 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import Layout from '../components/layout';
-import Hero from '../components/Hero/Hero';
-import Work from '../components/Work/Work';
+import { Layout } from '@src/ui/layout'
+import { WorkHero, Work } from '@src/modules/work'
 
 const Home = () => (
-	<Layout pageTitle={'Work'}>
-		<Hero />
-		<Work />
-	</Layout>
-);
+  <Layout pageTitle='Work'>
+    <WorkHero />
+    <Work />
+  </Layout>
+)
 
-export default Home;
+export default Home
