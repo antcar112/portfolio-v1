@@ -1,11 +1,13 @@
-import { bigGenerals, generalsTech } from '@src/content'
+import { projects, projectTech } from '@src/data'
 import { Project } from '@src/modules/project'
 import { Layout } from '@src/ui/layout'
 import React from 'react'
 
+const { bigGenerals } = projects
+
 const BigGenerals = () => (
-  <Layout pageTitle="Big General's">
-    <Project project={bigGenerals} tech={generalsTech} />
+  <Layout pageTitle={bigGenerals.title}>
+    <Project project={bigGenerals} tech={projectTech.bigGenerals} />
   </Layout>
 )
 

@@ -1,20 +1,13 @@
-import codyImg from '../images/projects/cody-cameron.png'
-import codyVideo from '../images/projects/codyVideo.webp'
-import generalImage from '../images/projects/pizza.png'
-import generalVideo from '../images/projects/bigGeneralsVideo.webp'
-import timeegoImg from '../images/projects/timeego.png'
-import timeegoVideo from '../images/projects/timeegoVideo.webp'
-import voltImage from '../images/projects/volt.png'
-import voltVideo from '../images/projects/voltVideo.webp'
+import { projectAssets } from '@src/assets/projects'
 
-export const projects = [
-  {
+export const projects = {
+  timeego: {
     title: 'Timeego',
     subtitle: 'Studying Web App',
     description: `Timeego is a web app designed to help students track their time spent studying. It allows users to add courses, log their time studying, and view their total study time in each course.`,
     link: '/timeego/',
-    image: timeegoImg,
-    video: timeegoVideo,
+    image: projectAssets.timeego.image,
+    video: projectAssets.timeego.video,
     background: '#10ffcb',
     githubLink: 'https://github.com/antcar112/timeego',
     hostedLink: 'https://timeego-d54c4.firebaseapp.com/',
@@ -33,14 +26,14 @@ export const projects = [
       `Uses Google Firebase for a database and for authorization.`,
     ],
   },
-  {
+  codyCameron: {
     title: 'Cody Cameron',
     subtitle: 'Artist Portfolio Website',
     description:
       'A portfolio website made for Cody Cameron, a graphic designer and artist based in Vancouver, BC.',
     link: '/cody-cameron/',
-    image: codyImg,
-    video: codyVideo,
+    image: projectAssets.codyCameron.image,
+    video: projectAssets.codyCameron.video,
     background: '#A3D9FF',
     githubLink: 'https://github.com/antcar112/cody-cameron-portfolio',
     hostedLink: 'https://eloquent-wozniak-860d04.netlify.com/',
@@ -55,14 +48,14 @@ export const projects = [
       `The updated site is then automatically redeployed on Netlify.`,
     ],
   },
-  {
+  volt: {
     title: 'Volt',
     subtitle: 'QDS20 Hackathon App',
     description:
       'A web application designed to display complex mining data in a simple, graphical form. This project was made for the QDS20 Hackathon hosted at BCIT.',
     link: '/volt/',
-    image: voltImage,
-    video: voltVideo,
+    image: projectAssets.volt.image,
+    video: projectAssets.volt.video,
     background: '#7E6B8F',
     githubLink: 'https://github.com/antcar112/qds-20-hackathon',
     hostedLink: 'https://hardcore-dubinsky-9bf55c.netlify.com/',
@@ -79,13 +72,13 @@ export const projects = [
       `Uses ApexCharts, a JavaScript library, to display dynamic charts.`,
     ],
   },
-  {
+  bigGenerals: {
     title: "Big General's",
     subtitle: 'Pizza Restaurant Website',
     description: "A static website built for Big General's, a fictional pizza restaurant.",
     link: '/big-generals/',
-    image: generalImage,
-    video: generalVideo,
+    image: projectAssets.bigGenerals.image,
+    video: projectAssets.bigGenerals.video,
     background: '#F7E8A4 ',
     githubLink: 'https://github.com/antcar112/big-generals-pizza',
     hostedLink: 'https://happy-jepsen-721e54.netlify.com/index.html',
@@ -98,9 +91,6 @@ export const projects = [
       `Uses Sass to speed up process of writing CSS.`,
     ],
   },
-]
+}
 
-export const timeego = projects[0]
-export const codyCameron = projects[1]
-export const volt = projects[2]
-export const bigGenerals = projects[3]
+export const projectList = Object.values(projects)

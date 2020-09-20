@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
-import logo from '@src/images/logo.png'
+import logo from '@src/assets/images/logo.png'
 import { media } from '@src/utils'
 
 const NavLogoContainer = styled(AniLink)`

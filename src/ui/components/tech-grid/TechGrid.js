@@ -1,11 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { techList } from '@src/content'
 import { TechItem } from '@src/ui/components'
 import { media } from '@src/utils'
 
-const StyledTechGrid = styled.div`
+export const TechGrid = ({ page, tech }) => {
+  const StyledTechGrid = page === 'about' ? AboutGrid : ProjectGrid
+  return (
+    <StyledTechGrid>
+      {tech.map(techItem => (
+        <TechItem tech={techItem} key={techItem.name} showInProgress={page === 'about'} />
+      ))}
+    </StyledTechGrid>
+  )
+}
+
+const AboutGrid = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
@@ -30,10 +40,24 @@ const StyledTechGrid = styled.div`
   }
 `
 
-export const TechGrid = ({ showInProgress }) => (
-  <StyledTechGrid>
-    {techList.map(tech => (
-      <TechItem tech={tech} key={tech.name} showInProgress={!!showInProgress} />
-    ))}
-  </StyledTechGrid>
-)
+const ProjectGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 30px 20px;
+  margin: 50px auto 20px;
+
+  ${media.down.lg} {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  ${media.down.md} {
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 35px 20px;
+  }
+  ${media.down.sm} {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 35px 10px;
+  }
+  ${media.down.xs} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+`

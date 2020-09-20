@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import anthony from '@src/images/anthony.jpg'
+import anthony from '@src/assets/images/anthony.jpg'
 import { Card, SectionParagraph } from '@src/ui/components'
 import { media } from '@src/utils'
 
