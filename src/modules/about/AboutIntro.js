@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import anthony from '@src/assets/images/anthony.jpg'
-import { Card, SectionParagraph } from '@src/ui/components'
+import { Card, Text } from '@src/ui/components'
 import { media } from '@src/utils'
 
 const StyledAboutIntro = styled.section`
@@ -60,7 +60,6 @@ const AboutCard = styled(Card)`
 
     & span {
       color: ${({ theme }) => theme.color.primary};
-      font-weight: 400;
     }
   }
 
@@ -87,30 +86,30 @@ const AboutCard = styled(Card)`
 export const AboutIntro = () => (
   <StyledAboutIntro>
     <AboutImage src={anthony} alt='Anthony' />
-    <AboutCard className='about-text'>
-      <h2 className='cursive'>
+    <AboutCard>
+      <h2>
         I'm <span>Anthony</span>,
       </h2>
-      <SectionParagraph>
+      <Text>
         a software developer and designer. I am currently earning a{' '}
-        <a className='bold' href='https://www.bcit.ca/study/programs/5500dipma'>
+        <Text className='bold' href='https://www.bcit.ca/study/programs/5500dipma'>
           Computer Systems Technology
-        </a>{' '}
+        </Text>{' '}
         diploma at the{' '}
-        <a className='bold' href='https://www.bcit.ca/'>
+        <Text className='bold' href='https://www.bcit.ca/'>
           British Columbia Institute of Technology
-        </a>
+        </Text>
         .
-      </SectionParagraph>{' '}
-      <SectionParagraph>
+      </Text>
+      <Text>
         I love how developing software allows me to build something new from scratch. I also
         enjoying the constant problem solving and learning.
-      </SectionParagraph>
-      <SectionParagraph>
-        I currently live in the greater <span className='bold'>Vancouver</span> area. In my spare
+      </Text>
+      <Text>
+        I currently live in the greater <Text type='highlight'>Vancouver</Text> area. In my spare
         time, I enjoy playing guitar and drums, watching hockey, exploring new types of music,
         running and cooking.
-      </SectionParagraph>
+      </Text>
     </AboutCard>
   </StyledAboutIntro>
 )

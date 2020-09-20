@@ -1,4 +1,4 @@
-import { SectionSubtitle, SectionParagraph, TechGrid } from '@src/ui/components'
+import { TechGrid, Text } from '@src/ui/components'
 import { media } from '@src/utils'
 import React from 'react'
 import styled from 'styled-components'
@@ -12,10 +12,10 @@ const StyledProjectTech = styled.div`
 
 export const ProjectTech = ({ tech }) => (
   <StyledProjectTech>
-    <SectionSubtitle>Tools Used</SectionSubtitle>
-    <SectionParagraph>
+    <Text type='subheading'>Tools Used</Text>
+    <Text>
       Here are some of the key pieces of technology used in building and designing this project.
-    </SectionParagraph>
+    </Text>
     <TechGrid tech={tech} page='project' />
   </StyledProjectTech>
 )

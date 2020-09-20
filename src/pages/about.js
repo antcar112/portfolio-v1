@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { AboutContact, AboutIntro, AboutSkills } from '@src/modules/about'
-import { Container, PageTitle } from '@src/ui/components'
+import { Container, Text } from '@src/ui/components'
 import { Layout } from '@src/ui/layout'
 
 const StyledAbout = styled.section`
@@ -16,7 +16,7 @@ const About = () => {
     <Layout pageTitle='About'>
       <StyledAbout>
         <Container>
-          <PageTitle>About Me</PageTitle>
+          <Text type='page-heading'>About Me</Text>
           <AboutIntro />
           <AboutSkills />
           <AboutContact />

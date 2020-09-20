@@ -1,4 +1,4 @@
-import { SectionSubtitle, SectionListItem } from '@src/ui/components'
+import { Text } from '@src/ui/components'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -13,10 +13,12 @@ const FeatureList = styled.ul`
 
 export const ProjectFeatures = ({ features }) => (
   <StyledProjectFeatures>
-    <SectionSubtitle>Key Features</SectionSubtitle>
+    <Text type='subheading'>Key Features</Text>
     <FeatureList>
       {features.map((feature, i) => (
-        <SectionListItem key={`feat-${i}`}>{feature}</SectionListItem>
+        <Text type='list-item' key={`feat-${i}`}>
+          {feature}
+        </Text>
       ))}
     </FeatureList>
   </StyledProjectFeatures>

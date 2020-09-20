@@ -44,14 +44,14 @@ const SharedBtnStyles = css`
     pointer-events: none;
   }
 
-  & .btn_text--text {
+  & .btn_text--default {
     transition: transform 500ms, opacity 250ms 120ms;
     opacity: 1;
   }
 
-  &:hover .btn_text--text,
-  &:active .btn_text--text,
-  &:focus .btn_text--text {
+  &:hover .btn_text--default,
+  &:active .btn_text--default,
+  &:focus .btn_text--default {
     opacity: 0;
     transform: translateX(-20%);
     transition: transform 500ms, opacity 250ms;
@@ -114,7 +114,7 @@ export const BtnOutlineStyles = css`
     width: 100%;
   }
 
-  & .btn_text--text {
+  & .btn_text--default {
     & span {
       color: ${({ theme }) => theme.color.primary};
     }

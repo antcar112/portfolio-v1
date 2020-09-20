@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { IoMdMail } from 'react-icons/io'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
-import { SectionTitle, SectionParagraph } from '@src/ui/components'
+import { Text } from '@src/ui/components'
 import { media } from '@src/utils'
 
 const StyledAboutContact = styled.section``
@@ -85,8 +85,12 @@ const AboutContactList = styled.ul`
 
 export const AboutContact = () => (
   <StyledAboutContact>
-    <SectionTitle center>Get In Touch</SectionTitle>
-    <SectionParagraph center>I'd love to answer any questions you may have.</SectionParagraph>
+    <Text type='heading' center>
+      Get In Touch
+    </Text>
+    <Text type='body' center>
+      I'd love to answer any questions you may have.
+    </Text>
     <AboutContactList>
       <li>
         <a href='mailto:anthony.j.caron@gmail.com'>

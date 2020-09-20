@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { WorkList } from '@src/modules/work'
-import { Container, PageTitle } from '@src/ui/components'
+import { Container, Text } from '@src/ui/components'
 
 const StyledWork = styled.section`
   width: 100%;
@@ -21,7 +21,7 @@ const ScrollTarget = styled.div`
 export const Work = () => (
   <StyledWork>
     <ScrollTarget id='scroll-target' />
-    <PageTitle>Projects</PageTitle>
+    <Text type='page-heading'>Projects</Text>
     <Container>
       <WorkList />
     </Container>

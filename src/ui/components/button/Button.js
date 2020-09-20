@@ -2,62 +2,59 @@ import React, { useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
-import { BtnSolidStyles, BtnOutlineStyles } from './ButtonStyles'
+import { BtnSolidStyles, BtnOutlineStyles } from './buttonStyles'
 
 const StyledButton = styled.button`
-  ${({ outline }) => (outline === 'outline' ? BtnOutlineStyles : BtnSolidStyles)};
+  ${({ outline }) => (outline ? BtnOutlineStyles : BtnSolidStyles)};
 `
 
 const StyledAnchor = styled.a`
-  ${({ outline }) => (outline === 'outline' ? BtnOutlineStyles : BtnSolidStyles)};
+  ${({ outline }) => (outline ? BtnOutlineStyles : BtnSolidStyles)};
 `
 
 const StyledAniLink = styled(AniLink)`
-  ${({ outline }) => (outline === 'outline' ? BtnOutlineStyles : BtnSolidStyles)};
+  ${({ outline }) => (outline ? BtnOutlineStyles : BtnSolidStyles)};
 `
 
-export const Button = ({ outline, to, href, text, direction, handleClick }) => {
+export const Button = ({ outline = false, to, href, text, direction, handleClick }) => {
   const themeContext = useContext(ThemeContext)
   if (to) {
     return (
       <StyledAniLink
         to={to}
-        outline={outline ? 'outline' : 'solid'}
+        outline={outline}
         cover
         direction={direction}
         bg={themeContext.color.primary}
         duration={0.8}
       >
-        <ButtonText text={text} type={'text'} />
-        <ButtonText text={text} type={'hidden'} />
+        <ButtonText text={text} />
       </StyledAniLink>
     )
   }
 
   if (href) {
     return (
-      <StyledAnchor
-        href={href}
-        outline={outline ? 'outline' : 'solid'}
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <ButtonText text={text} type={'text'} />
-        <ButtonText text={text} type={'hidden'} />
+      <StyledAnchor href={href} outline={outline} target='_blank' rel='noopener noreferrer'>
+        <ButtonText text={text} />
       </StyledAnchor>
     )
   }
 
   return (
-    <StyledButton onClick={handleClick} outline={outline ? 'outline' : 'solid'}>
-      <ButtonText text={text} type={'text'} />
-      <ButtonText text={text} type={'hidden'} />
+    <StyledButton onClick={handleClick} outline={outline}>
+      <ButtonText text={text} />
     </StyledButton>
   )
 }
 
-const ButtonText = ({ text, type }) => (
-  <div className={`btn_text--${type}`}>
-    <span>{text}</span>
-  </div>
+const ButtonText = ({ text }) => (
+  <>
+    <div className={`btn_text--default`}>
+      <span>{text}</span>
+    </div>
+    <div className={`btn_text--hidden`}>
+      <span>{text}</span>
+    </div>
+  </>
 )
