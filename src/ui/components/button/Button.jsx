@@ -50,10 +50,10 @@ export const Button = ({ outline = false, to, href, text, direction, handleClick
 
 const ButtonText = ({ text }) => (
   <>
-    <div className={`btn_text--default`}>
+    <div className='btn_text--default'>
       <span>{text}</span>
     </div>
-    <div className={`btn_text--hidden`}>
+    <div className='btn_text--hidden'>
       <span>{text}</span>
     </div>
   </>

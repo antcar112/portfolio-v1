@@ -39,12 +39,10 @@ const darkTheme = {
   },
 }
 
-const Theme = ({ colorTheme, children }) => (
+export const Theme = ({ colorTheme, children }) => (
   <ThemeProvider theme={theme}>
     <ThemeProvider theme={colorTheme === 'light' ? lightTheme : darkTheme}>
       {children}
     </ThemeProvider>
   </ThemeProvider>
 )
-
-export default Theme

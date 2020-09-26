@@ -1,5 +1,5 @@
-import { GlobalThemeContext } from '@src/context/GlobalContextProvider'
-import React, { useContext } from 'react'
+import { useTheme } from '@src/context'
+import React from 'react'
 import { IoMdSunny, IoMdMoon } from 'react-icons/io'
 import styled from 'styled-components'
 
@@ -45,11 +45,11 @@ const DarkModeBtn = styled.button`
 `
 
 export const DarkModeButton = () => {
-  const theme = useContext(GlobalThemeContext)
+  const { theme, toggle } = useTheme()
   return (
-    <DarkModeBtn onClick={theme.toggle} colorTheme={theme.theme}>
+    <DarkModeBtn onClick={toggle} colorTheme={theme}>
       <IoMdSunny className='sun' /> <IoMdMoon className='moon' />
-      <span>{theme.theme === 'light' ? 'Dark ' : 'Light '}Mode</span>
+      <span>{theme === 'light' ? 'Dark ' : 'Light '}Mode</span>
     </DarkModeBtn>
   )
 }

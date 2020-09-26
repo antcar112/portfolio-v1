@@ -20,9 +20,13 @@ const styledText = {
   highlight: Hightlight,
 }
 
-const getTextComponent = type => styledText[type] || styledText.body
+const getTextComponent = (type) => styledText[type] || styledText.body
 
-export const Text = ({ children, type = 'body', ...props }) => {
-  const TextComponent = props.href ? Link : getTextComponent(type)
-  return <TextComponent {...props}>{children}</TextComponent>
+export const Text = ({ children, type = 'body', href, ...props }) => {
+  const TextComponent = href ? Link : getTextComponent(type)
+  return (
+    <TextComponent {...props} href={href}>
+      {children}
+    </TextComponent>
+  )
 }

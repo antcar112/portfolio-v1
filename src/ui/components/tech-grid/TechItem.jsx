@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
-import { GlobalThemeContext } from '@src/context/GlobalContextProvider'
+import { useTheme } from '@src/context'
 import { media } from '@src/utils'
 
 const StyledTechItem = styled.div`
@@ -67,9 +67,9 @@ const StyledTechItem = styled.div`
 `
 
 export const TechItem = ({ tech: { darkModeInvert, image, inProgress, name }, showInProgress }) => {
-  const theme = useContext(GlobalThemeContext)
+  const { theme } = useTheme()
   return (
-    <StyledTechItem colorTheme={theme.theme} invert={darkModeInvert}>
+    <StyledTechItem colorTheme={theme} invert={darkModeInvert}>
       <img src={image} alt={name} />
       <span className='tech_name'>{name}</span>
       {showInProgress && inProgress && <span className='in_progress'>In Progress</span>}

@@ -1,6 +1,6 @@
-import { GlobalThemeContext } from '@src/context/GlobalContextProvider'
+import { useTheme } from '@src/context'
 import { DrawerNavLink } from '@src/ui/layout/nav/components'
-import React, { useContext } from 'react'
+import React from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { IoMdFolder, IoMdMail, IoMdPerson, IoMdSunny, IoMdMoon } from 'react-icons/io'
 import styled from 'styled-components'
@@ -19,10 +19,10 @@ const NavList = styled.ul`
 `
 
 export const DrawerList = ({ setDrawerOpen }) => {
-  const theme = useContext(GlobalThemeContext)
+  const { theme, toggle } = useTheme()
 
   const handleDarkMode = () => {
-    theme.toggle()
+    toggle()
     setDrawerOpen()
   }
   return (
@@ -43,8 +43,8 @@ export const DrawerList = ({ setDrawerOpen }) => {
       />
       <DrawerNavLink
         onClick={handleDarkMode}
-        name={theme.theme === 'light' ? 'Dark Mode' : 'Light Mode'}
-        icon={theme.theme === 'light' ? <IoMdMoon /> : <IoMdSunny />}
+        name={theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+        icon={theme === 'light' ? <IoMdMoon /> : <IoMdSunny />}
       />
     </NavList>
   )

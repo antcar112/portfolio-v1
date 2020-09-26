@@ -20,7 +20,7 @@ export const Subheading = styled.h3`
 `
 
 export const Paragraph = styled.p`
-  text-align: ${props => (props.center ? 'center' : 'left')};
+  text-align: ${(props) => (props.center ? 'center' : 'left')};
   font-size: 1.2em;
   line-height: 1.5em;
   margin-bottom: ${({ card }) => (card ? '30px' : '1.4em')};

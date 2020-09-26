@@ -15,8 +15,8 @@ export const ProjectFeatures = ({ features }) => (
   <StyledProjectFeatures>
     <Text type='subheading'>Key Features</Text>
     <FeatureList>
-      {features.map((feature, i) => (
-        <Text type='list-item' key={`feat-${i}`}>
+      {features.map((feature) => (
+        <Text type='list-item' key={`feat-${feature}`}>
           {feature}
         </Text>
       ))}

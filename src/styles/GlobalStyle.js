@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import { media } from '@src/utils'
 
-export default createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
     
     /* Font Imports */
     /* @import url('https://fonts.googleapis.com/css?family=Karla:400,700|Rubik:400,700,900&display=swap'); */
@@ -26,7 +26,7 @@ export default createGlobalStyle`
 
     body {
         margin: 0;
-        font-family: ${props => props.theme.font.body};
+        font-family: ${(props) => props.theme.font.body};
         background: ${({ theme }) => theme.color.bg};
         color: ${({ theme }) => theme.color.text};
         font-size: 16px;

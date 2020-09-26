@@ -100,7 +100,7 @@ export const DrawerNavLink = ({ to, href, direction, name, icon, email, onClick 
 
   return (
     <NavListItem>
-      <button onClick={onClick}>
+      <button onClick={onClick} type='button'>
         <DrawLinkContent name={name} icon={icon} />
       </button>
     </NavListItem>

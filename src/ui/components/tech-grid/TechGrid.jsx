@@ -1,19 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import { TechItem } from '@src/ui/components'
 import { media } from '@src/utils'
-
-export const TechGrid = ({ page, tech }) => {
-  const StyledTechGrid = page === 'about' ? AboutGrid : ProjectGrid
-  return (
-    <StyledTechGrid>
-      {tech.map(techItem => (
-        <TechItem tech={techItem} key={techItem.name} showInProgress={page === 'about'} />
-      ))}
-    </StyledTechGrid>
-  )
-}
 
 const AboutGrid = styled.div`
   width: 100%;
@@ -61,3 +49,14 @@ const ProjectGrid = styled.div`
     grid-template-columns: repeat(3, 1fr);
   }
 `
+
+export const TechGrid = ({ page, tech }) => {
+  const StyledTechGrid = page === 'about' ? AboutGrid : ProjectGrid
+  return (
+    <StyledTechGrid>
+      {tech.map((techItem) => (
+        <TechItem tech={techItem} key={techItem.name} showInProgress={page === 'about'} />
+      ))}
+    </StyledTechGrid>
+  )
+}

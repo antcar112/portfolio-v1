@@ -1,17 +1,15 @@
-import React, { useContext } from 'react'
-
-import { GlobalThemeContext } from '@src/context/GlobalContextProvider'
-import GlobalStyle from '@src/styles/GlobalStyle'
-import Theme from '@src/styles/Theme'
+import { useTheme } from '@src/context'
+import { GlobalStyle, Theme } from '@src/styles'
 import { Footer, Helmet, LoadingPage, Nav } from '@src/ui/layout'
+import React from 'react'
 
 export const Layout = ({ pageTitle, children }) => {
-  const theme = useContext(GlobalThemeContext)
+  const { mounted, theme } = useTheme()
 
   return (
-    <Theme colorTheme={theme.theme}>
+    <Theme colorTheme={theme}>
       <Helmet pageTitle={pageTitle} />
-      {!theme.mounted ? (
+      {!mounted ? (
         <LoadingPage />
       ) : (
         <>

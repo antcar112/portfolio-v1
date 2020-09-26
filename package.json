@@ -1,40 +1,46 @@
 {
-	"name": "anthony-caron-portfolio",
-	"description": "A portfolio website for developer Anthony Caron.",
-	"version": "0.1.0",
-	"author": "Anthony Caron <antcar1992@gmail.com>",
-	"dependencies": {
-		"babel-plugin-styled-components": "^1.10.6",
-		"gatsby": "^2.18.12",
-		"gatsby-plugin-alias-imports": "^1.0.5",
-		"gatsby-plugin-manifest": "^2.2.31",
-		"gatsby-plugin-react-helmet": "^3.1.16",
-		"gatsby-plugin-sharp": "^2.3.5",
-		"gatsby-plugin-styled-components": "^3.1.16",
-		"gatsby-plugin-transition-link": "^1.17.7",
-		"gatsby-transformer-sharp": "^2.3.9",
-		"gsap": "^3.0.4",
-		"react": "^16.12.0",
-		"react-dom": "^16.12.0",
-		"react-helmet": "^5.2.1",
-		"react-icons": "^3.8.0",
-		"react-reveal": "^1.2.2",
-		"styled-components": "^4.4.1",
-		"typeface-karla": "0.0.72",
-		"typeface-rubik": "0.0.72"
-	},
-	"devDependencies": {
-		"gatsby-plugin-root-import": "^2.0.5"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/antcar112/anthony-caron-portfolio"
-	},
-	"scripts": {
-		"build": "gatsby build",
-		"develop": "gatsby develop",
-		"start": "npm run develop",
-		"serve": "gatsby serve",
-		"clean": "gatsby clean"
-	}
+  "name": "anthony-caron-portfolio",
+  "description": "A portfolio website for developer Anthony Caron.",
+  "version": "0.1.0",
+  "author": "Anthony Caron <antcar1992@gmail.com>",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.6",
+    "gatsby": "^2.18.12",
+    "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-manifest": "^2.2.31",
+    "gatsby-plugin-react-helmet": "^3.1.16",
+    "gatsby-plugin-styled-components": "^3.1.16",
+    "gatsby-plugin-transition-link": "^1.17.7",
+    "gsap": "^3.0.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.8.0",
+    "react-reveal": "^1.2.2",
+    "styled-components": "^4.4.1",
+    "typeface-karla": "0.0.72",
+    "typeface-rubik": "0.0.72"
+  },
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "gatsby-plugin-eslint": "^2.0.8",
+    "prettier": "^2.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antcar112/anthony-caron-portfolio"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  }
 }

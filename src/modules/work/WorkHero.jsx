@@ -58,6 +58,12 @@ const HeroText = styled.span`
   }
 `
 
+const scrollDown = () => {
+  document.getElementById('scroll-target').scrollIntoView({
+    behavior: 'smooth',
+  })
+}
+
 export const WorkHero = () => (
   <StyledHero>
     <div>
@@ -65,13 +71,7 @@ export const WorkHero = () => (
         Hi, I'm <span>Anthony</span>
       </Cursive>
       <HeroText>I’m a software developer and designer from Vancouver, BC</HeroText>
-      <Button text={'See my work'} handleClick={scrollDown} />
+      <Button text='See my work' handleClick={scrollDown} />
     </div>
   </StyledHero>
 )
-
-const scrollDown = () => {
-  document.getElementById('scroll-target').scrollIntoView({
-    behavior: 'smooth',
-  })
-}
