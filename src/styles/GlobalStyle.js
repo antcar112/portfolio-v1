@@ -38,10 +38,8 @@ export const GlobalStyle = createGlobalStyle`
 
     h1 {
         font-family: ${({ theme }) => theme.font.heading};
-        font-weight: 700;
-        color: ${({ theme }) => theme.color.text};
+
         font-size: 5em;
-        text-align: center;
 
         ${media.down.lg} {
             font-size: 4.5em;
@@ -59,8 +57,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     h2 {
         font-family: ${({ theme }) => theme.font.heading};
-        font-weight: 700;
-        color: ${({ theme }) => theme.color.text};
+
         font-size: 3em;
 
         ${media.down.lg} {
@@ -79,8 +76,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     h3 {
         font-family: ${({ theme }) => theme.font.heading};
-        font-weight: 400;
-        color:  ${({ theme }) => theme.color.primary};
+
         font-size: 2em;
 
         ${media.down.xl} {
@@ -111,7 +107,6 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 400;
         color: ${({ theme }) => theme.color.text};
         font-size: 1em;
-
     }
 
     h1,
@@ -119,8 +114,5 @@ export const GlobalStyle = createGlobalStyle`
     h3,
     p {
         margin: 0;
-
     }
-
-
 `

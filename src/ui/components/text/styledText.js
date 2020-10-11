@@ -2,6 +2,8 @@ import { media } from '@src/utils'
 import styled from 'styled-components'
 
 export const PageHeading = styled.h1`
+  color: ${({ theme }) => theme.color.text};
+  font-weight: 700;
   text-align: center;
 `
 export const PageSubheading = styled.h2`
@@ -11,11 +13,15 @@ export const PageSubheading = styled.h2`
 `
 
 export const Heading = styled.h2`
+  color: ${({ theme }) => theme.color.text};
+  font-weight: 700;
   text-align: ${({ center }) => (center ? 'center' : 'left')};
   margin-bottom: ${({ card }) => (card ? '10px' : '0.4em')};
 `
 
 export const Subheading = styled.h3`
+  font-weight: 400;
+  color: ${({ theme }) => theme.color.primary};
   margin-bottom: ${({ card }) => (card ? '30px;' : '16px')};
 `
 
