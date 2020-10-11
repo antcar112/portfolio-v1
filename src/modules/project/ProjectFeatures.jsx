@@ -16,7 +16,7 @@ export const ProjectFeatures = ({ features }) => (
     <Text type='subheading'>Key Features</Text>
     <FeatureList>
       {features.map((feature) => (
-        <Text type='list-item' key={`feat-${feature}`}>
+        <Text key={`feat-${feature}`} type='list-item'>
           {feature}
         </Text>
       ))}

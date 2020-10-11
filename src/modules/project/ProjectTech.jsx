@@ -16,6 +16,6 @@ export const ProjectTech = ({ tech }) => (
     <Text>
       Here are some of the key pieces of technology used in building and designing this project.
     </Text>
-    <TechGrid tech={tech} page='project' />
+    <TechGrid page='project' tech={tech} />
   </StyledProjectTech>
 )

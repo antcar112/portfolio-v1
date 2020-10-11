@@ -1,6 +1,6 @@
 import { useTheme } from '@src/context'
 import React from 'react'
-import { IoMdSunny, IoMdMoon } from 'react-icons/io'
+import { IoMdMoon, IoMdSunny } from 'react-icons/io'
 import styled from 'styled-components'
 
 const DarkModeBtn = styled.button`
@@ -47,7 +47,7 @@ const DarkModeBtn = styled.button`
 export const DarkModeButton = () => {
   const { theme, toggle } = useTheme()
   return (
-    <DarkModeBtn onClick={toggle} colorTheme={theme}>
+    <DarkModeBtn colorTheme={theme} onClick={toggle}>
       <IoMdSunny className='sun' /> <IoMdMoon className='moon' />
       <span>{theme === 'light' ? 'Dark ' : 'Light '}Mode</span>
     </DarkModeBtn>

@@ -1,4 +1,4 @@
-import { ProjectDev, ProjectInfo, ProjectHeader, ProjectVideo } from '@src/modules/project'
+import { ProjectDev, ProjectHeader, ProjectInfo, ProjectVideo } from '@src/modules/project'
 import { Button, Container } from '@src/ui/components'
 import { media } from '@src/utils'
 import React from 'react'
@@ -22,33 +22,33 @@ const InnerContainer = styled.div`
 
 export const Project = ({ project, tech }) => {
   const {
-    title,
-    subtitle,
     background,
     description,
-    image,
-    githubLink,
-    hostedLink,
-    video,
     devDesc,
     features,
+    githubLink,
+    hostedLink,
+    image,
+    subtitle,
+    title,
+    video,
   } = project
 
   return (
     <ProjectContainer>
-      <ProjectHeader background={background} title={title} subtitle={subtitle} image={image} />
+      <ProjectHeader background={background} image={image} subtitle={subtitle} title={title} />
       <Container>
         <InnerContainer>
           <ProjectInfo
-            title={title}
-            subtitle={subtitle}
             description={description}
             githubLink={githubLink}
             hostedLink={hostedLink}
+            subtitle={subtitle}
+            title={title}
           />
-          <ProjectVideo video={video} title={title} />
+          <ProjectVideo title={title} video={video} />
           <ProjectDev devDesc={devDesc} features={features} tech={tech} />
-          <Button outline to='/' text='Go Back' direction='down' />
+          <Button direction='down' outline text='Go Back' to='/' />
         </InnerContainer>
       </Container>
     </ProjectContainer>

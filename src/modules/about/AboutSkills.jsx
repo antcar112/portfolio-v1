@@ -1,12 +1,12 @@
-import React from 'react'
-import { Text, TechGrid } from '@src/ui/components'
 import { techList } from '@src/data'
+import { TechGrid, Text } from '@src/ui/components'
+import React from 'react'
 
 export const AboutSkills = () => (
   <section>
-    <Text type='heading' center>
+    <Text center type='heading'>
       My Skills
     </Text>
-    <TechGrid tech={techList} page='about' />
+    <TechGrid page='about' tech={techList} />
   </section>
 )

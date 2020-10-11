@@ -1,8 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-
 import { Button } from '@src/ui/components'
 import { media } from '@src/utils'
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledHero = styled.div`
   width: 100%;
@@ -71,7 +70,7 @@ export const WorkHero = () => (
         Hi, I'm <span>Anthony</span>
       </Cursive>
       <HeroText>I’m a software developer and designer from Vancouver, BC</HeroText>
-      <Button text='See my work' handleClick={scrollDown} />
+      <Button handleClick={scrollDown} text='See my work' />
     </div>
   </StyledHero>
 )

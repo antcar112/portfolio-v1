@@ -35,13 +35,13 @@ const ColorSection = styled.div`
   }
 `
 
-export const ProjectHeader = ({ background, title, subtitle, image }) => (
+export const ProjectHeader = ({ background, image, subtitle, title }) => (
   <StyledHeader>
     <Text type='page-heading'>{title}</Text>
     <Text type='page-subheading'>{subtitle}</Text>
     <ColorSection background={background}>
       <Fade bottom>
-        <img src={image} alt={title} />
+        <img alt={title} src={image} />
       </Fade>
     </ColorSection>
   </StyledHeader>

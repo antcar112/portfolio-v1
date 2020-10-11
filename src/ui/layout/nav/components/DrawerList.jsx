@@ -2,7 +2,7 @@ import { useTheme } from '@src/context'
 import { DrawerNavLink } from '@src/ui/layout/nav/components'
 import React from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { IoMdFolder, IoMdMail, IoMdPerson, IoMdSunny, IoMdMoon } from 'react-icons/io'
+import { IoMdFolder, IoMdMail, IoMdMoon, IoMdPerson, IoMdSunny } from 'react-icons/io'
 import styled from 'styled-components'
 
 const NavList = styled.ul`
@@ -27,24 +27,24 @@ export const DrawerList = ({ setDrawerOpen }) => {
   }
   return (
     <NavList>
-      <DrawerNavLink to='/' direction='right' name='Work' icon={<IoMdFolder />} />
-      <DrawerNavLink to='/about/' direction='left' name='About' icon={<IoMdPerson />} />
+      <DrawerNavLink direction='right' icon={<IoMdFolder />} name='Work' to='/' />
+      <DrawerNavLink direction='left' icon={<IoMdPerson />} name='About' to='/about/' />
       <DrawerNavLink
-        href='mailto:anthony.j.caron@gmail.com'
-        name='Contact'
-        icon={<IoMdMail />}
         email
+        href='mailto:anthony.j.caron@gmail.com'
+        icon={<IoMdMail />}
+        name='Contact'
       />
-      <DrawerNavLink href='https://github.com/antcar112' name='GitHub' icon={<FaGithub />} />
+      <DrawerNavLink href='https://github.com/antcar112' icon={<FaGithub />} name='GitHub' />
       <DrawerNavLink
         href='https://www.linkedin.com/in/anthony-caron/'
-        name='LinkedIn'
         icon={<FaLinkedin />}
+        name='LinkedIn'
       />
       <DrawerNavLink
-        onClick={handleDarkMode}
-        name={theme === 'light' ? 'Dark Mode' : 'Light Mode'}
         icon={theme === 'light' ? <IoMdMoon /> : <IoMdSunny />}
+        name={theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+        onClick={handleDarkMode}
       />
     </NavList>
   )

@@ -7,7 +7,7 @@ const StyledProjectDev = styled.section`
   margin: 60px auto 0;
 `
 
-export const ProjectDev = ({ devDesc, tech, features }) => (
+export const ProjectDev = ({ devDesc, features, tech }) => (
   <StyledProjectDev>
     <Text type='heading'>Project Development</Text>
     {devDesc.map((paragraph) => (

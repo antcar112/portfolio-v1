@@ -1,10 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import { IoMdMail } from 'react-icons/io'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
-
 import { Text } from '@src/ui/components'
 import { media } from '@src/utils'
+import React from 'react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { IoMdMail } from 'react-icons/io'
+import styled from 'styled-components'
 
 const StyledAboutContact = styled.section``
 
@@ -85,10 +84,10 @@ const AboutContactList = styled.ul`
 
 export const AboutContact = () => (
   <StyledAboutContact>
-    <Text type='heading' center>
+    <Text center type='heading'>
       Get In Touch
     </Text>
-    <Text type='body' center>
+    <Text center type='body'>
       I'd love to answer any questions you may have.
     </Text>
     <AboutContactList>
@@ -99,7 +98,7 @@ export const AboutContact = () => (
         </a>
       </li>
       <li>
-        <a href='https://github.com/antcar112' target='_blank' rel='noopener noreferrer'>
+        <a href='https://github.com/antcar112' rel='noopener noreferrer' target='_blank'>
           <FaGithub />
           <span> GitHub</span>
         </a>
@@ -107,8 +106,8 @@ export const AboutContact = () => (
       <li>
         <a
           href='https://www.linkedin.com/in/anthony-caron/'
-          target='_blank'
           rel='noopener noreferrer'
+          target='_blank'
         >
           <FaLinkedin />
           <span> LinkedIn</span>

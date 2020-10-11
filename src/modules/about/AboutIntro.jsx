@@ -1,9 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-
 import anthony from '@src/assets/images/anthony.jpg'
 import { Card, Text } from '@src/ui/components'
 import { media } from '@src/utils'
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledAboutIntro = styled.section`
   display: grid;
@@ -85,7 +84,7 @@ const AboutCard = styled(Card)`
 
 export const AboutIntro = () => (
   <StyledAboutIntro>
-    <AboutImage src={anthony} alt='Anthony' />
+    <AboutImage alt='Anthony' src={anthony} />
     <AboutCard>
       <h2>
         I'm <span>Anthony</span>,

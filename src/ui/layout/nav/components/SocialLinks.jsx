@@ -1,6 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import styled from 'styled-components'
 
 const SocialLink = styled.a`
   display: flex;
@@ -19,13 +19,13 @@ const SocialLink = styled.a`
 
 export const SocialLinks = () => (
   <>
-    <SocialLink href='https://github.com/antcar112' target='_blank' rel='noopener noreferrer'>
+    <SocialLink href='https://github.com/antcar112' rel='noopener noreferrer' target='_blank'>
       <FaGithub />
     </SocialLink>
     <SocialLink
       href='https://www.linkedin.com/in/anthony-caron/'
-      target='_blank'
       rel='noopener noreferrer'
+      target='_blank'
     >
       <FaLinkedin />
     </SocialLink>

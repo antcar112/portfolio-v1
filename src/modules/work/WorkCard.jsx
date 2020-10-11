@@ -1,8 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-
 import { Button, Card, Text } from '@src/ui/components'
 import { media } from '@src/utils'
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledWorkCard = styled(Card)`
   ${media.down.lg} {
@@ -12,15 +11,15 @@ const StyledWorkCard = styled(Card)`
   }
 `
 
-export const WorkCard = ({ title, subtitle, description, link }) => (
+export const WorkCard = ({ description, link, subtitle, title }) => (
   <StyledWorkCard>
-    <Text type='heading' card>
+    <Text card type='heading'>
       {title}
     </Text>
-    <Text type='subheading' card>
+    <Text card type='subheading'>
       {subtitle}
     </Text>
     <Text card>{description}</Text>
-    <Button outline to={link} text='See More' direction='up' />
+    <Button direction='up' outline text='See More' to={link} />
   </StyledWorkCard>
 )

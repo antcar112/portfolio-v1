@@ -1,8 +1,7 @@
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import React, { useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
-
-import { BtnSolidStyles, BtnOutlineStyles } from './buttonStyles'
+import { BtnOutlineStyles, BtnSolidStyles } from './buttonStyles'
 
 const StyledButton = styled.button`
   ${({ outline }) => (outline ? BtnOutlineStyles : BtnSolidStyles)};
@@ -16,17 +15,17 @@ const StyledAniLink = styled(AniLink)`
   ${({ outline }) => (outline ? BtnOutlineStyles : BtnSolidStyles)};
 `
 
-export const Button = ({ outline = false, to, href, text, direction, handleClick }) => {
+export const Button = ({ direction, handleClick, href, outline = false, text, to }) => {
   const themeContext = useContext(ThemeContext)
   if (to) {
     return (
       <StyledAniLink
-        to={to}
-        outline={outline}
+        bg={themeContext.color.primary}
         cover
         direction={direction}
-        bg={themeContext.color.primary}
         duration={0.8}
+        outline={outline}
+        to={to}
       >
         <ButtonText text={text} />
       </StyledAniLink>
@@ -35,7 +34,7 @@ export const Button = ({ outline = false, to, href, text, direction, handleClick
 
   if (href) {
     return (
-      <StyledAnchor href={href} outline={outline} target='_blank' rel='noopener noreferrer'>
+      <StyledAnchor href={href} outline={outline} rel='noopener noreferrer' target='_blank'>
         <ButtonText text={text} />
       </StyledAnchor>
     )

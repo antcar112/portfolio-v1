@@ -1,5 +1,6 @@
-import React from 'react'
 import { GlobalContextProvider } from '@src/context'
+import React from 'react'
+
 import 'typeface-karla'
 import 'typeface-rubik'
 

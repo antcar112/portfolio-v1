@@ -1,8 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-
 import { useTheme } from '@src/context'
 import { media } from '@src/utils'
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledTechItem = styled.div`
   display: flex;
@@ -66,11 +65,11 @@ const StyledTechItem = styled.div`
   }
 `
 
-export const TechItem = ({ tech: { darkModeInvert, image, inProgress, name }, showInProgress }) => {
+export const TechItem = ({ showInProgress, tech: { darkModeInvert, image, inProgress, name } }) => {
   const { theme } = useTheme()
   return (
     <StyledTechItem colorTheme={theme} invert={darkModeInvert}>
-      <img src={image} alt={name} />
+      <img alt={name} src={image} />
       <span className='tech_name'>{name}</span>
       {showInProgress && inProgress && <span className='in_progress'>In Progress</span>}
     </StyledTechItem>

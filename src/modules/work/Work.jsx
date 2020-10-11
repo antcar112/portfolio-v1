@@ -1,8 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-
 import { WorkList } from '@src/modules/work'
 import { Container, Text } from '@src/ui/components'
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledWork = styled.section`
   width: 100%;

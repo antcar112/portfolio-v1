@@ -22,7 +22,7 @@ const styledText = {
 
 const getTextComponent = (type) => styledText[type] || styledText.body
 
-export const Text = ({ children, type = 'body', href, ...props }) => {
+export const Text = ({ children, href, type = 'body', ...props }) => {
   const TextComponent = href ? Link : getTextComponent(type)
   return (
     <TextComponent {...props} href={href}>

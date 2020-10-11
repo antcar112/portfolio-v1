@@ -1,9 +1,8 @@
-import React, { useContext } from 'react'
-import styled, { ThemeContext } from 'styled-components'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
-
 import logo from '@src/assets/images/logo.png'
 import { media } from '@src/utils'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import React, { useContext } from 'react'
+import styled, { ThemeContext } from 'styled-components'
 
 const NavLogoContainer = styled(AniLink)`
   height: 100%;
@@ -53,8 +52,8 @@ const NavLogoContainer = styled(AniLink)`
 export const NavLogo = () => {
   const themeContext = useContext(ThemeContext)
   return (
-    <NavLogoContainer to='/' cover direction='right' bg={themeContext.color.primary} duration={0.8}>
-      <img className='logo' src={logo} alt='Anthony Caron - Developer' />
+    <NavLogoContainer bg={themeContext.color.primary} cover direction='right' duration={0.8} to='/'>
+      <img alt='Anthony Caron - Developer' className='logo' src={logo} />
     </NavLogoContainer>
   )
 }

@@ -60,21 +60,21 @@ const NavListItem = styled.li`
   }
 `
 
-export const DrawerNavLink = ({ to, href, direction, name, icon, email, onClick }) => {
+export const DrawerNavLink = ({ direction, email, href, icon, name, onClick, to }) => {
   const themeContext = useContext(ThemeContext)
 
   if (to) {
     return (
       <NavListItem>
         <AniLink
-          to={to}
+          activeClassName='nav_drawer_link--active'
+          bg={themeContext.color.primary}
           cover
           direction={direction}
-          bg={themeContext.color.primary}
           duration={0.8}
-          activeClassName='nav_drawer_link--active'
+          to={to}
         >
-          <DrawLinkContent name={name} icon={icon} />
+          <DrawLinkContent icon={icon} name={name} />
         </AniLink>
       </NavListItem>
     )
@@ -82,8 +82,8 @@ export const DrawerNavLink = ({ to, href, direction, name, icon, email, onClick 
   if (href && !email) {
     return (
       <NavListItem>
-        <a href={href} target='_blank' rel='noopener noreferrer'>
-          <DrawLinkContent name={name} icon={icon} />
+        <a href={href} rel='noopener noreferrer' target='_blank'>
+          <DrawLinkContent icon={icon} name={name} />
         </a>
       </NavListItem>
     )
@@ -92,7 +92,7 @@ export const DrawerNavLink = ({ to, href, direction, name, icon, email, onClick 
     return (
       <NavListItem>
         <a href={href}>
-          <DrawLinkContent name={name} icon={icon} />
+          <DrawLinkContent icon={icon} name={name} />
         </a>
       </NavListItem>
     )
@@ -101,13 +101,13 @@ export const DrawerNavLink = ({ to, href, direction, name, icon, email, onClick 
   return (
     <NavListItem>
       <button onClick={onClick} type='button'>
-        <DrawLinkContent name={name} icon={icon} />
+        <DrawLinkContent icon={icon} name={name} />
       </button>
     </NavListItem>
   )
 }
 
-const DrawLinkContent = ({ name, icon }) => (
+const DrawLinkContent = ({ icon, name }) => (
   <div>
     <span>{name}</span>
     {icon}

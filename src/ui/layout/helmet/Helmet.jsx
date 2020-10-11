@@ -6,10 +6,10 @@ export const Helmet = ({ pageTitle }) => (
     <meta charSet='utf-8' />
     <title>Anthony Caron - {pageTitle}</title>
     <meta
-      name='keywords'
       content='HTML, CSS, JavaScript, React, Web Developer, Software Developer, Designer, Portfolio'
+      name='keywords'
     />
-    <meta name='description' content='Portfolio site for software developer Anthony Caron' />
-    <meta name='author' content='Anthony Caron' />
+    <meta content='Portfolio site for software developer Anthony Caron' name='description' />
+    <meta content='Anthony Caron' name='author' />
   </ReactHelmet>
 )

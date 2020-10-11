@@ -39,7 +39,7 @@ const Buttons = styled.div`
   }
 `
 
-export const ProjectInfo = ({ title, subtitle, description, githubLink, hostedLink }) => (
+export const ProjectInfo = ({ description, githubLink, hostedLink, subtitle, title }) => (
   <StyledProjectInfo>
     <Text type='heading'>{title}</Text>
     <Grid>
@@ -48,8 +48,8 @@ export const ProjectInfo = ({ title, subtitle, description, githubLink, hostedLi
         <Text>{description}</Text>
       </div>
       <Buttons>
-        <Button text='See Website' href={hostedLink} />
-        <Button outline text='View on GitHub' href={githubLink} />
+        <Button href={hostedLink} text='See Website' />
+        <Button href={githubLink} outline text='View on GitHub' />
       </Buttons>
     </Grid>
   </StyledProjectInfo>

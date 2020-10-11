@@ -1,7 +1,6 @@
-import React from 'react'
-
+import { Work, WorkHero } from '@src/modules/work'
 import { Layout } from '@src/ui/layout'
-import { WorkHero, Work } from '@src/modules/work'
+import React from 'react'
 
 const Home = () => (
   <Layout pageTitle='Work'>

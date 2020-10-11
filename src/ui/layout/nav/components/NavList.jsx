@@ -1,8 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-
 import { DarkModeButton, NavLink, SocialLinks } from '@src/ui/layout/nav/components'
 import { media } from '@src/utils'
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledNavList = styled.ul`
   margin: 0;
@@ -21,8 +20,8 @@ const StyledNavList = styled.ul`
 
 export const NavList = () => (
   <StyledNavList>
-    <NavLink to='/' name='Work' direction='right' />
-    <NavLink to='/about/' name='About' direction='left' />
+    <NavLink direction='right' name='Work' to='/' />
+    <NavLink direction='left' name='About' to='/about/' />
     <NavLink href='mailto:anthony.j.caron@gmail.com' name='Contact' />
     <SocialLinks />
     <DarkModeButton />

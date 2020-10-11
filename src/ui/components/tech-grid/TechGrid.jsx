@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
 import { TechItem } from '@src/ui/components'
 import { media } from '@src/utils'
+import React from 'react'
+import styled from 'styled-components'
 
 const AboutGrid = styled.div`
   width: 100%;
@@ -55,7 +55,7 @@ export const TechGrid = ({ page, tech }) => {
   return (
     <StyledTechGrid>
       {tech.map((techItem) => (
-        <TechItem tech={techItem} key={techItem.name} showInProgress={page === 'about'} />
+        <TechItem key={techItem.name} showInProgress={page === 'about'} tech={techItem} />
       ))}
     </StyledTechGrid>
   )

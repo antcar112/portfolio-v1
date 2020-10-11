@@ -1,4 +1,4 @@
-import { Button, Container, Text } from '@src/ui/components'
+import { Button, Container, fun, Text } from '@src/ui/components'
 import { Layout } from '@src/ui/layout'
 import React from 'react'
 import styled from 'styled-components'
@@ -15,10 +15,10 @@ const NotFoundPage = () => (
   <Layout pageTitle='Page Not Found'>
     <NotFoundContainer>
       <Text type='page-heading'>404 error</Text>
-      <Text type='page-subheading' style={{ marginBottom: '60px' }}>
-        This page doesn't exist.
+      <Text style={{ marginBottom: '60px' }} type='page-subheading'>
+        This page doesn't exist. {fun}
       </Text>
-      <Button to='/' outline direction='up' text='Go Back' />
+      <Button direction='up' outline text='Go Back' to='/' />
     </NotFoundContainer>
   </Layout>
 )
