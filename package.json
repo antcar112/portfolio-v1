@@ -17,7 +17,9 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.8.0",
     "react-reveal": "^1.2.2",
-    "styled-components": "^4.4.1"
+    "styled-components": "^4.4.1",
+    "typeface-karla": "^1.1.13",
+    "typeface-rubik": "^1.1.13"
   },
   "devDependencies": {
     "eslint": "^7.9.0",

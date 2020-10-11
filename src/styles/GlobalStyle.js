@@ -1,12 +1,7 @@
-import { fonts } from '@src/styles/fonts'
 import { media } from '@src/utils'
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-    
-    /* Font Imports */
-    ${fonts}
-
     /**** Resets ****/
     html {
         box-sizing: border-box;
@@ -26,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         margin: 0;
-        font-family: ${(props) => props.theme.font.body};
+        /* font-family: ${(props) => props.theme.font.body}; */
         background: ${({ theme }) => theme.color.bg};
         color: ${({ theme }) => theme.color.text};
         font-size: 16px;
@@ -36,9 +31,11 @@ export const GlobalStyle = createGlobalStyle`
         padding-top: 60px;
     }
 
-    h1 {
+    h1, h2, h3 {
         font-family: ${({ theme }) => theme.font.heading};
+    }
 
+    h1 {
         font-size: 5em;
 
         ${media.down.lg} {
@@ -56,8 +53,6 @@ export const GlobalStyle = createGlobalStyle`
 
     }
     h2 {
-        font-family: ${({ theme }) => theme.font.heading};
-
         font-size: 3em;
 
         ${media.down.lg} {
@@ -75,8 +70,6 @@ export const GlobalStyle = createGlobalStyle`
 
     }
     h3 {
-        font-family: ${({ theme }) => theme.font.heading};
-
         font-size: 2em;
 
         ${media.down.xl} {

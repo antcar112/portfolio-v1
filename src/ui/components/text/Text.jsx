@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   Heading,
   Hightlight,
@@ -7,8 +8,7 @@ import {
   PageSubheading,
   Paragraph,
   Subheading,
-} from '@src/ui/components/text/textStyles'
-import React from 'react'
+} from './textStyles'
 
 const styledText = {
   body: Paragraph,
