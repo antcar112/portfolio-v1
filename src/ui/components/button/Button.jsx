@@ -1,7 +1,7 @@
+import { BtnOutlineStyles, BtnSolidStyles } from '@src/ui/components/button/buttonStyles'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import React, { useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
-import { BtnOutlineStyles, BtnSolidStyles } from './buttonStyles'
 
 const StyledButton = styled.button`
   ${({ outline }) => (outline ? BtnOutlineStyles : BtnSolidStyles)};
