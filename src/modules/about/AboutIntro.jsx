@@ -51,7 +51,7 @@ const AboutCard = styled(Card)`
   top: 50px;
 
   & h2 {
-    font-family: ${({ theme }) => theme.font.cursive};
+    font-family: ${({ theme }) => theme.font.heading};
     font-weight: 400;
     color: ${({ theme }) => theme.color.text};
     font-size: 3em;

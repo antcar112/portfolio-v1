@@ -7,7 +7,7 @@ module.exports = {
   },
   plugins: [
     {
-      // Adds a manifest file
+      // Adds manifest file
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Anthony Caron Portfolio',
@@ -20,9 +20,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-eslint',
-    // 'gatsby-plugin-root-import',
-    // 'gatsby-plugin-sharp',
-    // 'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-transition-link',
@@ -30,7 +27,7 @@ module.exports = {
       resolve: 'gatsby-plugin-alias-imports',
       options: {
         alias: { '@src': 'src' },
-        extensions: ['js'],
+        extensions: ['js, jsx'],
       },
     },
   ],

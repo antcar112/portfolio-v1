@@ -2,14 +2,12 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 
 const fonts = {
-  cursive: ['Rubik', 'Helvetica', 'serif'],
   heading: ['Rubik', 'Helvetica', 'serif'],
   body: ['Karla', 'Helvetica', 'sans-serif'],
 }
 
 const theme = {
   font: {
-    cursive: fonts.cursive.join(', '),
     heading: fonts.heading.join(', '),
     body: fonts.body.join(', '),
   },

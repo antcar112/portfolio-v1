@@ -16,7 +16,7 @@ const StyledHero = styled.div`
 `
 
 const Cursive = styled.h1`
-  font-family: ${({ theme }) => theme.font.cursive};
+  font-family: ${({ theme }) => theme.font.heading};
   font-weight: 700;
   color: ${({ theme }) => theme.color.text};
   font-size: 5.5em;
@@ -25,7 +25,7 @@ const Cursive = styled.h1`
 
   & span {
     color: ${({ theme }) => theme.color.primary};
-    font-family: ${({ theme }) => theme.font.cursive};
+    font-family: ${({ theme }) => theme.font.heading};
     transition: ${({ theme }) => theme.hoverTransition};
     font-weight: 700;
   }
