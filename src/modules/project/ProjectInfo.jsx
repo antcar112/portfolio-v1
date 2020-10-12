@@ -1,4 +1,4 @@
-import { Button, Text } from '@src/ui/components'
+import { Button, SectionHeading, Text } from '@src/ui/components'
 import { media } from '@src/utils'
 import React from 'react'
 import styled from 'styled-components'
@@ -41,10 +41,10 @@ const Buttons = styled.div`
 
 export const ProjectInfo = ({ description, githubLink, hostedLink, subtitle, title }) => (
   <StyledProjectInfo>
-    <Text type='heading'>{title}</Text>
+    <SectionHeading title={title} />
     <Grid>
       <div>
-        <Text type='subheading'>{subtitle}</Text>
+        <Text type='h3'>{subtitle}</Text>
         <Text>{description}</Text>
       </div>
       <Buttons>

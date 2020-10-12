@@ -1,5 +1,5 @@
 import { AboutContact, AboutExperience, AboutIntro, AboutTech } from '@src/modules/about'
-import { Container, Text } from '@src/ui/components'
+import { Container, PageHeading } from '@src/ui/components'
 import { Layout } from '@src/ui/layout'
 import React from 'react'
 import styled from 'styled-components'
@@ -14,7 +14,7 @@ const About = () => (
   <Layout pageTitle='About'>
     <StyledAbout>
       <Container>
-        <Text type='page-heading'>About Me</Text>
+        <PageHeading title='About Me' />
         <AboutIntro />
         <AboutExperience />
         <AboutTech />

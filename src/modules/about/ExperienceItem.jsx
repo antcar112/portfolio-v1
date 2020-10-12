@@ -37,9 +37,12 @@ export const ExperienceItem = ({ experience }) => {
         </ImageContainer>
         <div>
           <Text color='text' type='h4'>
-            {jobTitle} @ <Text href={companyUrl}>{company}</Text>
+            {jobTitle} @{' '}
+            <Text decoration='none' href={companyUrl}>
+              {company}
+            </Text>
           </Text>
-          <Text type='body2'>{date}</Text>
+          <Text type='subtitle'>{date}</Text>
         </div>
       </ExperienceHeader>
       <ExperienceList>

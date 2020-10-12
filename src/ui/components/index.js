@@ -1,5 +1,6 @@
 export * from './button'
 export * from './card'
 export * from './container'
+export * from './heading'
 export * from './tech-grid'
 export * from './text'

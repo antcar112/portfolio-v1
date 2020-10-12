@@ -56,10 +56,6 @@ const AboutCard = styled(Card)`
     color: ${({ theme }) => theme.color.text};
     font-size: 3em;
     margin: 6px 0 20px;
-
-    & span {
-      color: ${({ theme }) => theme.color.primary};
-    }
   }
 
   ${media.down.lg} {
@@ -87,33 +83,27 @@ export const AboutIntro = () => (
     <AboutImage alt='Anthony' src={anthony} />
     <AboutCard>
       <h2>
-        I'm <span>Anthony</span>,
+        I'm{' '}
+        <Text type='span' weight={400}>
+          Anthony
+        </Text>
+        ,
       </h2>
       <Text>
         a software developer and designer. I am currently earning a{' '}
-        <Text className='bold' href='https://www.bcit.ca/study/programs/5500dipma'>
-          Computer Systems Technology
-        </Text>{' '}
+        <Text href='https://www.bcit.ca/study/programs/5500dipma'>Computer Systems Technology</Text>{' '}
         diploma at the{' '}
-        <Text className='bold' href='https://www.bcit.ca/'>
-          British Columbia Institute of Technology
-        </Text>
-        .
+        <Text href='https://www.bcit.ca/'>British Columbia Institute of Technology</Text>.
       </Text>
       <Text>
         I love how developing software allows me to build something new from scratch. I also
         enjoying the constant problem solving and learning.
       </Text>
       <Text>
-        I currently live in the greater{' '}
-        <Text color='primary' type='span' weight={700}>
-          Vancouver
-        </Text>{' '}
-        area. In my spare time, I enjoy playing guitar and drums, watching hockey, exploring new
-        types of music, running and cooking.
+        I currently live in the greater <Text type='span'>Vancouver</Text> area. In my spare time, I
+        enjoy playing guitar and drums, watching hockey, exploring new types of music, running and
+        cooking.
       </Text>
     </AboutCard>
   </StyledAboutIntro>
 )
-
-export default AboutIntro

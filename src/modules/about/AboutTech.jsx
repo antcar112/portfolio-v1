@@ -1,5 +1,5 @@
 import { techList } from '@src/data'
-import { TechGrid, Text } from '@src/ui/components'
+import { SectionHeading, TechGrid } from '@src/ui/components'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -9,9 +9,7 @@ const TechSection = styled.section`
 
 export const AboutTech = () => (
   <TechSection>
-    <Text center type='heading'>
-      Tech I've Used
-    </Text>
+    <SectionHeading center title="Tech I've Used" />
     <TechGrid page='about' tech={techList} />
   </TechSection>
 )

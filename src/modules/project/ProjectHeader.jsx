@@ -1,4 +1,4 @@
-import { Text } from '@src/ui/components'
+import { PageHeading } from '@src/ui/components'
 import { media } from '@src/utils'
 import React from 'react'
 import Fade from 'react-reveal/Fade'
@@ -37,8 +37,7 @@ const ColorSection = styled.div`
 
 export const ProjectHeader = ({ background, image, subtitle, title }) => (
   <StyledHeader>
-    <Text type='page-heading'>{title}</Text>
-    <Text type='page-subheading'>{subtitle}</Text>
+    <PageHeading subtitle={subtitle} title={title} />
     <ColorSection background={background}>
       <Fade bottom>
         <img alt={title} src={image} />

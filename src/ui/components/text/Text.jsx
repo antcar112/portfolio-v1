@@ -1,34 +1,24 @@
 import React from 'react'
-import {
-  H4,
-  Heading,
-  Link,
-  ListItem,
-  PageHeading,
-  PageSubheading,
-  Paragraph,
-  Span,
-  SubBody,
-  Subheading,
-} from './textStyles'
+import { Body, H1, H2, H3, H4, Link, ListItem, Span, Subtitle } from './textStyles'
 
 const styledText = {
-  body: Paragraph,
-  body2: SubBody,
-  'list-item': ListItem,
-  heading: Heading,
-  subheading: Subheading,
-  'page-heading': PageHeading,
-  'page-subheading': PageSubheading,
-  span: Span,
+  body: Body,
+  h1: H1,
+  h2: H2,
+  h3: H3,
   h4: H4,
+  'list-item': ListItem,
+  span: Span,
+  subtitle: Subtitle,
 }
 
 const getTextComponent = (type) => styledText[type] || styledText.body
 
 export const Text = ({ children, href, type = 'body', ...props }) => {
   const TextComponent = href ? Link : getTextComponent(type)
-  const textProps = href ? { ...props, rel: 'noopener noreferrer', target: '_blank', href } : props
+  const textProps = href
+    ? { ...props, type: 'link', href, rel: 'noopener noreferrer', target: '_blank' }
+    : { ...props, type }
 
   return <TextComponent {...textProps}>{children}</TextComponent>
 }

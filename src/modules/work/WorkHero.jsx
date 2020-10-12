@@ -21,12 +21,10 @@ const HeroTitle = styled.h1`
   color: ${({ theme }) => theme.color.text};
   font-size: 5.5em;
   margin-bottom: 0px;
-  transition: ${({ theme }) => theme.hoverTransition};
 
   & span {
     color: ${({ theme }) => theme.color.primary};
     font-family: ${({ theme }) => theme.font.heading};
-    transition: ${({ theme }) => theme.hoverTransition};
     font-weight: 700;
   }
 

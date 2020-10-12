@@ -1,4 +1,4 @@
-import { Text } from '@src/ui/components'
+import { SectionHeading, Text } from '@src/ui/components'
 import { media } from '@src/utils'
 import React from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
@@ -84,12 +84,8 @@ const AboutContactList = styled.ul`
 
 export const AboutContact = () => (
   <StyledAboutContact>
-    <Text center type='heading'>
-      Get In Touch
-    </Text>
-    <Text center type='body'>
-      I'd love to answer any questions you may have.
-    </Text>
+    <SectionHeading center title='Get In Touch' />
+    <Text center>I'd love to answer any questions you may have.</Text>
     <AboutContactList>
       <li>
         <a href='mailto:anthony.j.caron@gmail.com'>

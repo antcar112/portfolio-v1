@@ -1,6 +1,6 @@
 import { experienceList } from '@src/data'
 import { ExperienceItem } from '@src/modules/about'
-import { Text } from '@src/ui/components'
+import { SectionHeading } from '@src/ui/components'
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
@@ -14,9 +14,7 @@ export const AboutExperience = () => {
 
   return (
     <section>
-      <Text center type='heading'>
-        My Experience
-      </Text>
+      <SectionHeading center title='My Experience' />
       <Experiences>
         <ExperienceItem experience={experienceToShow} />
       </Experiences>

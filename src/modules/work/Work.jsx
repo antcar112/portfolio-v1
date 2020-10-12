@@ -1,5 +1,5 @@
 import { WorkList } from '@src/modules/work'
-import { Container, Text } from '@src/ui/components'
+import { Container, PageHeading } from '@src/ui/components'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -20,7 +20,7 @@ const ScrollTarget = styled.div`
 export const Work = () => (
   <StyledWork>
     <ScrollTarget id='scroll-target' />
-    <Text type='page-heading'>Projects</Text>
+    <PageHeading title='Projects' />
     <Container>
       <WorkList />
     </Container>

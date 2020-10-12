@@ -1,4 +1,4 @@
-import { Button, Card, Text } from '@src/ui/components'
+import { Button, Card, SectionHeading, Text } from '@src/ui/components'
 import { media } from '@src/utils'
 import React from 'react'
 import styled from 'styled-components'
@@ -13,13 +13,8 @@ const StyledWorkCard = styled(Card)`
 
 export const WorkCard = ({ description, link, subtitle, title }) => (
   <StyledWorkCard>
-    <Text card type='heading'>
-      {title}
-    </Text>
-    <Text card type='subheading'>
-      {subtitle}
-    </Text>
-    <Text card>{description}</Text>
+    <SectionHeading marginBottom='card' subtitle={subtitle} title={title} />
+    <Text marginBottom='card'>{description}</Text>
     <Button direction='up' outline text='See More' to={link} />
   </StyledWorkCard>
 )

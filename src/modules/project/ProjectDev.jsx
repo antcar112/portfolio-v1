@@ -1,5 +1,5 @@
 import { ProjectFeatures, ProjectTech } from '@src/modules/project'
-import { Text } from '@src/ui/components'
+import { SectionHeading, Text } from '@src/ui/components'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -9,7 +9,7 @@ const StyledProjectDev = styled.section`
 
 export const ProjectDev = ({ devDesc, features, tech }) => (
   <StyledProjectDev>
-    <Text type='heading'>Project Development</Text>
+    <SectionHeading title='Project Development' />
     {devDesc.map((paragraph) => (
       <Text key={`DevDesc-${paragraph}`}>{paragraph}</Text>
     ))}

@@ -64,13 +64,12 @@ const StyledWorkItem = styled.article`
   }
 `
 
-export const WorkItem = ({ index, project }) => {
-  const { background, description, image, link, subtitle, title } = project
-
-  return (
-    <StyledWorkItem background={background} index={index}>
-      <WorkImage background={background} image={image} title={title} />
-      <WorkCard description={description} link={link} subtitle={subtitle} title={title} />
-    </StyledWorkItem>
-  )
-}
+export const WorkItem = ({
+  index,
+  project: { background, description, image, link, subtitle, title },
+}) => (
+  <StyledWorkItem background={background} index={index}>
+    <WorkImage background={background} image={image} title={title} />
+    <WorkCard description={description} link={link} subtitle={subtitle} title={title} />
+  </StyledWorkItem>
+)

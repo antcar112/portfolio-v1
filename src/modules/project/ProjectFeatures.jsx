@@ -13,7 +13,7 @@ const FeatureList = styled.ul`
 
 export const ProjectFeatures = ({ features }) => (
   <StyledProjectFeatures>
-    <Text type='subheading'>Key Features</Text>
+    <Text type='h3'>Key Features</Text>
     <FeatureList>
       {features.map((feature) => (
         <Text key={`feat-${feature}`} type='list-item'>

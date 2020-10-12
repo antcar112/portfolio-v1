@@ -12,7 +12,7 @@ const StyledProjectTech = styled.div`
 
 export const ProjectTech = ({ tech }) => (
   <StyledProjectTech>
-    <Text type='subheading'>Tools Used</Text>
+    <Text type='h3'>Tools Used</Text>
     <Text>
       Here are some of the key pieces of technology used in building and designing this project.
     </Text>
