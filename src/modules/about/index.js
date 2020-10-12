@@ -1,3 +1,5 @@
 export * from './AboutContact'
+export * from './AboutExperience'
 export * from './AboutIntro'
-export * from './AboutSkills'
+export * from './AboutTech'
+export * from './ExperienceItem'

@@ -1,4 +1,4 @@
-import { AboutContact, AboutIntro, AboutSkills } from '@src/modules/about'
+import { AboutContact, AboutExperience, AboutIntro, AboutTech } from '@src/modules/about'
 import { Container, Text } from '@src/ui/components'
 import { Layout } from '@src/ui/layout'
 import React from 'react'
@@ -16,7 +16,8 @@ const About = () => (
       <Container>
         <Text type='page-heading'>About Me</Text>
         <AboutIntro />
-        <AboutSkills />
+        <AboutExperience />
+        <AboutTech />
         <AboutContact />
       </Container>
     </StyledAbout>

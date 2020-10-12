@@ -2,6 +2,7 @@ import { media } from '@src/utils'
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
+
     /**** Resets ****/
     html {
         box-sizing: border-box;
@@ -21,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         margin: 0;
-        /* font-family: ${(props) => props.theme.font.body}; */
+        font-family: ${(props) => props.theme.font.body};
         background: ${({ theme }) => theme.color.bg};
         color: ${({ theme }) => theme.color.text};
         font-size: 16px;
@@ -50,8 +51,8 @@ export const GlobalStyle = createGlobalStyle`
         ${media.down.xs} {
             font-size: 2.5em;
         }
-
     }
+
     h2 {
         font-size: 3em;
 
@@ -67,8 +68,8 @@ export const GlobalStyle = createGlobalStyle`
         ${media.down.xs} {
             font-size: 2em;
         }
-
     }
+
     h3 {
         font-size: 2em;
 
@@ -87,8 +88,28 @@ export const GlobalStyle = createGlobalStyle`
         ${media.down.xs} {
             font-size: 1.4em;
         }
-
     }
+
+    h4 {
+        font-size: 1.6em;
+
+        ${media.down.xl} {
+            font-size: 1.6em;
+        }
+        ${media.down.lg} {
+            font-size: 1.5em;
+        }
+        ${media.down.md} {
+            font-size: 1.5em;
+        }
+        ${media.down.sm} {
+            font-size: 1.3em;
+        }
+        ${media.down.xs} {
+            font-size: 1.3em;
+        }
+    }
+
     p, 
     nav a, 
     aside a, 

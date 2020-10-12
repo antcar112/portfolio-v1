@@ -105,9 +105,12 @@ export const AboutIntro = () => (
         enjoying the constant problem solving and learning.
       </Text>
       <Text>
-        I currently live in the greater <Text type='highlight'>Vancouver</Text> area. In my spare
-        time, I enjoy playing guitar and drums, watching hockey, exploring new types of music,
-        running and cooking.
+        I currently live in the greater{' '}
+        <Text color='primary' type='span' weight={700}>
+          Vancouver
+        </Text>{' '}
+        area. In my spare time, I enjoy playing guitar and drums, watching hockey, exploring new
+        types of music, running and cooking.
       </Text>
     </AboutCard>
   </StyledAboutIntro>

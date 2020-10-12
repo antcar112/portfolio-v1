@@ -15,7 +15,7 @@ const StyledHero = styled.div`
   transition: ${({ theme }) => theme.hoverTransition};
 `
 
-const Cursive = styled.h1`
+const HeroTitle = styled.h1`
   font-family: ${({ theme }) => theme.font.heading};
   font-weight: 700;
   color: ${({ theme }) => theme.color.text};
@@ -66,9 +66,9 @@ const scrollDown = () => {
 export const WorkHero = () => (
   <StyledHero>
     <div>
-      <Cursive>
+      <HeroTitle>
         Hi, I'm <span>Anthony</span>
-      </Cursive>
+      </HeroTitle>
       <HeroText>I’m a software developer and designer from Vancouver, BC</HeroText>
       <Button handleClick={scrollDown} text='See my work' />
     </div>
