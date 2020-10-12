@@ -1,6 +1,6 @@
 import { Button } from '@src/ui/components'
 import { media } from '@src/utils'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 const StyledHero = styled.div`
@@ -8,9 +8,9 @@ const StyledHero = styled.div`
   height: calc(100vh - 60px);
   padding: 0 50px;
   background: ${({ theme }) => theme.color.bg};
-  text-align: center;
   display: flex;
   flex-direction: column;
+  text-align: center;
   justify-content: space-evenly;
   transition: ${({ theme }) => theme.hoverTransition};
 `
@@ -55,20 +55,36 @@ const HeroText = styled.span`
   }
 `
 
+const HeroContainer = styled.div`
+  opacity: ${({ mounted }) => (mounted ? 1 : 0)};
+  transform: translateY(${({ mounted }) => (mounted ? '0' : '50px')});
+  transition: opacity 600ms ease-in 300ms, transform 800ms ease-in-out 300ms;
+`
+
 const scrollDown = () => {
   document.getElementById('scroll-target').scrollIntoView({
     behavior: 'smooth',
   })
 }
 
-export const WorkHero = () => (
-  <StyledHero>
-    <div>
-      <HeroTitle>
-        Hi, I'm <span>Anthony</span>
-      </HeroTitle>
-      <HeroText>I’m a software developer and designer from Vancouver, BC</HeroText>
-      <Button handleClick={scrollDown}>See my work</Button>
-    </div>
-  </StyledHero>
-)
+export const WorkHero = () => {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    if (!mounted) {
+      setMounted(true)
+    }
+  }, [mounted, setMounted])
+
+  return (
+    <StyledHero>
+      <HeroContainer mounted={mounted}>
+        <HeroTitle>
+          Hi, I'm <span>Anthony</span>
+        </HeroTitle>
+        <HeroText>I’m a software developer and designer from Vancouver, BC</HeroText>
+        <Button handleClick={scrollDown}>See my work</Button>
+      </HeroContainer>
+    </StyledHero>
+  )
+}
