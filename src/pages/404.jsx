@@ -21,7 +21,9 @@ const NotFoundPage = () => (
       <HeadingContainer>
         <PageHeading subtitle="This page doesn't exist." title='404 error' />
       </HeadingContainer>
-      <Button direction='up' outline text='Go Back' to='/' />
+      <Button outline to='/'>
+        Go back
+      </Button>
     </NotFoundContainer>
   </Layout>
 )

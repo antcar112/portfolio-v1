@@ -15,6 +15,8 @@ export const WorkCard = ({ description, link, subtitle, title }) => (
   <StyledWorkCard>
     <SectionHeading marginBottom='card' subtitle={subtitle} title={title} />
     <Text marginBottom='card'>{description}</Text>
-    <Button direction='up' outline text='See More' to={link} />
+    <Button outline to={link}>
+      See more
+    </Button>
   </StyledWorkCard>
 )

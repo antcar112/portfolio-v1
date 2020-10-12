@@ -1,10 +1,10 @@
 import logo from '@src/assets/images/logo.png'
 import { media } from '@src/utils'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
-import React, { useContext } from 'react'
-import styled, { ThemeContext } from 'styled-components'
+import { Link } from 'gatsby'
+import React from 'react'
+import styled from 'styled-components'
 
-const NavLogoContainer = styled(AniLink)`
+const NavLogoContainer = styled(Link)`
   height: 100%;
   display: flex;
   align-items: center;
@@ -49,11 +49,8 @@ const NavLogoContainer = styled(AniLink)`
   }
 `
 
-export const NavLogo = () => {
-  const themeContext = useContext(ThemeContext)
-  return (
-    <NavLogoContainer bg={themeContext.color.primary} cover direction='right' duration={0.8} to='/'>
-      <img alt='Anthony Caron - Developer' className='logo' src={logo} />
-    </NavLogoContainer>
-  )
-}
+export const NavLogo = () => (
+  <NavLogoContainer to='/'>
+    <img alt='Anthony Caron - Developer' className='logo' src={logo} />
+  </NavLogoContainer>
+)

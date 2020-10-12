@@ -24,7 +24,7 @@ const ImageContainer = styled.div`
 
 const ExperienceList = styled.ul`
   list-style-type: square;
-  padding-left: 1.4em;
+  padding-left: 2.8em;
 `
 
 export const ExperienceItem = ({ experience }) => {

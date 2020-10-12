@@ -1,7 +1,7 @@
 import { media } from '@src/utils'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
-import React, { useContext } from 'react'
-import styled, { css, ThemeContext } from 'styled-components'
+import { Link } from 'gatsby'
+import React from 'react'
+import styled, { css } from 'styled-components'
 
 const styles = css`
   text-decoration: none;
@@ -35,7 +35,7 @@ const styles = css`
   }
 `
 
-const StyledNavLink = styled(AniLink)`
+const StyledNavLink = styled(Link)`
   ${styles};
 `
 
@@ -43,28 +43,14 @@ const StyledNavAnchor = styled.a`
   ${styles};
 `
 
-export const NavLink = ({ direction, href, name, to }) => {
-  const themeContext = useContext(ThemeContext)
-
-  if (href) {
-    return (
-      <li>
-        <StyledNavAnchor href={href}>{name}</StyledNavAnchor>
-      </li>
-    )
-  }
-  return (
-    <li>
-      <StyledNavLink
-        activeClassName='nav_link--active'
-        bg={themeContext.color.primary}
-        cover
-        direction={direction}
-        duration={0.8}
-        to={to}
-      >
+export const NavLink = ({ href, name, to }) => (
+  <li>
+    {href ? (
+      <StyledNavAnchor href={href}>{name}</StyledNavAnchor>
+    ) : (
+      <StyledNavLink activeClassName='nav_link--active' to={to}>
         {name}
       </StyledNavLink>
-    </li>
-  )
-}
+    )}
+  </li>
+)

@@ -20,7 +20,7 @@ const Grid = styled.div`
   }
 `
 
-const Buttons = styled.div`
+const ButtonContainer = styled.div`
   display: grid;
   grid-gap: 15px;
   align-self: start;
@@ -47,10 +47,12 @@ export const ProjectInfo = ({ description, githubLink, hostedLink, subtitle, tit
         <Text type='h3'>{subtitle}</Text>
         <Text>{description}</Text>
       </div>
-      <Buttons>
-        <Button href={hostedLink} text='See Website' />
-        <Button href={githubLink} outline text='View on GitHub' />
-      </Buttons>
+      <ButtonContainer>
+        <Button href={hostedLink}>See website</Button>
+        <Button href={githubLink} outline>
+          View on GitHub
+        </Button>
+      </ButtonContainer>
     </Grid>
   </StyledProjectInfo>
 )

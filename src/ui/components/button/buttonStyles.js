@@ -1,5 +1,5 @@
 import { media } from '@src/utils'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { Link } from 'gatsby'
 import styled, { css } from 'styled-components'
 
 const SharedBtnStyles = css`
@@ -135,6 +135,6 @@ export const StyledAnchor = styled.a`
   ${({ outline }) => (outline ? BtnOutlineStyles : BtnSolidStyles)};
 `
 
-export const StyledAniLink = styled(AniLink)`
+export const StyledLink = styled(Link)`
   ${({ outline }) => (outline ? BtnOutlineStyles : BtnSolidStyles)};
 `

@@ -22,7 +22,6 @@ module.exports = {
     'gatsby-plugin-eslint',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-transition-link',
     {
       resolve: 'gatsby-plugin-alias-imports',
       options: {

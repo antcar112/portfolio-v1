@@ -48,7 +48,7 @@ export const Project = ({ project, tech }) => {
           />
           <ProjectVideo title={title} video={video} />
           <ProjectDev devDesc={devDesc} features={features} tech={tech} />
-          <Button direction='down' outline text='Go Back' to='/' />
+          <Button to='/'>Go back</Button>
         </InnerContainer>
       </Container>
     </ProjectContainer>

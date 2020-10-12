@@ -68,7 +68,7 @@ export const WorkHero = () => (
         Hi, I'm <span>Anthony</span>
       </HeroTitle>
       <HeroText>I’m a software developer and designer from Vancouver, BC</HeroText>
-      <Button handleClick={scrollDown} text='See my work' />
+      <Button handleClick={scrollDown}>See my work</Button>
     </div>
   </StyledHero>
 )

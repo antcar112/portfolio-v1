@@ -1,6 +1,6 @@
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
-import React, { useContext } from 'react'
-import styled, { ThemeContext } from 'styled-components'
+import { Link } from 'gatsby'
+import React from 'react'
+import styled from 'styled-components'
 
 const NavListItem = styled.li`
   display: block;
@@ -60,25 +60,17 @@ const NavListItem = styled.li`
   }
 `
 
-export const DrawerNavLink = ({ direction, email, href, icon, name, onClick, to }) => {
-  const themeContext = useContext(ThemeContext)
-
+export const DrawerNavLink = ({ email, href, icon, name, onClick, to }) => {
   if (to) {
     return (
       <NavListItem>
-        <AniLink
-          activeClassName='nav_drawer_link--active'
-          bg={themeContext.color.primary}
-          cover
-          direction={direction}
-          duration={0.8}
-          to={to}
-        >
+        <Link activeClassName='nav_drawer_link--active' to={to}>
           <DrawLinkContent icon={icon} name={name} />
-        </AniLink>
+        </Link>
       </NavListItem>
     )
   }
+
   if (href && !email) {
     return (
       <NavListItem>
@@ -88,6 +80,7 @@ export const DrawerNavLink = ({ direction, email, href, icon, name, onClick, to 
       </NavListItem>
     )
   }
+
   if (href && email) {
     return (
       <NavListItem>
