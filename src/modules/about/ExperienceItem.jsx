@@ -1,9 +1,14 @@
 import { Text } from '@src/ui/components'
+import { media } from '@src/utils'
 import React from 'react'
 import styled from 'styled-components'
 
 const ExperienceContainer = styled.ul`
   max-width: 1000px;
+
+  ${media.down.md} {
+    margin-right: 24px;
+  }
 `
 
 const ExperienceHeader = styled.div`
@@ -27,31 +32,30 @@ const ExperienceList = styled.ul`
   padding-left: 2.8em;
 `
 
-export const ExperienceItem = ({ experience }) => {
-  const { company, companyUrl, date, description, jobTitle, logo } = experience
-  return (
-    <ExperienceContainer>
-      <ExperienceHeader>
-        <ImageContainer>
-          <img src={logo} />
-        </ImageContainer>
-        <div>
-          <Text color='text' type='h4'>
-            {jobTitle} @{' '}
-            <Text decoration='none' href={companyUrl}>
-              {company}
-            </Text>
+export const ExperienceItem = ({
+  experience: { company, companyUrl, date, description, jobTitle, logo },
+}) => (
+  <ExperienceContainer>
+    <ExperienceHeader>
+      <ImageContainer>
+        <img src={logo} />
+      </ImageContainer>
+      <div>
+        <Text color='text' type='h4'>
+          {jobTitle} @{' '}
+          <Text decoration='none' href={companyUrl}>
+            {company}
           </Text>
-          <Text type='subtitle'>{date}</Text>
-        </div>
-      </ExperienceHeader>
-      <ExperienceList>
-        {description.map((text, index) => (
-          <Text key={`${company}--${index}`} type='list-item'>
-            {text}
-          </Text>
-        ))}
-      </ExperienceList>
-    </ExperienceContainer>
-  )
-}
+        </Text>
+        <Text type='subtitle'>{date}</Text>
+      </div>
+    </ExperienceHeader>
+    <ExperienceList>
+      {description.map((text, index) => (
+        <Text key={`${company}--${index}`} type='list-item'>
+          {text}
+        </Text>
+      ))}
+    </ExperienceList>
+  </ExperienceContainer>
+)
