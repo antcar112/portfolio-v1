@@ -2,7 +2,7 @@ import { experienceAssets } from '@src/assets/experience'
 
 const experience = {
   atb: {
-    jobTitle: 'Junior Software Engineer',
+    jobTitle: 'Junior Software Developer',
     company: 'ATB Financial',
     companyUrl: 'https://www.atb.com/personal/',
     date: 'May 2020 - Present',
