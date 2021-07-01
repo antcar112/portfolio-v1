@@ -10,6 +10,7 @@ const StyledTechItem = styled.div`
 
   & img {
     height: 45px;
+    max-width: 72px;
     filter: ${({ colorTheme, invert }) => (colorTheme === 'dark' && invert ? 'invert(1)' : '')}
       grayscale(100%);
     transition: 150ms filter linear;
@@ -20,6 +21,7 @@ const StyledTechItem = styled.div`
     }
     ${media.down.xs} {
       height: 35px;
+      max-width: 58px;
     }
   }
 

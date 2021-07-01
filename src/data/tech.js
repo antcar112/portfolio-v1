@@ -22,12 +22,20 @@ const tech = {
     image: techLogos.css,
   },
   sass: {
-    name: 'Sass',
+    name: 'SCSS',
     image: techLogos.sass,
+  },
+  less: {
+    name: 'Less',
+    image: techLogos.less,
   },
   materialUi: {
     name: 'Material UI',
     image: techLogos.materialUi,
+  },
+  antd: {
+    name: 'Ant Design',
+    image: techLogos.antd,
   },
   styledComponents: {
     name: 'Styled Components',
@@ -36,6 +44,15 @@ const tech = {
   bootstrap: {
     name: 'Bootstrap',
     image: techLogos.bootstrap,
+  },
+  reactQuery: {
+    name: 'React Query',
+    image: techLogos.reactQuery,
+  },
+  jotai: {
+    name: 'Jotai',
+    image: techLogos.jotai,
+    darkModeInvert: true,
   },
   mobx: {
     name: 'MobX',
@@ -58,6 +75,14 @@ const tech = {
     image: techLogos.express,
     darkModeInvert: true,
   },
+  jest: {
+    name: 'Jest',
+    image: techLogos.jest,
+  },
+  testingLibrary: {
+    name: 'Testing Library',
+    image: techLogos.testingLibrary,
+  },
   java: {
     name: 'Java',
     image: techLogos.java,
@@ -67,7 +92,6 @@ const tech = {
     image: techLogos.python,
     inProgress: true,
   },
-  c: { name: 'C', image: techLogos.c, inProgress: true },
   oracle: {
     name: 'Oracle Database',
     image: techLogos.oracle,
@@ -79,16 +103,6 @@ const tech = {
   firebase: {
     name: 'Firebase',
     image: techLogos.firebase,
-  },
-  jest: {
-    name: 'Jest',
-    image: techLogos.jest,
-    inProgress: true,
-  },
-  testingLibrary: {
-    name: 'Testing Library',
-    image: techLogos.testingLibrary,
-    inProgress: true,
   },
   photoshop: {
     name: 'Abobe Photoshop',
