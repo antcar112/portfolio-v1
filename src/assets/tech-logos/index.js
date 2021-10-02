@@ -1,4 +1,5 @@
 import antd from './antd.svg'
+import apollo from './apollo.svg'
 import bootstrap from './bootstrap.svg'
 import css from './css.svg'
 import express from './express.svg'
@@ -29,6 +30,7 @@ import typescript from './typescript.svg'
 
 export const techLogos = {
   antd,
+  apollo,
   bootstrap,
   css,
   express,

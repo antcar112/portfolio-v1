@@ -1,11 +1,22 @@
 import { experienceAssets } from '@src/assets/experience'
 
 const experience = {
+  rivian: {
+    jobTitle: 'Software Engineer II',
+    company: 'Rivian',
+    companyUrl: 'https://www.rivian.com',
+    date: 'August 2021 - Present',
+    logo: experienceAssets.rivian,
+    description: [
+      'Developed React front end micro-apps using TypeScript & Material-UI',
+      'Leverage GraphQL and Apollo client for fetching and caching data',
+    ],
+  },
   atb: {
-    jobTitle: 'Software Developer',
+    jobTitle: 'Software Developer II',
     company: 'ATB Financial',
     companyUrl: 'https://www.atb.com/personal/',
-    date: 'May 2020 - Present',
+    date: 'May 2020 - August 2021',
     logo: experienceAssets.atb,
     description: [
       'Developed React front end using TypeScript, MobX, React Query, Jotai, Material-UI & AntD',

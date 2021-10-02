@@ -45,6 +45,15 @@ const tech = {
     name: 'Bootstrap',
     image: techLogos.bootstrap,
   },
+  graphql: {
+    name: 'GraphQL',
+    image: techLogos.graphql,
+  },
+  apollo: {
+    name: 'Apollo',
+    image: techLogos.apollo,
+    darkModeInvert: true,
+  },
   reactQuery: {
     name: 'React Query',
     image: techLogos.reactQuery,
@@ -57,10 +66,6 @@ const tech = {
   mobx: {
     name: 'MobX',
     image: techLogos.mobx,
-  },
-  graphql: {
-    name: 'GraphQL',
-    image: techLogos.graphql,
   },
   gatsby: {
     name: 'Gatsby',
@@ -87,11 +92,11 @@ const tech = {
     name: 'Java',
     image: techLogos.java,
   },
-  python: {
-    name: 'Python',
-    image: techLogos.python,
-    inProgress: true,
-  },
+  // python: {
+  //   name: 'Python',
+  //   image: techLogos.python,
+  //   inProgress: true,
+  // },
   oracle: {
     name: 'Oracle Database',
     image: techLogos.oracle,

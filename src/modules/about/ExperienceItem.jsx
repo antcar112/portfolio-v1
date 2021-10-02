@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 const ExperienceContainer = styled.ul`
   max-width: 1000px;
+  width: 100%;
 
   ${media.down.md} {
     margin-right: 24px;
